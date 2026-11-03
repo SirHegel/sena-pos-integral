@@ -1,0 +1,366 @@
+{
+  "fecha_UTC": "2026-11-03T14:36:11.164929+00:00",
+  "base": "sena_pos_ga7_auth",
+  "url": "http://127.0.0.1:8088/api/v1/auth/",
+  "datos": "Cuentas y negocios sintéticos; ninguna cuenta del aula",
+  "registro_correo": "casoe7bc32155b@example.test",
+  "alcance": "Pruebas HTTP reales y consulta MySQL real del caso88, no Postman ni backend completo",
+  "resultados": [
+    {
+      "caso": "Registro válido con correo normalizado",
+      "endpoint": "registro",
+      "esperado": 201,
+      "correcto": true,
+      "status": 201,
+      "respuesta": {
+        "mensaje": "Registro satisfactorio",
+        "usuarioId": "a593d114-cd42-4a36-9db2-c1aee09a1490"
+      },
+      "segundos": 0.6387
+    },
+    {
+      "caso": "Ingreso válido",
+      "endpoint": "ingreso",
+      "esperado": 200,
+      "correcto": true,
+      "status": 200,
+      "respuesta": {
+        "mensaje": "Autenticación satisfactoria",
+        "usuarioId": "a593d114-cd42-4a36-9db2-c1aee09a1490"
+      },
+      "segundos": 0.2355
+    },
+    {
+      "caso": "Duplicado dentro del negocio",
+      "endpoint": "registro",
+      "esperado": 409,
+      "correcto": true,
+      "status": 409,
+      "respuesta": {
+        "mensaje": "El usuario ya está registrado en este negocio",
+        "codigo": "USUARIO_EXISTENTE"
+      },
+      "segundos": 0.2884
+    },
+    {
+      "caso": "Mismo correo en otro negocio",
+      "endpoint": "registro",
+      "esperado": 201,
+      "correcto": true,
+      "status": 201,
+      "respuesta": {
+        "mensaje": "Registro satisfactorio",
+        "usuarioId": "890d4ba8-b7c7-4b15-bfcb-c63da01fc639"
+      },
+      "segundos": 0.237
+    },
+    {
+      "caso": "Contraseña de otro negocio rechazada",
+      "endpoint": "ingreso",
+      "esperado": 401,
+      "correcto": true,
+      "status": 401,
+      "respuesta": {
+        "mensaje": "Error en la autenticación",
+        "codigo": "AUTENTICACION_FALLIDA"
+      },
+      "segundos": 0.2357
+    },
+    {
+      "caso": "Ingreso correcto del segundo negocio",
+      "endpoint": "ingreso",
+      "esperado": 200,
+      "correcto": true,
+      "status": 200,
+      "respuesta": {
+        "mensaje": "Autenticación satisfactoria",
+        "usuarioId": "890d4ba8-b7c7-4b15-bfcb-c63da01fc639"
+      },
+      "segundos": 0.234
+    },
+    {
+      "caso": "Negocio inexistente",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "Negocio no disponible",
+        "codigo": "NEGOCIO_NO_DISPONIBLE"
+      },
+      "segundos": 0.0034
+    },
+    {
+      "caso": "Negocio inactivo",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "Negocio no disponible",
+        "codigo": "NEGOCIO_NO_DISPONIBLE"
+      },
+      "segundos": 0.0067
+    },
+    {
+      "caso": "Usuario inexistente",
+      "endpoint": "ingreso",
+      "esperado": 401,
+      "correcto": true,
+      "status": 401,
+      "respuesta": {
+        "mensaje": "Error en la autenticación",
+        "codigo": "AUTENTICACION_FALLIDA"
+      },
+      "segundos": 0.2265
+    },
+    {
+      "caso": "UUID inválido",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "tenantId debe ser un UUID válido",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0036
+    },
+    {
+      "caso": "Correo inválido",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "usuario debe ser un correo válido de hasta 254 caracteres",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0047
+    },
+    {
+      "caso": "Puntos repetidos en correo",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "usuario debe ser un correo válido de hasta 254 caracteres",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0039
+    },
+    {
+      "caso": "Correo con inyección no válido",
+      "endpoint": "ingreso",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "usuario debe ser un correo válido de hasta 254 caracteres",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0031
+    },
+    {
+      "caso": "Contraseña demasiado corta",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "password debe tener entre 8 y 64 caracteres, máximo 72 bytes UTF-8, sin controles",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.003
+    },
+    {
+      "caso": "Contraseña demasiado larga",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "password debe tener entre 8 y 64 caracteres, máximo 72 bytes UTF-8, sin controles",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0025
+    },
+    {
+      "caso": "Contraseña sólo espacios",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "password debe tener entre 8 y 64 caracteres, máximo 72 bytes UTF-8, sin controles",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0025
+    },
+    {
+      "caso": "Más de72bytes UTF8",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "password debe tener entre 8 y 64 caracteres, máximo 72 bytes UTF-8, sin controles",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0028
+    },
+    {
+      "caso": "Control en contraseña",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "password debe tener entre 8 y 64 caracteres, máximo 72 bytes UTF-8, sin controles",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0031
+    },
+    {
+      "caso": "Campo obligatorio ausente",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "password debe tener entre 8 y 64 caracteres, máximo 72 bytes UTF-8, sin controles",
+        "codigo": "DATOS_INVALIDOS"
+      },
+      "segundos": 0.0025
+    },
+    {
+      "caso": "JSON mal formado",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "Cuerpo JSON no válido",
+        "codigo": "JSON_INVALIDO"
+      },
+      "segundos": 0.0025
+    },
+    {
+      "caso": "Campos desconocidos",
+      "endpoint": "registro",
+      "esperado": 400,
+      "correcto": true,
+      "status": 400,
+      "respuesta": {
+        "mensaje": "Cuerpo JSON no válido",
+        "codigo": "JSON_INVALIDO"
+      },
+      "segundos": 0.0058
+    },
+    {
+      "caso": "Primer fallo",
+      "endpoint": "ingreso",
+      "esperado": 401,
+      "correcto": true,
+      "status": 401,
+      "respuesta": {
+        "mensaje": "Error en la autenticación",
+        "codigo": "AUTENTICACION_FALLIDA"
+      },
+      "segundos": 0.2315
+    },
+    {
+      "caso": "Segundo fallo",
+      "endpoint": "ingreso",
+      "esperado": 401,
+      "correcto": true,
+      "status": 401,
+      "respuesta": {
+        "mensaje": "Error en la autenticación",
+        "codigo": "AUTENTICACION_FALLIDA"
+      },
+      "segundos": 0.2325
+    },
+    {
+      "caso": "Tercer fallo activa bloqueo",
+      "endpoint": "ingreso",
+      "esperado": 429,
+      "correcto": true,
+      "status": 429,
+      "respuesta": {
+        "mensaje": "Tres intentos fallidos. Acceso bloqueado por 30 segundos",
+        "codigo": "BLOQUEO_TEMPORAL"
+      },
+      "segundos": 0.2285
+    },
+    {
+      "caso": "Clave correcta no evita bloqueo",
+      "endpoint": "ingreso",
+      "esperado": 429,
+      "correcto": true,
+      "status": 429,
+      "respuesta": {
+        "mensaje": "Acceso bloqueado temporalmente por intentos fallidos",
+        "codigo": "BLOQUEO_TEMPORAL"
+      },
+      "segundos": 0.2239
+    },
+    {
+      "caso": "Dos registros concurrentes del mismo correo",
+      "correcto": true,
+      "esperado": [
+        201,
+        409
+      ],
+      "resultados": [
+        {
+          "status": 409,
+          "respuesta": {
+            "mensaje": "El usuario ya está registrado en este negocio",
+            "codigo": "USUARIO_EXISTENTE"
+          },
+          "segundos": 0.2337
+        },
+        {
+          "status": 201,
+          "respuesta": {
+            "mensaje": "Registro satisfactorio",
+            "usuarioId": "221a3c39-578c-4b29-ae1b-770a85404469"
+          },
+          "segundos": 0.2316
+        }
+      ]
+    },
+    {
+      "caso": "Estado persistido de bloqueo y hash BCrypt coste12",
+      "correcto": true,
+      "salida_mysql": "3\t1\t$2a$12$\t0"
+    },
+    {
+      "caso": "Hashes distintos por cuenta",
+      "correcto": true,
+      "salida_mysql": "2",
+      "nota": "Las dos cuentas tienen contraseñas de prueba diferentes; no se infiere sólo de este resultado una prueba de sal aleatoria."
+    },
+    {
+      "caso": "Ingreso después del vencimiento real",
+      "endpoint": "ingreso",
+      "esperado": 200,
+      "correcto": true,
+      "status": 200,
+      "respuesta": {
+        "mensaje": "Autenticación satisfactoria",
+        "usuarioId": "a593d114-cd42-4a36-9db2-c1aee09a1490"
+      },
+      "segundos": 0.2326
+    },
+    {
+      "caso": "Éxito reinicia contador y bloqueo",
+      "correcto": true,
+      "salida_mysql": "0\t1"
+    }
+  ],
+  "total": 30,
+  "correctos": 30
+}

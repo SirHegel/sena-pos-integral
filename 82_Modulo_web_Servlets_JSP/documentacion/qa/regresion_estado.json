@@ -1,0 +1,8 @@
+{
+  "fecha_UTC": "2026-11-03T15:33:42.724129+00:00",
+  "caso": "Editar un producto inactivo conserva su estado",
+  "HTTP_actualizacion": 303,
+  "activo_mysql_despues": "0",
+  "HTTP_limpieza": 303,
+  "correcto": true
+}

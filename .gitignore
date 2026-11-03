@@ -1,0 +1,6 @@
+**/target/
+**/.env
+**/.env.*
+**/__pycache__/
+*.log
+*.bundle

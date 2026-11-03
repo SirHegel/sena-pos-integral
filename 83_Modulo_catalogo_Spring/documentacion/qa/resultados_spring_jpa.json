@@ -1,0 +1,206 @@
+{
+  "fecha_UTC": "2026-11-03T15:15:46.485447+00:00",
+  "base_URL": "http://127.0.0.1:8083",
+  "instrumento": "HTTP real con cookie de sesión; SpringMVC/JPA/Hibernate y Jasper/Tomcat reales",
+  "datos": "Productos sintéticos retirados por POST al finalizar",
+  "resultados": [
+    {
+      "caso": "GET compila y muestra JSP del catálogo",
+      "correcto": true,
+      "detalle": "200"
+    },
+    {
+      "caso": "Cabeceras antiinterpretación y CSP",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "Cookie sesión HttpOnly y SameSite",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "GET muestra formulario JSP",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "POST crea y responde303",
+      "correcto": true,
+      "detalle": "303"
+    },
+    {
+      "caso": "GET recupera resultado persistido",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "JSTL escapa textoHTML del producto",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "POST rechaza tokenCSRF inválido",
+      "correcto": true,
+      "detalle": "403"
+    },
+    {
+      "caso": "POST rechaza tokenCSRF ausente",
+      "correcto": true,
+      "detalle": "403"
+    },
+    {
+      "caso": "POST rechaza código duplicado",
+      "correcto": true,
+      "detalle": "409"
+    },
+    {
+      "caso": "Aplicación rechaza precio cero",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "POST rechaza precio negativo",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "POST rechaza precisión monetaria",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "POST rechazaIVA fuera de rango",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "POST rechaza receta para insumo",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "POST rechaza campos ausentes",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Nombre mayor de128caracteres",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Código mayor de64caracteres",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Unidad mayor de32caracteres",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Nombre sólo espacios",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Caracteres de control en nombre",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Búsqueda mayor de128caracteres",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "GET procesa búsqueda por parámetro",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "GET escapa búsqueda en atributo",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "GET rechaza negocio no permitido",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "GET no edita clave de otro negocio",
+      "correcto": true,
+      "detalle": "404"
+    },
+    {
+      "caso": "POST no actualiza clave de otro negocio",
+      "correcto": true,
+      "detalle": "404"
+    },
+    {
+      "caso": "POST no elimina clave de otro negocio",
+      "correcto": true,
+      "detalle": "404"
+    },
+    {
+      "caso": "Código repetible entre negocios en web",
+      "correcto": true,
+      "detalle": "303"
+    },
+    {
+      "caso": "POST actualiza existente",
+      "correcto": true,
+      "detalle": "303"
+    },
+    {
+      "caso": "GET verifica actualización persistida",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "GET no elimina datos",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "JSP no accesible directamente",
+      "correcto": true,
+      "detalle": "404"
+    },
+    {
+      "caso": "Modo GET desconocido rechazado",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "Acción POST desconocida rechazada",
+      "correcto": true,
+      "detalle": "400"
+    },
+    {
+      "caso": "POST elimina producto sintético de 1",
+      "correcto": true,
+      "detalle": "303"
+    },
+    {
+      "caso": "Eliminación persistida de 1",
+      "correcto": true,
+      "detalle": ""
+    },
+    {
+      "caso": "POST elimina producto sintético de 2",
+      "correcto": true,
+      "detalle": "303"
+    },
+    {
+      "caso": "Eliminación persistida de 2",
+      "correcto": true,
+      "detalle": ""
+    }
+  ],
+  "total": 39,
+  "correctos": 39,
+  "nota": "No es un video ni se atribuye a Postman. La selección de dos negocios es demostración, no autorización."
+}

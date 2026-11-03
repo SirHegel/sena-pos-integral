@@ -1,0 +1,3 @@
+tablas	26
+FK	42
+CHECK	146

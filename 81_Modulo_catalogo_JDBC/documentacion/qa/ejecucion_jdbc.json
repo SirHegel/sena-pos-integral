@@ -1,0 +1,14 @@
+{
+  "fecha_UTC": "2026-11-03T15:32:24.568918+00:00",
+  "comando": [
+    "/home/sirhegel/Documents/Codex/2026-11-01/va/work/ga7_java/runtime/jdk-21.0.13+9/bin/java",
+    "-cp",
+    "/home/sirhegel/Documents/Codex/2026-11-01/va/outputs/sena/04_Preparacion/Desarrollo_de_software/81_Modulo_catalogo_JDBC/target/classes:/home/sirhegel/Documents/Codex/2026-11-01/va/outputs/sena/04_Preparacion/Desarrollo_de_software/81_Modulo_catalogo_JDBC/target/dependency/*",
+    "co.edu.sena.pos.catalogo.CliCatalogo",
+    "--demo"
+  ],
+  "salida": "PASS|C: insertar por JDBC\nPASS|R: nombre con apóstrofo preservado\nPASS|R: precio decimal exacto\nPASS|R: listar sólo negocio elegido\nPASS|R: clave de otro negocio no visible\nPASS|Código repetible entre negocios\nPASS|Duplicado en mismo negocio rechazado por UNIQUE\nPASS|U: actualizar existente\nPASS|U: valor persistido\nPASS|U: otro negocio no actualiza la clave\nPASS|D: otro negocio no elimina la clave\nPASS|Rechazar precio negativo\nPASS|Rechazar tres decimales monetarios\nPASS|Rechazar desborde DECIMAL14,2\nPASS|Rechazar IVA superior a 1\nPASS|Rechazar precio cero\nPASS|Aceptar límite monetario\nPASS|Rechazar tipo ausente\nPASS|Rechazar modo ausente\nPASS|Rechazar texto vacío\nPASS|Rechazar nombre demasiado largo\nPASS|Rechazar controles\nPASS|Rechazar RECETA para INSUMO\nPASS|D: eliminar producto sin referencias\nPASS|D: eliminación persistida\nPASS|D: eliminar inexistente devuelve false\nTOTAL|26|0 fallos\n",
+  "stderr": "",
+  "retorno": 0,
+  "datos": "Productos y negocios sintéticos; JDBC real a MySQL8.4.13; esquema26tablas conservado"
+}

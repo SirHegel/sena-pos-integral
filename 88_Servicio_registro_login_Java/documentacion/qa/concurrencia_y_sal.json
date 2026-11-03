@@ -1,0 +1,30 @@
+{
+  "alcance": "Prueba adicional puntual de sal aleatoria y concurrencia de ingreso",
+  "resultados": [
+    {
+      "caso": "Registros con misma contraseña sintética",
+      "correcto": true,
+      "estados": [
+        201,
+        201
+      ]
+    },
+    {
+      "caso": "Sal aleatoria BCrypt con misma contraseña",
+      "correcto": true,
+      "hashes_distintos": "2"
+    },
+    {
+      "caso": "Tres fallos simultáneos conservan contador y bloqueo",
+      "correcto": true,
+      "estados": [
+        401,
+        401,
+        429
+      ],
+      "estado_mysql": "3\t1"
+    }
+  ],
+  "correctos": 3,
+  "total": 3
+}
