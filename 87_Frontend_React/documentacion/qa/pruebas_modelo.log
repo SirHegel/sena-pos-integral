@@ -1,0 +1,23 @@
+
+> pos-integral-react@1.0.0 test
+> node pruebas/modelo.test.js
+
+✔ La venta por unidad rechaza fracciones y enteros inseguros sin alterar inventario (2.946455ms)
+✔ El cobro inválido conserva carrito y stock; el válido descuenta exactamente una vez (11.123276ms)
+✔ Dos preparados comparten insumo: la demanda conjunta insuficiente rechaza todo el cobro (0.6596ms)
+✔ Un cobro válido de dos recetas agrega la demanda por insumo y evita descontar producto terminado (0.776042ms)
+✔ Milésimas exactas: 0.3 unidades disponibles permiten tres preparaciones de 0.1 (0.225111ms)
+✔ El detalle conserva el precio histórico aunque el catálogo cambie después de agregar (0.466461ms)
+✔ Caja separa confirmaciones externas y efectivo; abrir otra sesión no arrastra cobros anteriores (3.347137ms)
+✔ Los filtros de ventas y CSV usan el día de Bogotá, incluso cerca de medianoche UTC (1.68631ms)
+✔ La nómina filtra empleado y período y suma cada novedad una vez (0.48254ms)
+✔ El asiento requiere equilibrio, cuentas distintas activas y fecha de calendario válida (1.241109ms)
+✔ La identidad conserva ceros iniciales y rechaza nacimiento futuro según Bogotá (1.039211ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30.40853

@@ -1,0 +1,75 @@
+API INTEGRAL DEL POS — ENDPOINT
+Jhon Steven Alvarez Ruiz · ficha 3388966
+GA7-220501096-AA5-EV03 / GA7-220501096-AA5-EV04
+
+Base local: http://127.0.0.1:8090
+Sesión: cookie POSSESSION; escrituras: X-CSRF-Token. Tenant y roles del servidor.
+Leer A/B/C para parámetros,cuerpos,respuestas,errores y reglas transaccionales.
+El token se obtiene en GET /api/v1/auth/csrf y se renueva al iniciar sesión.
+No hay claves o tokens de acceso en este archivo.
+
+GET   /api/v1/cuentas | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: no
+POST  /api/v1/cuentas | éxito 201 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: sí
+PUT   /api/v1/cuentas/{id} | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: sí
+GET   /api/v1/asientos | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: no
+GET   /api/v1/asientos/{id} | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: no
+POST  /api/v1/asientos | éxito 201 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: sí
+GET   /api/v1/eventos | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: no
+GET   /api/v1/eventos/{id} | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: no
+POST  /api/v1/eventos/{id}/procesar | éxito 200 | roles: ADMINISTRADOR,CONTABILIDAD | CSRF: sí
+GET   /api/v1/empleados | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+GET   /api/v1/empleados/{id} | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+POST  /api/v1/empleados | éxito 201 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+PUT   /api/v1/empleados/{id} | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+GET   /api/v1/novedades | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+GET   /api/v1/novedades/{id} | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+POST  /api/v1/novedades | éxito 201 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+PUT   /api/v1/novedades/{id} | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+POST  /api/v1/novedades/{id}/autorizar | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+POST  /api/v1/novedades/{id}/rechazar | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+GET   /api/v1/liquidaciones | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+GET   /api/v1/liquidaciones/{id} | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+GET   /api/v1/liquidaciones/{id}/simulacion | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: no
+POST  /api/v1/liquidaciones | éxito 201 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+POST  /api/v1/liquidaciones/{id}/aprobar | éxito 200 | roles: ADMINISTRADOR,NOMINA | CSRF: sí
+GET   /api/v1/reportes/{area} | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO,NOMINA,CONTABILIDAD | CSRF: no
+GET   /api/v1/reportes/{area}/csv | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO,NOMINA,CONTABILIDAD | CSRF: no
+GET   /api/v1/productos | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO | CSRF: no
+GET   /api/v1/productos/{id} | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO | CSRF: no
+POST  /api/v1/productos | éxito 201 | roles: ADMINISTRADOR,INVENTARIO | CSRF: sí
+PUT   /api/v1/productos/{id} | éxito 200 | roles: ADMINISTRADOR,INVENTARIO | CSRF: sí
+GET   /api/v1/auth/csrf | éxito 200 | roles: público | CSRF: no
+POST  /api/v1/auth/ingreso | éxito 200 | roles: público | CSRF: sí
+GET   /api/v1/auth/sesion | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO,NOMINA,CONTABILIDAD | CSRF: no
+POST  /api/v1/auth/salir | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO,NOMINA,CONTABILIDAD | CSRF: sí
+GET   /api/v1/usuarios | éxito 200 | roles: ADMINISTRADOR | CSRF: no
+POST  /api/v1/usuarios | éxito 201 | roles: ADMINISTRADOR | CSRF: sí
+PUT   /api/v1/usuarios/{id} | éxito 200 | roles: ADMINISTRADOR | CSRF: sí
+GET   /api/v1/roles | éxito 200 | roles: ADMINISTRADOR | CSRF: no
+GET   /api/v1/bodegas | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO | CSRF: no
+POST  /api/v1/bodegas | éxito 201 | roles: ADMINISTRADOR,INVENTARIO | CSRF: sí
+GET   /api/v1/existencias | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO | CSRF: no
+GET   /api/v1/movimientos | éxito 200 | roles: ADMINISTRADOR,INVENTARIO | CSRF: no
+POST  /api/v1/movimientos | éxito 201 | roles: ADMINISTRADOR,INVENTARIO | CSRF: sí
+GET   /api/v1/mesas | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: no
+POST  /api/v1/mesas | éxito 201 | roles: ADMINISTRADOR | CSRF: sí
+PATCH /api/v1/mesas/{id}/estado | éxito 200 | roles: ADMINISTRADOR | CSRF: sí
+GET   /api/v1/cajas | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: no
+POST  /api/v1/cajas | éxito 201 | roles: ADMINISTRADOR | CSRF: sí
+GET   /api/v1/sesiones-caja | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: no
+POST  /api/v1/sesiones-caja | éxito 201 | roles: ADMINISTRADOR,CAJERO | CSRF: sí
+GET   /api/v1/sesiones-caja/{id} | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: no
+POST  /api/v1/sesiones-caja/{id}/cerrar | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: sí
+GET   /api/v1/recetas | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO | CSRF: no
+GET   /api/v1/recetas/{id} | éxito 200 | roles: ADMINISTRADOR,CAJERO,INVENTARIO | CSRF: no
+POST  /api/v1/recetas | éxito 201 | roles: ADMINISTRADOR,INVENTARIO | CSRF: sí
+POST  /api/v1/recetas/{id}/activar | éxito 200 | roles: ADMINISTRADOR,INVENTARIO | CSRF: sí
+GET   /api/v1/ventas | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: no
+POST  /api/v1/ventas | éxito 201 | roles: ADMINISTRADOR,CAJERO | CSRF: sí
+PUT   /api/v1/ventas/{id}/detalle | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: sí
+GET   /api/v1/ventas/{id}/comprobante | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: no
+POST  /api/v1/ventas/{id}/anular | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: sí
+POST  /api/v1/ventas/{id}/confirmar | éxito 200 | roles: ADMINISTRADOR,CAJERO | CSRF: sí
+
+Errores comunes:400 datos/formato,401 sesión/autenticación,403 permiso/CSRF,404 recurso propio no encontrado,409 conflicto de regla o integridad,429 bloqueo de ingreso,503 datos no disponibles. Reporte con más de 10000 filas:413.
+El servidor sólo escucha 127.0.0.1. React 87 no está conectado a esta API en este expediente.

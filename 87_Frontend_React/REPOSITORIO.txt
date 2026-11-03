@@ -1,0 +1,2 @@
+Repositorio público del proyecto:
+https://github.com/SirHegel/sena-pos-integral/tree/main/87_Frontend_React

@@ -1,0 +1,304 @@
+{
+  "modulo": "Operación",
+  "fuente_contrato": "B_Operacion.md",
+  "endpoints": [
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/bodegas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "bodegas",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/bodegas",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "crearBodega",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/existencias",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "existencias",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/movimientos",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "movimientos",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/movimientos",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "mover",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/mesas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "mesas",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/mesas",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "metodo_controlador": "crearMesa",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "PATCH",
+      "ruta": "/api/v1/mesas/{id}/estado",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "metodo_controlador": "estadoMesa",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/cajas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "cajas",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/cajas",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "metodo_controlador": "crearCaja",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/sesiones-caja",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "sesiones",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/sesiones-caja",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "abrir",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/sesiones-caja/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "resumen",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/sesiones-caja/{id}/cerrar",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "cerrar",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/recetas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "recetas",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/recetas/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "receta",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/recetas",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "crearReceta",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/recetas/{id}/activar",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "metodo_controlador": "activar",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/ventas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "ventas",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/ventas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "crearVenta",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 201
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/ventas/{id}/detalle",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "detalle",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/ventas/{id}/comprobante",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "comprobante",
+      "csrf": false,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/ventas/{id}/anular",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "anular",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/ventas/{id}/confirmar",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "metodo_controlador": "confirmar",
+      "csrf": true,
+      "autorizacion": "Actor derivado de sesión; nunca del cuerpo",
+      "respuesta_http": 200
+    }
+  ],
+  "pruebas_reales": "pruebas/B_pruebas_http.py",
+  "errores": [
+    400,
+    401,
+    403,
+    404,
+    409
+  ],
+  "evolucion_sql": "03_Aplicacion_operativa.sql (pago.medio)"
+}

@@ -1,0 +1,256 @@
+{
+  "prefijo": "/api/v1",
+  "endpoints": [
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/empleados",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C03 Listar empleados"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/empleados/{id}",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C04 Consultar empleado"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/empleados",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C02 Crear empleado sintético",
+        "C05 No aceptar tenant en el cuerpo"
+      ]
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/empleados/{id}",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C06 Inactivar antes de historial",
+        "C08 Activar empleado",
+        "C34 Conservar identidad histórica"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/novedades",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C17 Consultar novedades del período"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/novedades/{id}",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C18 Consultar novedad individual"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/novedades",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C07 No crear novedad de empleado inactivo",
+        "C09 Rechazar importe 0.00",
+        "C10 Rechazar importe -1.00",
+        "C11 Rechazar importe 1.001",
+        "C12 Rechazar importe 1000000000000.00",
+        "C13 Crear novedad 1",
+        "C14 Crear novedad 2",
+        "C15 Crear novedad 3",
+        "C16 Crear novedad 4"
+      ]
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/novedades/{id}",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C19 Editar borrador sin consumir",
+        "C27 No editar autorización"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/novedades/{id}/autorizar",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C23 Autorizar novedad 1",
+        "C24 Autorizar novedad 2",
+        "C25 Autorizar novedad 3"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/novedades/{id}/rechazar",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C26 Rechazar cuarta novedad",
+        "C33 No rechazar novedad consumida"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/liquidaciones",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C35 Listar liquidaciones del período"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/liquidaciones",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C20 Crear liquidación",
+        "C36 Nueva versión vacía"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/liquidaciones/{id}",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C22 Rechazo conserva borrador vacío",
+        "C38 Nueva versión sigue vacía",
+        "C56 Nómina contabilizada conserva neto"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/liquidaciones/{id}/simulacion",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C28 Simulación sin escritura"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/liquidaciones/{id}/aprobar",
+      "roles": "A,N",
+      "peticiones_postman": [
+        "C21 No aprobar selección sin autorización",
+        "C29 No repetir un ID en la selección",
+        "C30 Aprobar selección explícita completa",
+        "C31 Aprobación repetida idempotente",
+        "C32 No cambiar selección aprobada",
+        "C37 No consumir nuevamente en otra versión"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/cuentas",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C42 Listar cuentas del negocio"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/cuentas",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C39 Crear cuenta Debito",
+        "C40 Crear cuenta Credito",
+        "C41 Crear cuenta Auxiliar"
+      ]
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/cuentas/{id}",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C43 Editar cuenta antes de usar",
+        "C54 No redefinir cuenta con historial"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/asientos",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C59 Listado con un solo asiento por origen"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/asientos/{id}",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C51 Consultar asiento íntegro"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/asientos",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C46 No admitir importes contables del cliente",
+        "C50 Registrar nómina con tres líneas",
+        "C58 Repetir venta sin otro asiento"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/eventos",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C44 Encontrar eventos propios pendientes"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/eventos/{id}",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C45 Consultar evento de nómina",
+        "C49 Rechazos no procesan el evento",
+        "C55 Evento procesado con fecha real"
+      ]
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/eventos/{id}/procesar",
+      "roles": "A,C",
+      "peticiones_postman": [
+        "C47 No repetir cuenta en débito y crédito",
+        "C48 Exigir auxiliar para deducciones positivas",
+        "C52 Ruta de eventos repite mismo asiento",
+        "C53 No cambiar cuentas del asiento registrado",
+        "C57 Contabilizar venta histórica de B"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/reportes/{area}",
+      "roles": "Según área",
+      "peticiones_postman": [
+        "C60 Reporte JSON ventas",
+        "C62 Reporte JSON nomina",
+        "C64 Reporte JSON contabilidad",
+        "C66 Reporte JSON inventario",
+        "C68 Reporte JSON caja",
+        "C70 Rango invertido no admitido"
+      ]
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/reportes/{area}/csv",
+      "roles": "Según área",
+      "peticiones_postman": [
+        "C61 CSV idéntico al conjunto JSON ventas",
+        "C63 CSV idéntico al conjunto JSON nomina",
+        "C65 CSV idéntico al conjunto JSON contabilidad",
+        "C67 CSV idéntico al conjunto JSON inventario",
+        "C69 CSV idéntico al conjunto JSON caja"
+      ]
+    }
+  ]
+}

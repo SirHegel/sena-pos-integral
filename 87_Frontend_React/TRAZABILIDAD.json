@@ -1,0 +1,246 @@
+{
+  "codigo": "GA7-220501096-AA4-EV03",
+  "antecedente": "GA6-220501096-AA4-EV03, interfaz68 corregida",
+  "herramientas": [
+    "React19.3.1",
+    "ReactDOM19.3.1",
+    "JSX",
+    "Vite8.3.5",
+    "useReducer",
+    "useState"
+  ],
+  "pantallas": [
+    {
+      "id": "acceso",
+      "requisito": "RF01",
+      "campos_diseno": [
+        "Negocio",
+        "Correo",
+        "Contraseña"
+      ],
+      "aplicacion": "Componente React Acceso en src/vistas.jsx",
+      "componente": "Acceso"
+    },
+    {
+      "id": "inicio",
+      "requisito": "RF00",
+      "campos_diseno": [],
+      "aplicacion": "Componente React Inicio en src/vistas.jsx",
+      "componente": "Inicio"
+    },
+    {
+      "id": "usuarios",
+      "requisito": "RF02",
+      "campos_diseno": [
+        "Nombres y apellidos",
+        "Cédula como cadena",
+        "Fecha de nacimiento",
+        "Correo",
+        "Rol y estado"
+      ],
+      "aplicacion": "Componente React Usuarios en src/vistas.jsx",
+      "componente": "Usuarios"
+    },
+    {
+      "id": "roles",
+      "requisito": "RF02",
+      "campos_diseno": [
+        "Rol",
+        "Operación"
+      ],
+      "aplicacion": "Componente React Roles en src/vistas.jsx",
+      "componente": "Roles"
+    },
+    {
+      "id": "nueva-venta",
+      "requisito": "RF03",
+      "campos_diseno": [
+        "Código o nombre del producto",
+        "Bodega",
+        "Cantidad",
+        "Mesa opcional"
+      ],
+      "aplicacion": "Componente React NuevaVenta en src/vistas.jsx",
+      "componente": "NuevaVenta"
+    },
+    {
+      "id": "pago",
+      "requisito": "RF04",
+      "campos_diseno": [
+        "Medio de pago",
+        "Importe confirmado"
+      ],
+      "aplicacion": "Componente React Pago en src/vistas.jsx",
+      "componente": "Pago"
+    },
+    {
+      "id": "comprobante",
+      "requisito": "RF04",
+      "campos_diseno": [],
+      "aplicacion": "Componente React Comprobante en src/vistas.jsx",
+      "componente": "Comprobante"
+    },
+    {
+      "id": "productos",
+      "requisito": "RF05",
+      "campos_diseno": [
+        "Código",
+        "Nombre",
+        "Precio",
+        "Modalidad DIRECTO / RECETA",
+        "Unidad base"
+      ],
+      "aplicacion": "Componente React Productos en src/vistas.jsx",
+      "componente": "Productos"
+    },
+    {
+      "id": "existencias",
+      "requisito": "RF05",
+      "campos_diseno": [
+        "Bodega",
+        "Producto o insumo"
+      ],
+      "aplicacion": "Componente React Existencias en src/vistas.jsx",
+      "componente": "Existencias"
+    },
+    {
+      "id": "movimientos",
+      "requisito": "RF05",
+      "campos_diseno": [
+        "Rango de fechas",
+        "Bodega",
+        "Producto o insumo"
+      ],
+      "aplicacion": "Componente React Movimientos en src/vistas.jsx",
+      "componente": "Movimientos"
+    },
+    {
+      "id": "mesas",
+      "requisito": "RF06",
+      "campos_diseno": [
+        "Mesa"
+      ],
+      "aplicacion": "Componente React Mesas en src/vistas.jsx",
+      "componente": "Mesas"
+    },
+    {
+      "id": "caja",
+      "requisito": "RF06",
+      "campos_diseno": [
+        "Fondo de apertura",
+        "Conteo del cierre"
+      ],
+      "aplicacion": "Componente React Caja en src/vistas.jsx",
+      "componente": "Caja"
+    },
+    {
+      "id": "recetas",
+      "requisito": "RF06",
+      "campos_diseno": [
+        "Preparado",
+        "Insumo",
+        "Cantidad por preparación",
+        "Unidad de medida"
+      ],
+      "aplicacion": "Componente React Recetas en src/vistas.jsx",
+      "componente": "Recetas"
+    },
+    {
+      "id": "empleados",
+      "requisito": "RF07",
+      "campos_diseno": [
+        "Código del empleado",
+        "Nombres",
+        "Base configurable",
+        "Estado"
+      ],
+      "aplicacion": "Componente React Empleados en src/vistas.jsx",
+      "componente": "Empleados"
+    },
+    {
+      "id": "novedades",
+      "requisito": "RF07",
+      "campos_diseno": [
+        "Empleado",
+        "Período",
+        "Concepto",
+        "Devengo / deducción",
+        "Importe"
+      ],
+      "aplicacion": "Componente React Novedades en src/vistas.jsx",
+      "componente": "Novedades"
+    },
+    {
+      "id": "liquidacion",
+      "requisito": "RF07",
+      "campos_diseno": [
+        "Empleado",
+        "Período"
+      ],
+      "aplicacion": "Componente React Liquidacion en src/vistas.jsx",
+      "componente": "Liquidacion"
+    },
+    {
+      "id": "cuentas",
+      "requisito": "RF08",
+      "campos_diseno": [
+        "Código de cuenta",
+        "Nombre",
+        "Naturaleza",
+        "Estado"
+      ],
+      "aplicacion": "Componente React Cuentas en src/vistas.jsx",
+      "componente": "Cuentas"
+    },
+    {
+      "id": "asientos",
+      "requisito": "RF08",
+      "campos_diseno": [
+        "Documento de origen",
+        "Fecha",
+        "Cuenta",
+        "Débito",
+        "Crédito"
+      ],
+      "aplicacion": "Componente React Asientos en src/vistas.jsx",
+      "componente": "Asientos"
+    },
+    {
+      "id": "reportes",
+      "requisito": "RF09",
+      "campos_diseno": [
+        "Área del negocio",
+        "Rango de fechas",
+        "Estado"
+      ],
+      "aplicacion": "Componente React Reportes en src/vistas.jsx",
+      "componente": "Reportes"
+    }
+  ],
+  "colores": {
+    "texto": "#14364b",
+    "accion": "#126e68",
+    "fondo": "#f4f7f8",
+    "error": "#a22626"
+  },
+  "limites": [
+    "Estado sintético en memoria; recargar reinicia los datos",
+    "Acceso de demostración local; no autorización del servidor",
+    "No pagos reales, liquidación laboral ni contabilidad productiva"
+  ],
+  "antecedentes": [
+    "GA6-220501096-AA3-EV02 mockups",
+    "GA6-220501096-AA3-EV03 interfaces",
+    "GA6-220501096-AA4-EV02 especificación de elementos HTML y componentes CSS"
+  ],
+  "aplicacion_componentes": {
+    "estructura": "App coordina navegación y estado compartido",
+    "tabla": "DataTable renderiza JSX y estado vacío",
+    "campos": "Field genera etiquetas e identificadores useId",
+    "formularios": "DemoForm entrega valores a acciones del reducer",
+    "estado": "reducirDemo transforma copias sin escritura parcial",
+    "reportes": "Reportes usa filtros controlados y csvVentas con metadatos del mismo resultado"
+  },
+  "evolucion": "La interfaz68 se reescribe como componentes React con JSX y Hooks, conservando sus19vistas y reglas locales. No se reutilizan las plantillas de cadenas HTML ni se modifica el esquema MySQL.",
+  "estado": "Preparación local para revisión; remoto y entrega final pendientes."
+}

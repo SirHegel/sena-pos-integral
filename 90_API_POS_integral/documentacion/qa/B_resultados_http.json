@@ -1,0 +1,2847 @@
+{
+  "estado": "Pruebas HTTP reales completadas",
+  "datos": "Sintéticos; ninguna operación financiera real",
+  "motor": "MySQL8.4.13",
+  "run": "cc9cf294e4",
+  "total": 125,
+  "aprobadas": 125,
+  "casos": [
+    {
+      "caso": "Sin sesión no consulta ventas",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /bodegas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "nombre": "Bodega sintética cc9cf294e4"
+        }
+      }
+    },
+    {
+      "caso": "POST /bodegas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000002",
+          "bodega_id": "44530393-0aad-41b7-b26a-60716025a6c6",
+          "nombre": "Bodega aislada cc9cf294e4"
+        }
+      }
+    },
+    {
+      "caso": "POST /cajas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "caja_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "nombre": "Caja sintética cc9cf294e4",
+          "estado": "ACTIVA"
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "caja_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:45.8943",
+          "cerrada_en": null,
+          "fondo_inicial": 100.0,
+          "total_esperado": null,
+          "total_contado": null,
+          "caja_abierta_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "efectivo": 0.0,
+          "externo": 0.0,
+          "esperado_calculado": 100.0
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La caja ya tiene una sesión abierta",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "GET /sesiones-caja/794efab8-34b6-4203-8881-21eea7d10d61 HTTP403",
+      "aprobado": true,
+      "detalle": {
+        "http": 403,
+        "respuesta": {
+          "mensaje": "El recurso pertenece a otro operador del negocio",
+          "codigo": "PERMISO_DENEGADO"
+        }
+      }
+    },
+    {
+      "caso": "GET /ventas HTTP403",
+      "aprobado": true,
+      "detalle": {
+        "http": 403,
+        "respuesta": {
+          "mensaje": "La operación no está autorizada para el rol actual",
+          "codigo": "PERMISO_DENEGADO"
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP403",
+      "aprobado": true,
+      "detalle": {
+        "http": 403,
+        "respuesta": {
+          "mensaje": "La operación no está autorizada para el rol actual",
+          "codigo": "PERMISO_DENEGADO"
+        }
+      }
+    },
+    {
+      "caso": "POST /productos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+          "codigo": "cc9cf294e4DIRECTO",
+          "nombre": "Producto sintético DIRECTO",
+          "precio_vigente": 10000.0,
+          "tasa_iva": 0.19,
+          "tipo": "VENDIBLE",
+          "unidad": "Unidad",
+          "modo_descuento": "DIRECTO",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "d75bed5c-382e-4f8e-ba62-e469ce6b39c8",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 5.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e4entrada1",
+          "registrado_en": "2026-11-03T16:57:45.954455"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 5.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "d75bed5c-382e-4f8e-ba62-e469ce6b39c8",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 5.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e4entrada1",
+          "registrado_en": "2026-11-03T16:57:45.954455"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 5.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Entrada idempotente no duplica saldo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /movimientos HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "El documento ya existe con otra cantidad",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "El ajuste dejaría existencias negativas",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 5.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Ajuste fallido conserva saldo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /ventas HTTP404",
+      "aprobado": true,
+      "detalle": {
+        "http": 404,
+        "respuesta": {
+          "mensaje": "No se encontró el recurso en el negocio actual",
+          "codigo": "NO_ENCONTRADO"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP400",
+      "aprobado": true,
+      "detalle": {
+        "http": 400,
+        "respuesta": {
+          "mensaje": "cantidad: entero entre 1 y 1000000",
+          "codigo": "DATOS_INVALIDOS"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "Existencias insuficientes para agregar la demanda conjunta al detalle",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 5.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Adición sin stock se rechaza sin descontar",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /bodegas HTTP400",
+      "aprobado": true,
+      "detalle": {
+        "http": 400,
+        "respuesta": {
+          "mensaje": "cuerpo: contiene campos no permitidos",
+          "codigo": "DATOS_INVALIDOS"
+        }
+      }
+    },
+    {
+      "caso": "POST /mesas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "codigo": "M-cc9cf294e4",
+          "estado": "DISPONIBLE"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "d6f59a9b-05b3-41e3-b968-c158d1223f06",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.06879",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "d6f59a9b-05b3-41e3-b968-c158d1223f06",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 11900.0,
+          "base": 10000.0,
+          "iva": 1900.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La mesa no está disponible",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "PATCH /mesas/d1584fc6-f245-4ac2-8a8f-779671c92aaa/estado HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La mesa tiene una venta abierta",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/d6f59a9b-05b3-41e3-b968-c158d1223f06/anular HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "d6f59a9b-05b3-41e3-b968-c158d1223f06",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "ANULADA",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.06879",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "d6f59a9b-05b3-41e3-b968-c158d1223f06",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 11900.0,
+          "base": 10000.0,
+          "iva": 1900.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "GET /mesas HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+            "codigo": "M-cc9cf294e4",
+            "estado": "DISPONIBLE"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "mesa_id": "6c197f34-d72e-41ee-bab8-a8651a2297c4",
+            "codigo": "M-f3ed323220",
+            "estado": "DISPONIBLE"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Anular libera mesa",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.125046",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 2.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 23800.0,
+          "base": 20000.0,
+          "iva": 3800.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/864d6839-cd80-4b94-87ec-6245ac594284/confirmar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-864d6839-cd80-4b94-87ec-6245ac594284",
+          "creada_en": "2026-11-03T16:57:46.125046",
+          "pagada_en": "2026-11-03T16:57:46.152352",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 2.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 23800.0,
+          "base": 20000.0,
+          "iva": 3800.0,
+          "pagos": [
+            {
+              "pago_id": "d5d9d419-dd9f-422e-a6b8-052431dbba32",
+              "referencia": "cc9cf294e4pago1",
+              "importe": 23800.0,
+              "estado": "CONFIRMADO",
+              "medio": "EFECTIVO",
+              "confirmado_en": "2026-11-03T16:57:46.152352"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "Precio e IVA por línea correctos",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 3.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "POST /ventas/864d6839-cd80-4b94-87ec-6245ac594284/confirmar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-864d6839-cd80-4b94-87ec-6245ac594284",
+          "creada_en": "2026-11-03T16:57:46.125046",
+          "pagada_en": "2026-11-03T16:57:46.152352",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 2.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 23800.0,
+          "base": 20000.0,
+          "iva": 3800.0,
+          "pagos": [
+            {
+              "pago_id": "d5d9d419-dd9f-422e-a6b8-052431dbba32",
+              "referencia": "cc9cf294e4pago1",
+              "importe": 23800.0,
+              "estado": "CONFIRMADO",
+              "medio": "EFECTIVO",
+              "confirmado_en": "2026-11-03T16:57:46.152352"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 3.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Repetición devuelve misma factura y saldo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /ventas/864d6839-cd80-4b94-87ec-6245ac594284/confirmar HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La clave de idempotencia ya corresponde a otra solicitud",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/864d6839-cd80-4b94-87ec-6245ac594284/confirmar HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "Sólo se modifica una venta en borrador",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "PUT /ventas/864d6839-cd80-4b94-87ec-6245ac594284/detalle HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "Sólo se modifica una venta en borrador",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "GET /ventas/864d6839-cd80-4b94-87ec-6245ac594284/comprobante HTTP404",
+      "aprobado": true,
+      "detalle": {
+        "http": 404,
+        "respuesta": {
+          "mensaje": "No se encontró el recurso en el negocio actual",
+          "codigo": "NO_ENCONTRADO"
+        }
+      }
+    },
+    {
+      "caso": "GET /ventas/864d6839-cd80-4b94-87ec-6245ac594284/comprobante HTTP403",
+      "aprobado": true,
+      "detalle": {
+        "http": 403,
+        "respuesta": {
+          "mensaje": "El recurso pertenece a otro operador del negocio",
+          "codigo": "PERMISO_DENEGADO"
+        }
+      }
+    },
+    {
+      "caso": "PUT /productos/efa23382-ca08-4517-b307-7e383cec6ef2 HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+          "codigo": "cc9cf294e4DIRECTO",
+          "nombre": "Producto sintético DIRECTO",
+          "precio_vigente": 11000.0,
+          "tasa_iva": 0.19,
+          "tipo": "VENDIBLE",
+          "unidad": "Unidad",
+          "modo_descuento": "DIRECTO",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "GET /ventas/864d6839-cd80-4b94-87ec-6245ac594284/comprobante HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-864d6839-cd80-4b94-87ec-6245ac594284",
+          "creada_en": "2026-11-03T16:57:46.125046",
+          "pagada_en": "2026-11-03T16:57:46.152352",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 2.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 23800.0,
+          "base": 20000.0,
+          "iva": 3800.0,
+          "pagos": [
+            {
+              "pago_id": "d5d9d419-dd9f-422e-a6b8-052431dbba32",
+              "referencia": "cc9cf294e4pago1",
+              "importe": 23800.0,
+              "estado": "CONFIRMADO",
+              "medio": "EFECTIVO",
+              "confirmado_en": "2026-11-03T16:57:46.152352"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "Precio histórico permanece tras catálogo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.240244",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 11000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 13090.0,
+          "base": 11000.0,
+          "iva": 2090.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "PUT /productos/efa23382-ca08-4517-b307-7e383cec6ef2 HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+          "codigo": "cc9cf294e4DIRECTO",
+          "nombre": "Producto sintético DIRECTO",
+          "precio_vigente": 12000.0,
+          "tasa_iva": 0.19,
+          "tipo": "VENDIBLE",
+          "unidad": "Unidad",
+          "modo_descuento": "DIRECTO",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 3.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "POST /ventas/631eafc9-c789-4bc0-ab6b-a898c3dc8ecc/confirmar HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "Cambió el precio o IVA; revise y actualice el detalle antes de confirmar",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 3.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Cambio de precio no altera existencias",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "PUT /ventas/631eafc9-c789-4bc0-ab6b-a898c3dc8ecc/detalle HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.240244",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 12000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 14280.0,
+          "base": 12000.0,
+          "iva": 2280.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/631eafc9-c789-4bc0-ab6b-a898c3dc8ecc/confirmar HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La operación entra en conflicto con una restricción del modelo",
+          "codigo": "CONFLICTO_DATOS"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 3.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Fallo tardío de referencia revierte stock",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /ventas/631eafc9-c789-4bc0-ab6b-a898c3dc8ecc/comprobante HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.240244",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 12000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 14280.0,
+          "base": 12000.0,
+          "iva": 2280.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "Fallo tardío revierte pago y estado",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /ventas/631eafc9-c789-4bc0-ab6b-a898c3dc8ecc/confirmar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+          "creada_en": "2026-11-03T16:57:46.240244",
+          "pagada_en": "2026-11-03T16:57:46.391006",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 12000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 14280.0,
+          "base": 12000.0,
+          "iva": 2280.0,
+          "pagos": [
+            {
+              "pago_id": "71dfbc67-6099-4201-8461-6e06683b89df",
+              "referencia": "cc9cf294e400d9156c7cab4e65a686404e272e21ab",
+              "importe": 14280.0,
+              "estado": "CONFIRMADO",
+              "medio": "EXTERNO",
+              "confirmado_en": "2026-11-03T16:57:46.391006"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "Rollback retiró también la clave de idempotencia",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /sesiones-caja/794efab8-34b6-4203-8881-21eea7d10d61 HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "caja_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:45.8943",
+          "cerrada_en": null,
+          "fondo_inicial": 100.0,
+          "total_esperado": null,
+          "total_contado": null,
+          "caja_abierta_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "efectivo": 23800.0,
+          "externo": 14280.0,
+          "esperado_calculado": 23900.0
+        }
+      }
+    },
+    {
+      "caso": "Efectivo y externo separados",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /productos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+          "codigo": "cc9cf294e4INSUMO",
+          "nombre": "Producto sintético INSUMO",
+          "precio_vigente": 1.0,
+          "tasa_iva": 0.0,
+          "tipo": "INSUMO",
+          "unidad": "g",
+          "modo_descuento": "DIRECTO",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "6d5b798d-c9b8-4fb4-b6f2-320f48370d87",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 12.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e43318b5c0916c42ea8131c3f7be04912a",
+          "registrado_en": "2026-11-03T16:57:46.422677"
+        }
+      }
+    },
+    {
+      "caso": "POST /productos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "producto_id": "bc2e8154-2eef-4634-9ea8-a5c847a918fc",
+          "codigo": "cc9cf294e4PLATO1",
+          "nombre": "Producto sintético PLATO1",
+          "precio_vigente": 1000.0,
+          "tasa_iva": 0.0,
+          "tipo": "PLATO",
+          "unidad": "Unidad",
+          "modo_descuento": "RECETA",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "POST /recetas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+          "producto_plato_id": "bc2e8154-2eef-4634-9ea8-a5c847a918fc",
+          "version": 1,
+          "rendimiento": 1.0,
+          "activa": 0,
+          "plato_activo_id": null,
+          "componentes": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+              "linea_no": 1,
+              "producto_insumo_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+              "cantidad": 6.0,
+              "codigo": "cc9cf294e4INSUMO",
+              "nombre": "Producto sintético INSUMO",
+              "unidad": "g"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "caso": "POST /recetas/069c639a-f32b-4255-b492-42a088f042d8/activar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+          "producto_plato_id": "bc2e8154-2eef-4634-9ea8-a5c847a918fc",
+          "version": 1,
+          "rendimiento": 1.0,
+          "activa": 1,
+          "plato_activo_id": "bc2e8154-2eef-4634-9ea8-a5c847a918fc",
+          "componentes": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+              "linea_no": 1,
+              "producto_insumo_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+              "cantidad": 6.0,
+              "codigo": "cc9cf294e4INSUMO",
+              "nombre": "Producto sintético INSUMO",
+              "unidad": "g"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "caso": "POST /productos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "producto_id": "c3e0b21a-065f-4252-8dea-05d6d025f6cd",
+          "codigo": "cc9cf294e4PLATO2",
+          "nombre": "Producto sintético PLATO2",
+          "precio_vigente": 1000.0,
+          "tasa_iva": 0.0,
+          "tipo": "PLATO",
+          "unidad": "Unidad",
+          "modo_descuento": "RECETA",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "POST /recetas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+          "producto_plato_id": "c3e0b21a-065f-4252-8dea-05d6d025f6cd",
+          "version": 1,
+          "rendimiento": 1.0,
+          "activa": 0,
+          "plato_activo_id": null,
+          "componentes": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+              "linea_no": 1,
+              "producto_insumo_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+              "cantidad": 6.0,
+              "codigo": "cc9cf294e4INSUMO",
+              "nombre": "Producto sintético INSUMO",
+              "unidad": "g"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "caso": "POST /recetas/fd7c17a9-e01a-46e1-8d06-c69bf0ef233d/activar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+          "producto_plato_id": "c3e0b21a-065f-4252-8dea-05d6d025f6cd",
+          "version": 1,
+          "rendimiento": 1.0,
+          "activa": 1,
+          "plato_activo_id": "c3e0b21a-065f-4252-8dea-05d6d025f6cd",
+          "componentes": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+              "linea_no": 1,
+              "producto_insumo_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+              "cantidad": 6.0,
+              "codigo": "cc9cf294e4INSUMO",
+              "nombre": "Producto sintético INSUMO",
+              "unidad": "g"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.489687",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+              "linea_no": 1,
+              "producto_id": "bc2e8154-2eef-4634-9ea8-a5c847a918fc",
+              "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+              "cantidad": 1.0,
+              "precio_unitario": 1000.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4PLATO1",
+              "nombre": "Producto sintético PLATO1",
+              "unidad": "Unidad"
+            },
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+              "linea_no": 2,
+              "producto_id": "c3e0b21a-065f-4252-8dea-05d6d025f6cd",
+              "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+              "cantidad": 1.0,
+              "precio_unitario": 1000.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4PLATO2",
+              "nombre": "Producto sintético PLATO2",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 2000.0,
+          "base": 2000.0,
+          "iva": 0.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "b72e680f-ed18-4234-bb1c-0216a38798e9",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": -2.0,
+          "tipo_origen": "AJUSTE",
+          "documento_origen": "cc9cf294e4consumo_intermedio",
+          "registrado_en": "2026-11-03T16:57:46.504379"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "Existencias insuficientes para agregar la demanda conjunta al detalle",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/99fc269d-f17d-4caa-b065-07344d6223ca/confirmar HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "Existencias insuficientes para la demanda conjunta",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 2.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 10.0,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Demanda agregada falla sin consumir dos veces saldo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "be945256-84cf-4197-89f4-dc9732bb02a3",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 2.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e44348934d15e244fd960f440c008d64f3",
+          "registrado_en": "2026-11-03T16:57:46.5443"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/99fc269d-f17d-4caa-b065-07344d6223ca/confirmar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-99fc269d-f17d-4caa-b065-07344d6223ca",
+          "creada_en": "2026-11-03T16:57:46.489687",
+          "pagada_en": "2026-11-03T16:57:46.556177",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+              "linea_no": 1,
+              "producto_id": "bc2e8154-2eef-4634-9ea8-a5c847a918fc",
+              "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+              "cantidad": 1.0,
+              "precio_unitario": 1000.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4PLATO1",
+              "nombre": "Producto sintético PLATO1",
+              "unidad": "Unidad"
+            },
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+              "linea_no": 2,
+              "producto_id": "c3e0b21a-065f-4252-8dea-05d6d025f6cd",
+              "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+              "cantidad": 1.0,
+              "precio_unitario": 1000.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4PLATO2",
+              "nombre": "Producto sintético PLATO2",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 2000.0,
+          "base": 2000.0,
+          "iva": 0.0,
+          "pagos": [
+            {
+              "pago_id": "9b226d5b-f9ab-45fd-b69f-6c530e57907e",
+              "referencia": "cc9cf294e4531b3084ba8b485e9277dd983043cb27",
+              "importe": 2000.0,
+              "estado": "CONFIRMADO",
+              "medio": "EFECTIVO",
+              "confirmado_en": "2026-11-03T16:57:46.556177"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 2.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.0,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 2.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.0,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Dos recetas consumen12 sin descontar platos",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /productos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "producto_id": "0477bd7a-8dcf-45ea-ad9c-1a96144fe500",
+          "codigo": "cc9cf294e4FRACCION",
+          "nombre": "Producto sintético FRACCION",
+          "precio_vigente": 100.0,
+          "tasa_iva": 0.0,
+          "tipo": "PLATO",
+          "unidad": "Unidad",
+          "modo_descuento": "RECETA",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "46b23828-6873-4770-b546-a45aaf9a4cf5",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 1.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e40c27f2e747244c0ca73d07fe383f5701",
+          "registrado_en": "2026-11-03T16:57:46.58777"
+        }
+      }
+    },
+    {
+      "caso": "POST /recetas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+          "producto_plato_id": "0477bd7a-8dcf-45ea-ad9c-1a96144fe500",
+          "version": 1,
+          "rendimiento": 3.0,
+          "activa": 0,
+          "plato_activo_id": null,
+          "componentes": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+              "linea_no": 1,
+              "producto_insumo_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+              "cantidad": 1.0,
+              "codigo": "cc9cf294e4INSUMO",
+              "nombre": "Producto sintético INSUMO",
+              "unidad": "g"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "caso": "POST /recetas/e1b4897b-9073-48d8-8754-109190ded955/activar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+          "producto_plato_id": "0477bd7a-8dcf-45ea-ad9c-1a96144fe500",
+          "version": 1,
+          "rendimiento": 3.0,
+          "activa": 1,
+          "plato_activo_id": "0477bd7a-8dcf-45ea-ad9c-1a96144fe500",
+          "componentes": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+              "linea_no": 1,
+              "producto_insumo_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+              "cantidad": 1.0,
+              "codigo": "cc9cf294e4INSUMO",
+              "nombre": "Producto sintético INSUMO",
+              "unidad": "g"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.618059",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+              "linea_no": 1,
+              "producto_id": "0477bd7a-8dcf-45ea-ad9c-1a96144fe500",
+              "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+              "cantidad": 1.0,
+              "precio_unitario": 100.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4FRACCION",
+              "nombre": "Producto sintético FRACCION",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 100.0,
+          "base": 100.0,
+          "iva": 0.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/b21c0bad-8e42-4f9a-aaf4-1058a00a9d65/confirmar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+          "creada_en": "2026-11-03T16:57:46.618059",
+          "pagada_en": "2026-11-03T16:57:46.633329",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+              "linea_no": 1,
+              "producto_id": "0477bd7a-8dcf-45ea-ad9c-1a96144fe500",
+              "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+              "cantidad": 1.0,
+              "precio_unitario": 100.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4FRACCION",
+              "nombre": "Producto sintético FRACCION",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 100.0,
+          "base": 100.0,
+          "iva": 0.0,
+          "pagos": [
+            {
+              "pago_id": "d3f15c30-b91b-4f1a-8c0a-c6dba9964018",
+              "referencia": "cc9cf294e4dc44fb68451e45ee803a2f926b862172",
+              "importe": 100.0,
+              "estado": "CONFIRMADO",
+              "medio": "EFECTIVO",
+              "confirmado_en": "2026-11-03T16:57:46.633329"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 2.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Rendimiento conserva unidad y redondeo0.001",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /movimientos?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "212c21ae-2466-4ed5-a0ce-34880b478c01",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+            "linea_no": 1,
+            "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+            "componente_no": 1,
+            "cantidad_delta": -0.334,
+            "tipo_origen": "RECETA",
+            "documento_origen": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65:1",
+            "registrado_en": "2026-11-03T16:57:46.63298",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "46b23828-6873-4770-b546-a45aaf9a4cf5",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 1.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e40c27f2e747244c0ca73d07fe383f5701",
+            "registrado_en": "2026-11-03T16:57:46.58777",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "1b227586-c7ba-4383-aa54-21dd86551b2b",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+            "linea_no": 2,
+            "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+            "componente_no": 1,
+            "cantidad_delta": -6.0,
+            "tipo_origen": "RECETA",
+            "documento_origen": "99fc269d-f17d-4caa-b065-07344d6223ca:2",
+            "registrado_en": "2026-11-03T16:57:46.55601",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "ad5a6b46-20bc-40d7-b7a2-fa168900cd8d",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+            "linea_no": 1,
+            "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+            "componente_no": 1,
+            "cantidad_delta": -6.0,
+            "tipo_origen": "RECETA",
+            "documento_origen": "99fc269d-f17d-4caa-b065-07344d6223ca:1",
+            "registrado_en": "2026-11-03T16:57:46.555711",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "be945256-84cf-4197-89f4-dc9732bb02a3",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 2.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e44348934d15e244fd960f440c008d64f3",
+            "registrado_en": "2026-11-03T16:57:46.5443",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "b72e680f-ed18-4234-bb1c-0216a38798e9",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -2.0,
+            "tipo_origen": "AJUSTE",
+            "documento_origen": "cc9cf294e4consumo_intermedio",
+            "registrado_en": "2026-11-03T16:57:46.504379",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "6d5b798d-c9b8-4fb4-b6f2-320f48370d87",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 12.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e43318b5c0916c42ea8131c3f7be04912a",
+            "registrado_en": "2026-11-03T16:57:46.422677",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "812cdc80-2fc1-4915-8770-462863a79e81",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+            "linea_no": 1,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -1.0,
+            "tipo_origen": "VENTA_DIRECTA",
+            "documento_origen": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc:1",
+            "registrado_en": "2026-11-03T16:57:46.390786",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "a5ad931c-d72e-4939-9b29-39617af74ccb",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+            "linea_no": 1,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -2.0,
+            "tipo_origen": "VENTA_DIRECTA",
+            "documento_origen": "864d6839-cd80-4b94-87ec-6245ac594284:1",
+            "registrado_en": "2026-11-03T16:57:46.151901",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "d75bed5c-382e-4f8e-ba62-e469ce6b39c8",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 5.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e4entrada1",
+            "registrado_en": "2026-11-03T16:57:45.954455",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Kardex receta conserva origen y consumo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /sesiones-caja/794efab8-34b6-4203-8881-21eea7d10d61 HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "caja_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:45.8943",
+          "cerrada_en": null,
+          "fondo_inicial": 100.0,
+          "total_esperado": null,
+          "total_contado": null,
+          "caja_abierta_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "efectivo": 25900.0,
+          "externo": 14280.0,
+          "esperado_calculado": 26000.0
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja/794efab8-34b6-4203-8881-21eea7d10d61/cerrar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "caja_id": "da11ed3a-0448-40c3-874a-e33d2da26608",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:45.8943",
+          "cerrada_en": "2026-11-03T16:57:46.659243",
+          "fondo_inicial": 100.0,
+          "total_esperado": 26000.0,
+          "total_contado": 26000.0,
+          "caja_abierta_id": null,
+          "efectivo": 25900.0,
+          "externo": 14280.0,
+          "esperado_calculado": 26000.0,
+          "diferencia": 0.0
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas/864d6839-cd80-4b94-87ec-6245ac594284/confirmar HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": "d1584fc6-f245-4ac2-8a8f-779671c92aaa",
+          "sesion_caja_id": "794efab8-34b6-4203-8881-21eea7d10d61",
+          "estado": "PAGADA",
+          "numero_factura": "ACA-864d6839-cd80-4b94-87ec-6245ac594284",
+          "creada_en": "2026-11-03T16:57:46.125046",
+          "pagada_en": "2026-11-03T16:57:46.152352",
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 2.0,
+              "precio_unitario": 10000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 23800.0,
+          "base": 20000.0,
+          "iva": 3800.0,
+          "pagos": [
+            {
+              "pago_id": "d5d9d419-dd9f-422e-a6b8-052431dbba32",
+              "referencia": "cc9cf294e4pago1",
+              "importe": 23800.0,
+              "estado": "CONFIRMADO",
+              "medio": "EFECTIVO",
+              "confirmado_en": "2026-11-03T16:57:46.152352"
+            }
+          ],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La sesión de caja está cerrada",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja/794efab8-34b6-4203-8881-21eea7d10d61/cerrar HTTP409",
+      "aprobado": true,
+      "detalle": {
+        "http": 409,
+        "respuesta": {
+          "mensaje": "La sesión de caja está cerrada",
+          "codigo": "CONFLICTO_OPERATIVO"
+        }
+      }
+    },
+    {
+      "caso": "POST /cajas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "caja_id": "044c4fcf-2b07-4f76-afd6-e56056797253",
+          "nombre": "Caja concurrencia cc9cf294e4",
+          "estado": "ACTIVA"
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "ea9fa89e-9ea1-4cb9-9aaa-65fb1ea57215",
+          "caja_id": "044c4fcf-2b07-4f76-afd6-e56056797253",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:46.697268",
+          "cerrada_en": null,
+          "fondo_inicial": 0.0,
+          "total_esperado": null,
+          "total_contado": null,
+          "caja_abierta_id": "044c4fcf-2b07-4f76-afd6-e56056797253",
+          "efectivo": 0.0,
+          "externo": 0.0,
+          "esperado_calculado": 0.0
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "c3c449b1-35a9-41b0-a550-5623cb5ecdcf",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 20.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e4dfd00423949843fa96877e4346e1607c",
+          "registrado_en": "2026-11-03T16:57:46.710559"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "52811a59-839f-45bf-8b73-8c27ce9638c2",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "ea9fa89e-9ea1-4cb9-9aaa-65fb1ea57215",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.720309",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "52811a59-839f-45bf-8b73-8c27ce9638c2",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 12000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 14280.0,
+          "base": 12000.0,
+          "iva": 2280.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 22.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Cobros concurrentes misma clave ambos200 misma factura",
+      "aprobado": true,
+      "detalle": {
+        "http": [
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 21.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Cobro concurrente descuenta una sola vez",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /productos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+          "codigo": "cc9cf294e4ULTIMA",
+          "nombre": "Producto sintético ULTIMA",
+          "precio_vigente": 5.0,
+          "tasa_iva": 0.0,
+          "tipo": "VENDIBLE",
+          "unidad": "Unidad",
+          "modo_descuento": "DIRECTO",
+          "activo": 1
+        }
+      }
+    },
+    {
+      "caso": "POST /movimientos HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "movimiento_id": "f9e7845c-a6c3-48fa-9ee5-fa753b9a47fc",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+          "venta_id": null,
+          "linea_no": null,
+          "receta_id": null,
+          "componente_no": 0,
+          "cantidad_delta": 1.0,
+          "tipo_origen": "ENTRADA",
+          "documento_origen": "cc9cf294e49f85e01f5b6844a5bb70a15c5b397da4",
+          "registrado_en": "2026-11-03T16:57:46.774194"
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "8b2d880c-2358-49f2-b5c6-9ec50b7e9592",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "ea9fa89e-9ea1-4cb9-9aaa-65fb1ea57215",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.783556",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "8b2d880c-2358-49f2-b5c6-9ec50b7e9592",
+              "linea_no": 1,
+              "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 5.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4ULTIMA",
+              "nombre": "Producto sintético ULTIMA",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 5.0,
+          "base": 5.0,
+          "iva": 0.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "POST /cajas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "caja_id": "cbbaac9c-632a-437d-a340-214ef35cfb91",
+          "nombre": "Caja independiente cc9cf294e4",
+          "estado": "ACTIVA"
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "fffd3c7b-7dde-4cf8-93f6-4be7b1b0911e",
+          "caja_id": "cbbaac9c-632a-437d-a340-214ef35cfb91",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:46.806366",
+          "cerrada_en": null,
+          "fondo_inicial": 0.0,
+          "total_esperado": null,
+          "total_contado": null,
+          "caja_abierta_id": "cbbaac9c-632a-437d-a340-214ef35cfb91",
+          "efectivo": 0.0,
+          "externo": 0.0,
+          "esperado_calculado": 0.0
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "2c5f758a-bbea-4bd4-96ce-a0545d3753ca",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "fffd3c7b-7dde-4cf8-93f6-4be7b1b0911e",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.817844",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "2c5f758a-bbea-4bd4-96ce-a0545d3753ca",
+              "linea_no": 1,
+              "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 5.0,
+              "tasa_iva": 0.0,
+              "codigo": "cc9cf294e4ULTIMA",
+              "nombre": "Producto sintético ULTIMA",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 5.0,
+          "base": 5.0,
+          "iva": 0.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "Última unidad en cajas distintas sólo una venta confirmada",
+      "aprobado": true,
+      "detalle": {
+        "http": [
+          409,
+          200
+        ]
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 21.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+            "stock": 0.0,
+            "codigo": "cc9cf294e4ULTIMA",
+            "nombre": "Producto sintético ULTIMA",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Concurrencia no produce saldo negativo",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "POST /cajas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "caja_id": "5db1534e-fbad-47a5-9f92-f195a0a72bf3",
+          "nombre": "Caja cierre cc9cf294e4",
+          "estado": "ACTIVA"
+        }
+      }
+    },
+    {
+      "caso": "POST /sesiones-caja HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "sesion_id": "2f3933c7-571d-4e8a-ac59-ff961890a3d4",
+          "caja_id": "5db1534e-fbad-47a5-9f92-f195a0a72bf3",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "abierta_en": "2026-11-03T16:57:46.861902",
+          "cerrada_en": null,
+          "fondo_inicial": 10.0,
+          "total_esperado": null,
+          "total_contado": null,
+          "caja_abierta_id": "5db1534e-fbad-47a5-9f92-f195a0a72bf3",
+          "efectivo": 0.0,
+          "externo": 0.0,
+          "esperado_calculado": 10.0
+        }
+      }
+    },
+    {
+      "caso": "POST /ventas HTTP201",
+      "aprobado": true,
+      "detalle": {
+        "http": 201,
+        "respuesta": {
+          "tenant_id": "90000000-0000-4000-8000-000000000001",
+          "venta_id": "02ba1e31-08f6-4485-ab04-39aa839c8482",
+          "usuario_id": "ab6d0ec7-05de-3ab7-b47f-c4748f3174ca",
+          "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+          "mesa_id": null,
+          "sesion_caja_id": "2f3933c7-571d-4e8a-ac59-ff961890a3d4",
+          "estado": "BORRADOR",
+          "numero_factura": null,
+          "creada_en": "2026-11-03T16:57:46.87209",
+          "pagada_en": null,
+          "lineas": [
+            {
+              "tenant_id": "90000000-0000-4000-8000-000000000001",
+              "venta_id": "02ba1e31-08f6-4485-ab04-39aa839c8482",
+              "linea_no": 1,
+              "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+              "receta_id": null,
+              "cantidad": 1.0,
+              "precio_unitario": 12000.0,
+              "tasa_iva": 0.19,
+              "codigo": "cc9cf294e4DIRECTO",
+              "nombre": "Producto sintético DIRECTO",
+              "unidad": "Unidad"
+            }
+          ],
+          "total": 14280.0,
+          "base": 12000.0,
+          "iva": 2280.0,
+          "pagos": [],
+          "naturaleza": "Comprobante académico; no constituye facturación electrónica DIAN"
+        }
+      }
+    },
+    {
+      "caso": "Cierre concurrente serializa confirmación",
+      "aprobado": true,
+      "detalle": {
+        "http_pago": 409,
+        "http_cierre": 200,
+        "esperado": "10.0"
+      }
+    },
+    {
+      "caso": "GET /movimientos?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "ec7fb251-b0b7-4549-b9b5-74a59752d123",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+            "venta_id": "2c5f758a-bbea-4bd4-96ce-a0545d3753ca",
+            "linea_no": 1,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -1.0,
+            "tipo_origen": "VENTA_DIRECTA",
+            "documento_origen": "2c5f758a-bbea-4bd4-96ce-a0545d3753ca:1",
+            "registrado_en": "2026-11-03T16:57:46.834326",
+            "codigo": "cc9cf294e4ULTIMA",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "f9e7845c-a6c3-48fa-9ee5-fa753b9a47fc",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 1.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e49f85e01f5b6844a5bb70a15c5b397da4",
+            "registrado_en": "2026-11-03T16:57:46.774194",
+            "codigo": "cc9cf294e4ULTIMA",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "d366e6a8-8342-4b73-9013-911f043af5eb",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": "52811a59-839f-45bf-8b73-8c27ce9638c2",
+            "linea_no": 1,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -1.0,
+            "tipo_origen": "VENTA_DIRECTA",
+            "documento_origen": "52811a59-839f-45bf-8b73-8c27ce9638c2:1",
+            "registrado_en": "2026-11-03T16:57:46.747002",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "c3c449b1-35a9-41b0-a550-5623cb5ecdcf",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 20.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e4dfd00423949843fa96877e4346e1607c",
+            "registrado_en": "2026-11-03T16:57:46.710559",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "212c21ae-2466-4ed5-a0ce-34880b478c01",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65",
+            "linea_no": 1,
+            "receta_id": "e1b4897b-9073-48d8-8754-109190ded955",
+            "componente_no": 1,
+            "cantidad_delta": -0.334,
+            "tipo_origen": "RECETA",
+            "documento_origen": "b21c0bad-8e42-4f9a-aaf4-1058a00a9d65:1",
+            "registrado_en": "2026-11-03T16:57:46.63298",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "46b23828-6873-4770-b546-a45aaf9a4cf5",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 1.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e40c27f2e747244c0ca73d07fe383f5701",
+            "registrado_en": "2026-11-03T16:57:46.58777",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "1b227586-c7ba-4383-aa54-21dd86551b2b",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+            "linea_no": 2,
+            "receta_id": "fd7c17a9-e01a-46e1-8d06-c69bf0ef233d",
+            "componente_no": 1,
+            "cantidad_delta": -6.0,
+            "tipo_origen": "RECETA",
+            "documento_origen": "99fc269d-f17d-4caa-b065-07344d6223ca:2",
+            "registrado_en": "2026-11-03T16:57:46.55601",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "ad5a6b46-20bc-40d7-b7a2-fa168900cd8d",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": "99fc269d-f17d-4caa-b065-07344d6223ca",
+            "linea_no": 1,
+            "receta_id": "069c639a-f32b-4255-b492-42a088f042d8",
+            "componente_no": 1,
+            "cantidad_delta": -6.0,
+            "tipo_origen": "RECETA",
+            "documento_origen": "99fc269d-f17d-4caa-b065-07344d6223ca:1",
+            "registrado_en": "2026-11-03T16:57:46.555711",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "be945256-84cf-4197-89f4-dc9732bb02a3",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 2.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e44348934d15e244fd960f440c008d64f3",
+            "registrado_en": "2026-11-03T16:57:46.5443",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "b72e680f-ed18-4234-bb1c-0216a38798e9",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -2.0,
+            "tipo_origen": "AJUSTE",
+            "documento_origen": "cc9cf294e4consumo_intermedio",
+            "registrado_en": "2026-11-03T16:57:46.504379",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "6d5b798d-c9b8-4fb4-b6f2-320f48370d87",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 12.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e43318b5c0916c42ea8131c3f7be04912a",
+            "registrado_en": "2026-11-03T16:57:46.422677",
+            "codigo": "cc9cf294e4INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "812cdc80-2fc1-4915-8770-462863a79e81",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc",
+            "linea_no": 1,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -1.0,
+            "tipo_origen": "VENTA_DIRECTA",
+            "documento_origen": "631eafc9-c789-4bc0-ab6b-a898c3dc8ecc:1",
+            "registrado_en": "2026-11-03T16:57:46.390786",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "a5ad931c-d72e-4939-9b29-39617af74ccb",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": "864d6839-cd80-4b94-87ec-6245ac594284",
+            "linea_no": 1,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": -2.0,
+            "tipo_origen": "VENTA_DIRECTA",
+            "documento_origen": "864d6839-cd80-4b94-87ec-6245ac594284:1",
+            "registrado_en": "2026-11-03T16:57:46.151901",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "movimiento_id": "d75bed5c-382e-4f8e-ba62-e469ce6b39c8",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "venta_id": null,
+            "linea_no": null,
+            "receta_id": null,
+            "componente_no": 0,
+            "cantidad_delta": 5.0,
+            "tipo_origen": "ENTRADA",
+            "documento_origen": "cc9cf294e4entrada1",
+            "registrado_en": "2026-11-03T16:57:45.954455",
+            "codigo": "cc9cf294e4DIRECTO",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 21.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+            "stock": 0.0,
+            "codigo": "cc9cf294e4ULTIMA",
+            "nombre": "Producto sintético ULTIMA",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Saldo coincide con kardex efa23382-ca08-4517-b307-7e383cec6ef2",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 21.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+            "stock": 0.0,
+            "codigo": "cc9cf294e4ULTIMA",
+            "nombre": "Producto sintético ULTIMA",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Saldo coincide con kardex 9af8c338-a022-46bf-ac3e-bc348391569f",
+      "aprobado": true,
+      "detalle": null
+    },
+    {
+      "caso": "GET /existencias?bodegaId=c256aa04-3f51-4b70-992f-ae5f9c0e0edc HTTP200",
+      "aprobado": true,
+      "detalle": {
+        "http": 200,
+        "respuesta": [
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "efa23382-ca08-4517-b307-7e383cec6ef2",
+            "stock": 21.0,
+            "codigo": "cc9cf294e4DIRECTO",
+            "nombre": "Producto sintético DIRECTO",
+            "unidad": "Unidad"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "9af8c338-a022-46bf-ac3e-bc348391569f",
+            "stock": 0.666,
+            "codigo": "cc9cf294e4INSUMO",
+            "nombre": "Producto sintético INSUMO",
+            "unidad": "g"
+          },
+          {
+            "tenant_id": "90000000-0000-4000-8000-000000000001",
+            "bodega_id": "c256aa04-3f51-4b70-992f-ae5f9c0e0edc",
+            "producto_id": "d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+            "stock": 0.0,
+            "codigo": "cc9cf294e4ULTIMA",
+            "nombre": "Producto sintético ULTIMA",
+            "unidad": "Unidad"
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Saldo coincide con kardex d49cda2d-f58a-4c65-b9fd-16a8fdeb3701",
+      "aprobado": true,
+      "detalle": null
+    }
+  ]
+}

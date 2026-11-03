@@ -1,0 +1,266 @@
+{
+  "alcance": "Bloque A:seguridad servidor,identidad y catálogo; no QA integral B/C",
+  "duracion_segundos": 33.864,
+  "casos": [
+    {
+      "caso": "Lectura protegida sin sesión",
+      "esperado": 401,
+      "observado": 401,
+      "cumple": true
+    },
+    {
+      "caso": "Emisión CSRF",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Cookie HttpOnly y SameSite Strict",
+      "esperado": true,
+      "observado": true,
+      "cumple": true
+    },
+    {
+      "caso": "Login sin CSRF",
+      "esperado": 403,
+      "observado": 403,
+      "cumple": true
+    },
+    {
+      "caso": "Ingreso normaliza correo",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Identificador de sesión rotado",
+      "esperado": true,
+      "observado": true,
+      "cumple": true
+    },
+    {
+      "caso": "Token CSRF rotado",
+      "esperado": true,
+      "observado": true,
+      "cumple": true
+    },
+    {
+      "caso": "Actor tenant servidor",
+      "esperado": "90000000-0000-4000-8000-000000000001",
+      "observado": "90000000-0000-4000-8000-000000000001",
+      "cumple": true
+    },
+    {
+      "caso": "Rol admin derivado de base",
+      "esperado": [
+        "ADMINISTRADOR"
+      ],
+      "observado": [
+        "ADMINISTRADOR"
+      ],
+      "cumple": true
+    },
+    {
+      "caso": "Listado de usuarios sin hash",
+      "esperado": false,
+      "observado": false,
+      "cumple": true
+    },
+    {
+      "caso": "Escritura sin CSRF",
+      "esperado": 403,
+      "observado": 403,
+      "cumple": true
+    },
+    {
+      "caso": "CSRF anterior al login rechazado",
+      "esperado": 403,
+      "observado": 403,
+      "cumple": true
+    },
+    {
+      "caso": "Crear producto con decimal exacto",
+      "esperado": 201,
+      "observado": 201,
+      "cumple": true
+    },
+    {
+      "caso": "Nombre se conserva como texto",
+      "esperado": "Café <texto> & pruebas",
+      "observado": "Café <texto> & pruebas",
+      "cumple": true
+    },
+    {
+      "caso": "Duplicado de código",
+      "esperado": 409,
+      "observado": 409,
+      "cumple": true
+    },
+    {
+      "caso": "Precio cero inválido",
+      "esperado": 400,
+      "observado": 400,
+      "cumple": true
+    },
+    {
+      "caso": "Demasiados decimales monetarios",
+      "esperado": 400,
+      "observado": 400,
+      "cumple": true
+    },
+    {
+      "caso": "IVA mayor a uno",
+      "esperado": 400,
+      "observado": 400,
+      "cumple": true
+    },
+    {
+      "caso": "Campos de autorización ajenos rechazados",
+      "esperado": 400,
+      "observado": 400,
+      "cumple": true
+    },
+    {
+      "caso": "Consulta SQL se trata como texto",
+      "esperado": [],
+      "observado": [],
+      "cumple": true
+    },
+    {
+      "caso": "Ingreso segundo negocio",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Producto ajeno inaccesible",
+      "esperado": 404,
+      "observado": 404,
+      "cumple": true
+    },
+    {
+      "caso": "Producto ajeno inmodificable",
+      "esperado": 404,
+      "observado": 404,
+      "cumple": true
+    },
+    {
+      "caso": "Ingreso cajero",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Cajero no administra usuarios",
+      "esperado": 403,
+      "observado": 403,
+      "cumple": true
+    },
+    {
+      "caso": "Cajero no escribe catálogo",
+      "esperado": 403,
+      "observado": 403,
+      "cumple": true
+    },
+    {
+      "caso": "Último admin no desactivable",
+      "esperado": 409,
+      "observado": 409,
+      "cumple": true
+    },
+    {
+      "caso": "Roles vacíos rechazados",
+      "esperado": 400,
+      "observado": 400,
+      "cumple": true
+    },
+    {
+      "caso": "Alta usuario inventario",
+      "esperado": 201,
+      "observado": 201,
+      "cumple": true
+    },
+    {
+      "caso": "Ingreso usuario recién creado",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Permiso inventario crear catálogo",
+      "esperado": 201,
+      "observado": 201,
+      "cumple": true
+    },
+    {
+      "caso": "Cambio de rol por administrador",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Sesión previa relee nuevos roles",
+      "esperado": 403,
+      "observado": 403,
+      "cumple": true
+    },
+    {
+      "caso": "Desactivación usuario",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Sesión previa pierde acceso tras desactivación",
+      "esperado": 401,
+      "observado": 401,
+      "cumple": true
+    },
+    {
+      "caso": "Login fallido persistente 1",
+      "esperado": 401,
+      "observado": 401,
+      "cumple": true
+    },
+    {
+      "caso": "Login fallido persistente 2",
+      "esperado": 401,
+      "observado": 401,
+      "cumple": true
+    },
+    {
+      "caso": "Login fallido persistente 3",
+      "esperado": 429,
+      "observado": 429,
+      "cumple": true
+    },
+    {
+      "caso": "Clave correcta no evita bloqueo",
+      "esperado": 429,
+      "observado": 429,
+      "cumple": true
+    },
+    {
+      "caso": "Vencimiento real de bloqueo30s",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Logout válido",
+      "esperado": 200,
+      "observado": 200,
+      "cumple": true
+    },
+    {
+      "caso": "Cookie anterior no reabre sesión",
+      "esperado": 401,
+      "observado": 401,
+      "cumple": true
+    }
+  ],
+  "total": 42,
+  "correctos": 42,
+  "fallos": 0,
+  "script_sha256": "0da3ea40cbd705c2735c28069279afbf75a959dca6f6b0c6d8f7500cc303ec84"
+}

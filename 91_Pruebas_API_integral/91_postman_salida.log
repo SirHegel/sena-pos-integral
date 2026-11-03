@@ -1,0 +1,1063 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+91 · API integral del POS — pruebas reales
+
+Root A01 · Lectura sin sesión denegada
+
+  GET http://127.0.0.1:8090/api/v1/usuarios [401 Unauthorized, 317 B, 12 ms]
+  Pass  HTTP 401
+
+Root A02 · Token CSRF y cookie de sesión
+
+  GET http://127.0.0.1:8090/api/v1/auth/csrf [200 OK, 388 B, 3 ms]
+  Pass  HTTP 200
+  Pass  Cookie HttpOnly y SameSite
+
+Root A03 · Ingreso sin CSRF denegado
+
+  POST http://127.0.0.1:8090/api/v1/auth/ingreso [403 Forbidden, 322 B, 4 ms]
+  Pass  HTTP 403
+
+Root A04 · Ingreso del administrador DEMO1
+
+  POST http://127.0.0.1:8090/api/v1/auth/ingreso [200 OK, 526 B, 235 ms]
+  Pass  HTTP 200
+  Pass  Actor del servidor
+
+Root A05 · Sesión autenticada
+
+  GET http://127.0.0.1:8090/api/v1/auth/sesion [200 OK, 366 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Tenant y rol vigentes
+
+Root A06 · Roles del negocio
+
+  GET http://127.0.0.1:8090/api/v1/roles [200 OK, 596 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Cinco roles conocidos
+
+Root A07 · Usuarios sin hashes ni contraseñas
+
+  GET http://127.0.0.1:8090/api/v1/usuarios [200 OK, 1.07 KB, 12 ms]
+  Pass  HTTP 200
+  Pass  Excluye secretos
+
+Root A08 · Crear usuario de inventario
+
+  POST http://127.0.0.1:8090/api/v1/usuarios [201 Created, 392 B, 239 ms]
+  Pass  HTTP 201
+
+Root A09 · Cambiar estado y rol autorizado
+
+  PUT http://127.0.0.1:8090/api/v1/usuarios/62be85be-ac4a-44f9-b2f9-a391e4e473e5 [200 OK, 322 B, 16 ms]
+  Pass  HTTP 200
+  Pass  Rol asignado por administrador
+
+Root A10 · Escritura sin CSRF denegada
+
+  POST http://127.0.0.1:8090/api/v1/productos [403 Forbidden, 322 B, 3 ms]
+  Pass  HTTP 403
+
+Root A11 · Crear producto con IVA
+
+  POST http://127.0.0.1:8090/api/v1/productos [201 Created, 491 B, 10 ms]
+  Pass  HTTP 201
+  Pass  Decimal y texto conservados
+
+Root A12 · Leer producto propio
+
+  GET http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b [200 OK, 486 B, 6 ms]
+  Pass  HTTP 200
+
+Root A13 · Buscar por código literal
+
+  GET http://127.0.0.1:8090/api/v1/productos?q=A-aa518e45e1fd4cebb755a277a57c631d [200 OK, 488 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Búsqueda del producto creado
+
+Root A14 · Precio cero denegado
+
+  POST http://127.0.0.1:8090/api/v1/productos [400 Bad Request, 332 B, 5 ms]
+  Pass  HTTP 400
+
+Root A15 · Tenant cliente no autoriza escritura
+
+  POST http://127.0.0.1:8090/api/v1/productos [400 Bad Request, 308 B, 4 ms]
+  Pass  HTTP 400
+
+Root A16 · Actualizar producto propio
+
+  PUT http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b [200 OK, 493 B, 9 ms]
+  Pass  HTTP 200
+
+Root A17 · Cambiar a DEMO2 con credenciales
+
+  POST http://127.0.0.1:8090/api/v1/auth/ingreso [200 OK, 526 B, 237 ms]
+  Pass  HTTP 200
+
+Root A18 · Producto ajeno oculto
+
+  GET http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b [404 Not Found, 338 B, 5 ms]
+  Pass  HTTP 404
+
+Root A19 · Producto ajeno inmodificable
+
+  PUT http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b [404 Not Found, 338 B, 6 ms]
+  Pass  HTTP 404
+
+Root A20 · Regresar a DEMO1
+
+  POST http://127.0.0.1:8090/api/v1/auth/ingreso [200 OK, 526 B, 229 ms]
+  Pass  HTTP 200
+
+Root A21 · Cajero se autentica
+
+  POST http://127.0.0.1:8090/api/v1/auth/ingreso [200 OK, 519 B, 229 ms]
+  Pass  HTTP 200
+
+Root A22 · Cajero no administra usuarios
+
+  GET http://127.0.0.1:8090/api/v1/usuarios [403 Forbidden, 346 B, 4 ms]
+  Pass  HTTP 403
+
+Root A23 · Cajero no edita catálogo
+
+  PUT http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b [403 Forbidden, 346 B, 4 ms]
+  Pass  HTTP 403
+
+Root A24 · Sesión administrador para operación
+
+  POST http://127.0.0.1:8090/api/v1/auth/ingreso [200 OK, 526 B, 231 ms]
+  Pass  HTTP 200
+
+Root B01 Sesión inicial del administradorT1
+
+  GET http://127.0.0.1:8090/api/v1/auth/sesion [200 OK, 366 B, 3 ms]
+  Pass  HTTP 200
+  Pass  Actor de tenant1 y rol administrador
+
+Root B02 Crear bodega propia
+
+  POST http://127.0.0.1:8090/api/v1/bodegas [201 Created, 410 B, 10 ms]
+  Pass  HTTP 201
+
+Root B03 Listar bodegas del tenant
+
+  GET http://127.0.0.1:8090/api/v1/bodegas [200 OK, 967 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Incluye la bodega creada
+
+Root B04 Rechazar tenant en cuerpo
+
+  POST http://127.0.0.1:8090/api/v1/bodegas [400 Bad Request, 303 B, 5 ms]
+  Pass  HTTP 400
+
+Root B05 Crear mesa
+
+  POST http://127.0.0.1:8090/api/v1/mesas [201 Created, 412 B, 10 ms]
+  Pass  HTTP 201
+
+Root B06 Consultar mesas
+
+  GET http://127.0.0.1:8090/api/v1/mesas [200 OK, 705 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Mesa disponible
+
+Root B07 Inactivar mesa libre
+
+  PATCH http://127.0.0.1:8090/api/v1/mesas/199c0d37-4c55-409b-8c76-c8f793e64a73/estado [200 OK, 405 B, 10 ms]
+  Pass  HTTP 200
+  Pass  Estado inactivo observado
+
+Root B08 Habilitar mesa
+
+  PATCH http://127.0.0.1:8090/api/v1/mesas/199c0d37-4c55-409b-8c76-c8f793e64a73/estado [200 OK, 407 B, 9 ms]
+  Pass  HTTP 200
+  Pass  Estado disponible observado
+
+Root B09 Crear caja
+
+  POST http://127.0.0.1:8090/api/v1/cajas [201 Created, 424 B, 7 ms]
+  Pass  HTTP 201
+
+Root B10 Consultar cajas
+
+  GET http://127.0.0.1:8090/api/v1/cajas [200 OK, 1.78 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Caja activa creada
+
+Root B11 Abrir sesión de caja
+
+  POST http://127.0.0.1:8090/api/v1/sesiones-caja [201 Created, 689 B, 11 ms]
+  Pass  HTTP 201
+  Pass  Caja abierta con fondo100
+
+Root B12 No abrir dos sesiones en la misma caja
+
+  POST http://127.0.0.1:8090/api/v1/sesiones-caja [409 Conflict, 332 B, 5 ms]
+  Pass  HTTP 409
+
+Root B13 Consultar sesiones
+
+  GET http://127.0.0.1:8090/api/v1/sesiones-caja [200 OK, 3.98 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Sesión creada pertenece al actor
+
+Root B14 Resumen de caja inicial
+
+  GET http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f [200 OK, 684 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Esperado inicial100
+
+Root B15 Crear Vendible B
+
+  POST http://127.0.0.1:8090/api/v1/productos [201 Created, 498 B, 9 ms]
+  Pass  HTTP 201
+  Pass  Producto del tenant activo
+
+Root B16 Movimiento ENTRADA directo 10.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [201 Created, 676 B, 9 ms]
+  Pass  HTTP 201
+
+Root B17 Entrada deja diez unidades
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 512 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B18 Movimiento ENTRADA directo 10.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [201 Created, 676 B, 7 ms]
+  Pass  HTTP 201
+
+Root B19 Repetir entrada no duplica saldo
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 512 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B20 Movimiento ENTRADA directo 11.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [409 Conflict, 336 B, 9 ms]
+  Pass  HTTP 409
+
+Root B21 Movimiento AJUSTE ajuste-negativo -20.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [409 Conflict, 336 B, 8 ms]
+  Pass  HTTP 409
+
+Root B22 Ajuste rechazado conserva saldo
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 512 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B23 Rechazar cantidad fraccionaria
+
+  POST http://127.0.0.1:8090/api/v1/ventas [400 Bad Request, 300 B, 9 ms]
+  Pass  HTTP 400
+
+Root B24 Rechazar adición superior a stock
+
+  POST http://127.0.0.1:8090/api/v1/ventas [409 Conflict, 365 B, 11 ms]
+  Pass  HTTP 409
+
+Root B25 Borrador rechazado no descuenta
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 512 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B26 Crear venta en mesa
+
+  POST http://127.0.0.1:8090/api/v1/ventas [201 Created, 1.13 KB, 15 ms]
+  Pass  HTTP 201
+
+Root B27 No duplicar borrador en mesa ocupada
+
+  POST http://127.0.0.1:8090/api/v1/ventas [409 Conflict, 323 B, 6 ms]
+  Pass  HTTP 409
+
+Root B28 No inactivar mesa ocupada
+
+  PATCH http://127.0.0.1:8090/api/v1/mesas/199c0d37-4c55-409b-8c76-c8f793e64a73/estado [409 Conflict, 327 B, 8 ms]
+  Pass  HTTP 409
+
+Root B29 Editar detalle a dos unidades
+
+  PUT http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/detalle [200 OK, 1.12 KB, 10 ms]
+  Pass  HTTP 200
+  Pass  Base e IVA calculados por servidor
+
+Root B30 Editar borrador no reserva ni descuenta
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 512 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B31 Comprobante previo al pago
+
+  GET http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/comprobante [200 OK, 1.12 KB, 7 ms]
+  Pass  HTTP 200
+  Pass  Borrador sin pago
+
+Root B32 Confirmar venta efectiva
+
+  POST http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar [200 OK, 1.39 KB, 12 ms]
+  Pass  HTTP 200
+  Pass  Venta pagada con importes históricos
+  Pass  Pago único confirmado
+
+Root B33 Confirmar descuenta dos unidades
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 511 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B34 Repetir solicitud idempotente
+
+  POST http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar [200 OK, 1.39 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Misma factura y un pago
+
+Root B35 Repetición no descuenta otra vez
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 511 B, 3 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B36 Misma clave y contenido diferente
+
+  POST http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar [409 Conflict, 352 B, 8 ms]
+  Pass  HTTP 409
+
+Root B37 Otra clave no repaga una venta
+
+  POST http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar [409 Conflict, 335 B, 6 ms]
+  Pass  HTTP 409
+
+Root B38 No editar venta pagada
+
+  PUT http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/detalle [409 Conflict, 335 B, 8 ms]
+  Pass  HTTP 409
+
+Root B39 No anular venta pagada
+
+  POST http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/anular [409 Conflict, 335 B, 5 ms]
+  Pass  HTTP 409
+
+Root B40 Mesa liberada por pago
+
+  GET http://127.0.0.1:8090/api/v1/mesas [200 OK, 705 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Mesa vuelve a disponible
+
+Root B41 Crear segunda venta para referencia duplicada
+
+  POST http://127.0.0.1:8090/api/v1/ventas [201 Created, 1.09 KB, 10 ms]
+  Pass  HTTP 201
+
+Root B42 Referencia duplicada revierte transacción
+
+  POST http://127.0.0.1:8090/api/v1/ventas/beda2ff0-c6a7-4bea-b41a-85bb61b2a7ef/confirmar [409 Conflict, 356 B, 70 ms]
+  Pass  HTTP 409
+
+Root B43 Rollback tardío conserva stock
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 511 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B44 Rollback no deja pago ni estado parcial
+
+  GET http://127.0.0.1:8090/api/v1/ventas/beda2ff0-c6a7-4bea-b41a-85bb61b2a7ef/comprobante [200 OK, 1.09 KB, 4 ms]
+  Pass  HTTP 200
+  Pass  Borrador sin pagos tras fallo
+
+Root B45 Nueva referencia reutiliza clave revertida
+
+  POST http://127.0.0.1:8090/api/v1/ventas/beda2ff0-c6a7-4bea-b41a-85bb61b2a7ef/confirmar [200 OK, 1.36 KB, 14 ms]
+  Pass  HTTP 200
+  Pass  Pago externo confirmado sin duplicidad
+
+Root B46 Pago externo descuenta una unidad
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 511 B, 6 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B47 Separar efectivo y externo
+
+  GET http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f [200 OK, 694 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Esperado no suma el pago externo
+
+Root B48 Actualizar precio vigente posterior al pago
+
+  PUT http://127.0.0.1:8090/api/v1/productos/28b363ae-8389-4b8e-beeb-3463dc4a4de1 [200 OK, 493 B, 9 ms]
+  Pass  HTTP 200
+
+Root B49 Conservar precio pagado histórico
+
+  GET http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/comprobante [200 OK, 1.39 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Total histórico independiente del catálogo
+
+Root B50 Crear borrador con precio11000
+
+  POST http://127.0.0.1:8090/api/v1/ventas [201 Created, 1.09 KB, 12 ms]
+  Pass  HTTP 201
+
+Root B51 Cambiar precio de catálogo a12000
+
+  PUT http://127.0.0.1:8090/api/v1/productos/28b363ae-8389-4b8e-beeb-3463dc4a4de1 [200 OK, 493 B, 10 ms]
+  Pass  HTTP 200
+
+Root B52 Rechazar precio cambiado entre detalle y cobro
+
+  POST http://127.0.0.1:8090/api/v1/ventas/320d55cd-055b-49b9-8000-376a59e28a38/confirmar [409 Conflict, 369 B, 6 ms]
+  Pass  HTTP 409
+
+Root B53 Rechazo por precio conserva existencias
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 511 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B54 Anular borrador pendiente
+
+  POST http://127.0.0.1:8090/api/v1/ventas/320d55cd-055b-49b9-8000-376a59e28a38/anular [200 OK, 1.09 KB, 9 ms]
+  Pass  HTTP 200
+  Pass  Borrador pasa a anulado
+
+Root B55 Crear Insumo compartido B
+
+  POST http://127.0.0.1:8090/api/v1/productos [201 Created, 496 B, 9 ms]
+  Pass  HTTP 201
+  Pass  Producto del tenant activo
+
+Root B56 Movimiento ENTRADA entrada-insumo 12.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [201 Created, 685 B, 13 ms]
+  Pass  HTTP 201
+
+Root B57 Crear Plato B1
+
+  POST http://127.0.0.1:8090/api/v1/productos [201 Created, 490 B, 7 ms]
+  Pass  HTTP 201
+  Pass  Producto del tenant activo
+
+Root B58 Crear receta de plato1
+
+  POST http://127.0.0.1:8090/api/v1/recetas [201 Created, 786 B, 12 ms]
+  Pass  HTTP 201
+  Pass  Versión creada inactiva y con componente
+
+Root B59 Activar receta de plato1
+
+  POST http://127.0.0.1:8090/api/v1/recetas/d0fc8000-a30d-43d5-9b27-d53e1715c489/activar [200 OK, 815 B, 10 ms]
+  Pass  HTTP 200
+  Pass  Versión activa
+
+Root B60 Crear Plato B2
+
+  POST http://127.0.0.1:8090/api/v1/productos [201 Created, 490 B, 7 ms]
+  Pass  HTTP 201
+  Pass  Producto del tenant activo
+
+Root B61 Crear receta de plato2
+
+  POST http://127.0.0.1:8090/api/v1/recetas [201 Created, 786 B, 9 ms]
+  Pass  HTTP 201
+  Pass  Versión creada inactiva y con componente
+
+Root B62 Activar receta de plato2
+
+  POST http://127.0.0.1:8090/api/v1/recetas/ebdffa12-8bb4-4abb-904e-9c779b93528d/activar [200 OK, 815 B, 9 ms]
+  Pass  HTTP 200
+  Pass  Versión activa
+
+Root B63 Listar recetas
+
+  GET http://127.0.0.1:8090/api/v1/recetas [200 OK, 2.84 KB, 4 ms]
+  Pass  HTTP 200
+  Pass  Ambas recetas propias presentes
+
+Root B64 Consultar receta y unidad
+
+  GET http://127.0.0.1:8090/api/v1/recetas/d0fc8000-a30d-43d5-9b27-d53e1715c489 [200 OK, 815 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Cantidad y unidad del componente
+
+Root B65 Crear venta de dos platos con demanda12
+
+  POST http://127.0.0.1:8090/api/v1/ventas [201 Created, 1.49 KB, 11 ms]
+  Pass  HTTP 201
+
+Root B66 Movimiento AJUSTE ajuste-consumo -2.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [201 Created, 684 B, 12 ms]
+  Pass  HTTP 201
+
+Root B67 Insumo queda en diez
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 788 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B68 Rechazar nueva adición por demanda conjunta12
+
+  POST http://127.0.0.1:8090/api/v1/ventas [409 Conflict, 365 B, 13 ms]
+  Pass  HTTP 409
+
+Root B69 Revalidar stock del borrador anterior
+
+  POST http://127.0.0.1:8090/api/v1/ventas/dee6a861-3a72-4979-a03e-fdc56fc3f9c8/confirmar [409 Conflict, 346 B, 7 ms]
+  Pass  HTTP 409
+
+Root B70 Fallo agregado no deja consumo parcial
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 788 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B71 Venta de receta sigue sin pagos
+
+  GET http://127.0.0.1:8090/api/v1/ventas/dee6a861-3a72-4979-a03e-fdc56fc3f9c8/comprobante [200 OK, 1.48 KB, 8 ms]
+  Pass  HTTP 200
+  Pass  Estado sin efectos parciales
+
+Root B72 Movimiento ENTRADA reposicion-insumo 2.000
+
+  POST http://127.0.0.1:8090/api/v1/movimientos [201 Created, 687 B, 10 ms]
+  Pass  HTTP 201
+
+Root B73 Confirmar receta con insumos suficientes
+
+  POST http://127.0.0.1:8090/api/v1/ventas/dee6a861-3a72-4979-a03e-fdc56fc3f9c8/confirmar [200 OK, 1.75 KB, 15 ms]
+  Pass  HTTP 200
+  Pass  Dos platos pagados por2000
+
+Root B74 Demanda conjunta consumió doce
+
+  GET http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 787 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Saldo físico observado
+
+Root B75 Kardex conserva origen por receta y saldo firmado
+
+  GET http://127.0.0.1:8090/api/v1/movimientos?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a [200 OK, 4.35 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Dos movimientos de receta de seis
+  Pass  No hay doble descuento de platos
+  Pass  Kardex directo reconcilia siete
+  Pass  Kardex insumo reconcilia cero
+
+Root B76 Listar ventas del negocio
+
+  GET http://127.0.0.1:8090/api/v1/ventas [200 OK, 11.25 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Venta pagada visible
+
+Root B77 Cerrar caja con efectivo separado
+
+  POST http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f/cerrar [200 OK, 709 B, 10 ms]
+  Pass  HTTP 200
+  Pass  Cierre esperado y diferencia exactos
+
+Root B78 No volver a cerrar sesión
+
+  POST http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f/cerrar [409 Conflict, 328 B, 6 ms]
+  Pass  HTTP 409
+
+Root B79 No crear venta con caja cerrada
+
+  POST http://127.0.0.1:8090/api/v1/ventas [409 Conflict, 328 B, 4 ms]
+  Pass  HTTP 409
+
+Root B80 Repetición legítima después del cierre
+
+  POST http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar [200 OK, 1.39 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Misma factura después del cierre
+
+Root B81 Consultar cierre conservado
+
+  GET http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f [200 OK, 709 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Cierre histórico estable
+
+Root B82 Sesión administrativa queda disponible para C
+
+  GET http://127.0.0.1:8090/api/v1/auth/sesion [200 OK, 366 B, 3 ms]
+  Pass  HTTP 200
+  Pass  Mismo administrador tenant1
+
+Root C01 Sesión de administrador recibida de B
+
+  GET http://127.0.0.1:8090/api/v1/auth/sesion [200 OK, 366 B, 3 ms]
+  Pass  HTTP 200
+  Pass  Actor T1 administrador
+
+Root C02 Crear empleado sintético
+
+  POST http://127.0.0.1:8090/api/v1/empleados [201 Created, 380 B, 7 ms]
+  Pass  HTTP 201
+  Pass  Nombre original sin modificar
+
+Root C03 Listar empleados
+
+  GET http://127.0.0.1:8090/api/v1/empleados [200 OK, 2.29 KB, 3 ms]
+  Pass  HTTP 200
+  Pass  Empleado propio visible
+
+Root C04 Consultar empleado
+
+  GET http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb [200 OK, 375 B, 6 ms]
+  Pass  HTTP 200
+  Pass  Identidad del empleado
+
+Root C05 No aceptar tenant en el cuerpo
+
+  POST http://127.0.0.1:8090/api/v1/empleados [400 Bad Request, 308 B, 3 ms]
+  Pass  HTTP 400
+
+Root C06 Inactivar antes de historial
+
+  PUT http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb [200 OK, 377 B, 8 ms]
+  Pass  HTTP 200
+  Pass  Estado inactivo
+
+Root C07 No crear novedad de empleado inactivo
+
+  POST http://127.0.0.1:8090/api/v1/novedades [409 Conflict, 325 B, 4 ms]
+  Pass  HTTP 409
+
+Root C08 Activar empleado
+
+  PUT http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb [200 OK, 375 B, 8 ms]
+  Pass  HTTP 200
+  Pass  Estado activo
+
+Root C09 Rechazar importe 0.00
+
+  POST http://127.0.0.1:8090/api/v1/novedades [400 Bad Request, 329 B, 4 ms]
+  Pass  HTTP 400
+
+Root C10 Rechazar importe -1.00
+
+  POST http://127.0.0.1:8090/api/v1/novedades [400 Bad Request, 329 B, 5 ms]
+  Pass  HTTP 400
+
+Root C11 Rechazar importe 1.001
+
+  POST http://127.0.0.1:8090/api/v1/novedades [400 Bad Request, 329 B, 5 ms]
+  Pass  HTTP 400
+
+Root C12 Rechazar importe 1000000000000.00
+
+  POST http://127.0.0.1:8090/api/v1/novedades [400 Bad Request, 329 B, 7 ms]
+  Pass  HTTP 400
+
+Root C13 Crear novedad 1
+
+  POST http://127.0.0.1:8090/api/v1/novedades [201 Created, 459 B, 9 ms]
+  Pass  HTTP 201
+  Pass  Borrador inicial
+
+Root C14 Crear novedad 2
+
+  POST http://127.0.0.1:8090/api/v1/novedades [201 Created, 457 B, 11 ms]
+  Pass  HTTP 201
+  Pass  Borrador inicial
+
+Root C15 Crear novedad 3
+
+  POST http://127.0.0.1:8090/api/v1/novedades [201 Created, 459 B, 9 ms]
+  Pass  HTTP 201
+  Pass  Borrador inicial
+
+Root C16 Crear novedad 4
+
+  POST http://127.0.0.1:8090/api/v1/novedades [201 Created, 456 B, 9 ms]
+  Pass  HTTP 201
+  Pass  Borrador inicial
+
+Root C17 Consultar novedades del período
+
+  GET http://127.0.0.1:8090/api/v1/novedades?periodo=4118-12 [200 OK, 1.08 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Cuatro novedades propias presentes
+
+Root C18 Consultar novedad individual
+
+  GET http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f [200 OK, 454 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Importe del borrador
+
+Root C19 Editar borrador sin consumir
+
+  PUT http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f [200 OK, 461 B, 10 ms]
+  Pass  HTTP 200
+  Pass  Concepto editado
+
+Root C20 Crear liquidación
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones [201 Created, 430 B, 8 ms]
+  Pass  HTTP 201
+
+Root C21 No aprobar selección sin autorización
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar [409 Conflict, 358 B, 8 ms]
+  Pass  HTTP 409
+
+Root C22 Rechazo conserva borrador vacío
+
+  GET http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf [200 OK, 425 B, 7 ms]
+  Pass  HTTP 200
+  Pass  Sin detalles parciales
+
+Root C23 Autorizar novedad 1
+
+  POST http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f/autorizar [200 OK, 463 B, 7 ms]
+  Pass  HTTP 200
+  Pass  Autorizada
+
+Root C24 Autorizar novedad 2
+
+  POST http://127.0.0.1:8090/api/v1/novedades/6f3e5c15-d987-4d0e-a400-66abfb96e8be/autorizar [200 OK, 454 B, 7 ms]
+  Pass  HTTP 200
+  Pass  Autorizada
+
+Root C25 Autorizar novedad 3
+
+  POST http://127.0.0.1:8090/api/v1/novedades/f58fa869-62e4-4782-b59a-561cce81153b/autorizar [200 OK, 456 B, 9 ms]
+  Pass  HTTP 200
+  Pass  Autorizada
+
+Root C26 Rechazar cuarta novedad
+
+  POST http://127.0.0.1:8090/api/v1/novedades/980fff4f-093d-4f79-bd0c-b157450c6857/rechazar [200 OK, 452 B, 9 ms]
+  Pass  HTTP 200
+  Pass  Rechazada
+
+Root C27 No editar autorización
+
+  PUT http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f [409 Conflict, 333 B, 4 ms]
+  Pass  HTTP 409
+
+Root C28 Simulación sin escritura
+
+  GET http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/simulacion [200 OK, 1.21 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Tres candidatas del caso
+
+Root C29 No repetir un ID en la selección
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar [400 Bad Request, 305 B, 4 ms]
+  Pass  HTTP 400
+
+Root C30 Aprobar selección explícita completa
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar [200 OK, 714 B, 12 ms]
+  Pass  HTTP 200
+  Pass  Resultado exacto e íntegro
+  Pass  Tres novedades consumidas
+
+Root C31 Aprobación repetida idempotente
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar [200 OK, 714 B, 5 ms]
+  Pass  HTTP 200
+  Pass  Mismo detalle y neto
+
+Root C32 No cambiar selección aprobada
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar [409 Conflict, 360 B, 7 ms]
+  Pass  HTTP 409
+
+Root C33 No rechazar novedad consumida
+
+  POST http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f/rechazar [409 Conflict, 347 B, 5 ms]
+  Pass  HTTP 409
+
+Root C34 Conservar identidad histórica
+
+  PUT http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb [409 Conflict, 367 B, 5 ms]
+  Pass  HTTP 409
+
+Root C35 Listar liquidaciones del período
+
+  GET http://127.0.0.1:8090/api/v1/liquidaciones?periodo=4118-12 [200 OK, 395 B, 7 ms]
+  Pass  HTTP 200
+  Pass  Liquidación propia presente
+
+Root C36 Nueva versión vacía
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones [201 Created, 430 B, 12 ms]
+  Pass  HTTP 201
+
+Root C37 No consumir nuevamente en otra versión
+
+  POST http://127.0.0.1:8090/api/v1/liquidaciones/716d710e-73ed-4aee-8b47-473fd5e12f7d/aprobar [409 Conflict, 337 B, 4 ms]
+  Pass  HTTP 409
+
+Root C38 Nueva versión sigue vacía
+
+  GET http://127.0.0.1:8090/api/v1/liquidaciones/716d710e-73ed-4aee-8b47-473fd5e12f7d [200 OK, 425 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Sin escritura parcial
+
+Root C39 Crear cuenta Debito
+
+  POST http://127.0.0.1:8090/api/v1/cuentas [201 Created, 406 B, 7 ms]
+  Pass  HTTP 201
+  Pass  Naturaleza explícita
+
+Root C40 Crear cuenta Credito
+
+  POST http://127.0.0.1:8090/api/v1/cuentas [201 Created, 409 B, 8 ms]
+  Pass  HTTP 201
+  Pass  Naturaleza explícita
+
+Root C41 Crear cuenta Auxiliar
+
+  POST http://127.0.0.1:8090/api/v1/cuentas [201 Created, 411 B, 10 ms]
+  Pass  HTTP 201
+  Pass  Naturaleza explícita
+
+Root C42 Listar cuentas del negocio
+
+  GET http://127.0.0.1:8090/api/v1/cuentas [200 OK, 1.58 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Tres cuentas propias
+
+Root C43 Editar cuenta antes de usar
+
+  PUT http://127.0.0.1:8090/api/v1/cuentas/7c4158e2-26fb-473a-bfd2-4d582487c77f [200 OK, 410 B, 8 ms]
+  Pass  HTTP 200
+  Pass  Cambio conservado
+
+Root C44 Encontrar eventos propios pendientes
+
+  GET http://127.0.0.1:8090/api/v1/eventos?estado=PENDIENTE [200 OK, 6.64 KB, 7 ms]
+  Pass  HTTP 200
+  Pass  Evento tipado de nómina
+  Pass  Evento de la venta B
+
+Root C45 Consultar evento de nómina
+
+  GET http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459 [200 OK, 489 B, 6 ms]
+  Pass  HTTP 200
+  Pass  Pendiente sin procesamiento
+
+Root C46 No admitir importes contables del cliente
+
+  POST http://127.0.0.1:8090/api/v1/asientos [400 Bad Request, 308 B, 5 ms]
+  Pass  HTTP 400
+
+Root C47 No repetir cuenta en débito y crédito
+
+  POST http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar [400 Bad Request, 306 B, 6 ms]
+  Pass  HTTP 400
+
+Root C48 Exigir auxiliar para deducciones positivas
+
+  POST http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar [400 Bad Request, 326 B, 6 ms]
+  Pass  HTTP 400
+
+Root C49 Rechazos no procesan el evento
+
+  GET http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459 [200 OK, 489 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Sigue pendiente
+
+Root C50 Registrar nómina con tres líneas
+
+  POST http://127.0.0.1:8090/api/v1/asientos [201 Created, 1.12 KB, 11 ms]
+  Pass  HTTP 201
+  Pass  Origen tipado y equilibrio
+
+Root C51 Consultar asiento íntegro
+
+  GET http://127.0.0.1:8090/api/v1/asientos/adb353e7-b8d3-48c5-b6fc-bf1f1c524372 [200 OK, 1.11 KB, 4 ms]
+  Pass  HTTP 200
+  Pass  Mismo asiento y tres líneas
+
+Root C52 Ruta de eventos repite mismo asiento
+
+  POST http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar [200 OK, 1.11 KB, 10 ms]
+  Pass  HTTP 200
+  Pass  Idempotencia entre rutas
+
+Root C53 No cambiar cuentas del asiento registrado
+
+  POST http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar [409 Conflict, 340 B, 6 ms]
+  Pass  HTTP 409
+
+Root C54 No redefinir cuenta con historial
+
+  PUT http://127.0.0.1:8090/api/v1/cuentas/7c4158e2-26fb-473a-bfd2-4d582487c77f [409 Conflict, 361 B, 4 ms]
+  Pass  HTTP 409
+
+Root C55 Evento procesado con fecha real
+
+  GET http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459 [200 OK, 513 B, 3 ms]
+  Pass  HTTP 200
+  Pass  Estado completo
+
+Root C56 Nómina contabilizada conserva neto
+
+  GET http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf [200 OK, 719 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Estado y resultado
+
+Root C57 Contabilizar venta histórica de B
+
+  POST http://127.0.0.1:8090/api/v1/eventos/0246529e-ed47-49a0-b716-6ee490d1e8bf/procesar [200 OK, 1.13 KB, 12 ms]
+  Pass  HTTP 200
+  Pass  Factura histórica sin precio actual
+
+Root C58 Repetir venta sin otro asiento
+
+  POST http://127.0.0.1:8090/api/v1/asientos [201 Created, 1.14 KB, 5 ms]
+  Pass  HTTP 201
+  Pass  Mismo asiento de venta
+
+Root C59 Listado con un solo asiento por origen
+
+  GET http://127.0.0.1:8090/api/v1/asientos [200 OK, 2.01 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Sin duplicados de nómina o venta
+
+Root C60 Reporte JSON ventas
+
+  GET http://127.0.0.1:8090/api/v1/reportes/ventas?desde=2026-11-03&hasta=2026-11-03 [200 OK, 5.46 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Origen del servidor y fecha Bogotá
+  Pass  Conteo de las mismas filas
+
+Root C61 CSV idéntico al conjunto JSON ventas
+
+  GET http://127.0.0.1:8090/api/v1/reportes/ventas/csv?desde=2026-11-03&hasta=2026-11-03 [200 OK, 4.21 KB, 8 ms]
+  Pass  HTTP 200
+  Pass  CSV conserva negocio, usuario y período
+  Pass  CSV y JSON tienen las mismas filas
+  Pass  Cada celda proviene de las mismas filas autorizadas
+  Pass  Totales CSV calculados sobre el mismo conjunto
+
+Root C62 Reporte JSON nomina
+
+  GET http://127.0.0.1:8090/api/v1/reportes/nomina?desde=2026-11-03&hasta=2026-11-03 [200 OK, 3.93 KB, 4 ms]
+  Pass  HTTP 200
+  Pass  Origen del servidor y fecha Bogotá
+  Pass  Conteo de las mismas filas
+
+Root C63 CSV idéntico al conjunto JSON nomina
+
+  GET http://127.0.0.1:8090/api/v1/reportes/nomina/csv?desde=2026-11-03&hasta=2026-11-03 [200 OK, 2.89 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  CSV conserva negocio, usuario y período
+  Pass  CSV y JSON tienen las mismas filas
+  Pass  Cada celda proviene de las mismas filas autorizadas
+  Pass  Totales CSV calculados sobre el mismo conjunto
+
+Root C64 Reporte JSON contabilidad
+
+  GET http://127.0.0.1:8090/api/v1/reportes/contabilidad?desde=2026-11-03&hasta=2026-11-03 [200 OK, 6.43 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Origen del servidor y fecha Bogotá
+  Pass  Conteo de las mismas filas
+
+Root C65 CSV idéntico al conjunto JSON contabilidad
+
+  GET http://127.0.0.1:8090/api/v1/reportes/contabilidad/csv?desde=2026-11-03&hasta=2026-11-03 [200 OK, 4.63 KB, 8 ms]
+  Pass  HTTP 200
+  Pass  CSV conserva negocio, usuario y período
+  Pass  CSV y JSON tienen las mismas filas
+  Pass  Cada celda proviene de las mismas filas autorizadas
+  Pass  Totales CSV calculados sobre el mismo conjunto
+
+Root C66 Reporte JSON inventario
+
+  GET http://127.0.0.1:8090/api/v1/reportes/inventario?desde=2026-11-03&hasta=2026-11-03 [200 OK, 14.46 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  Origen del servidor y fecha Bogotá
+  Pass  Conteo de las mismas filas
+
+Root C67 CSV idéntico al conjunto JSON inventario
+
+  GET http://127.0.0.1:8090/api/v1/reportes/inventario/csv?desde=2026-11-03&hasta=2026-11-03 [200 OK, 10.14 KB, 6 ms]
+  Pass  HTTP 200
+  Pass  CSV conserva negocio, usuario y período
+  Pass  CSV y JSON tienen las mismas filas
+  Pass  Cada celda proviene de las mismas filas autorizadas
+  Pass  Totales CSV calculados sobre el mismo conjunto
+
+Root C68 Reporte JSON caja
+
+  GET http://127.0.0.1:8090/api/v1/reportes/caja?desde=2026-11-03&hasta=2026-11-03 [200 OK, 2.75 KB, 5 ms]
+  Pass  HTTP 200
+  Pass  Origen del servidor y fecha Bogotá
+  Pass  Conteo de las mismas filas
+
+Root C69 CSV idéntico al conjunto JSON caja
+
+  GET http://127.0.0.1:8090/api/v1/reportes/caja/csv?desde=2026-11-03&hasta=2026-11-03 [200 OK, 2.08 KB, 7 ms]
+  Pass  HTTP 200
+  Pass  CSV conserva negocio, usuario y período
+  Pass  CSV y JSON tienen las mismas filas
+  Pass  Cada celda proviene de las mismas filas autorizadas
+  Pass  Totales CSV calculados sobre el mismo conjunto
+
+Root C70 Rango invertido no admitido
+
+  GET http://127.0.0.1:8090/api/v1/reportes/nomina?desde=2026-12-01&hasta=2026-11-01 [400 Bad Request, 319 B, 4 ms]
+  Pass  HTTP 400
+
+Root C71 Área fuera del contrato no admitida
+
+  GET http://127.0.0.1:8090/api/v1/reportes/desconocida?desde=2026-11-03&hasta=2026-11-03 [400 Bad Request, 290 B, 6 ms]
+  Pass  HTTP 400
+
+Root C72 Sesión queda activa sin cambiar negocio
+
+  GET http://127.0.0.1:8090/api/v1/auth/sesion [200 OK, 366 B, 4 ms]
+  Pass  HTTP 200
+  Pass  Administrador T1 vigente
+
+Root Z01 · Cerrar sesión real
+
+  POST http://127.0.0.1:8090/api/v1/auth/salir [200 OK, 266 B, 3 ms]
+  Pass  HTTP 200
+
+Root Z02 · Sesión invalidada
+
+  GET http://127.0.0.1:8090/api/v1/auth/sesion [401 Unauthorized, 317 B, 2 ms]
+  Pass  HTTP 401
+
+----------------------------------------------------------------------
+|                         |            executed |             failed |
+--------------------------+---------------------+---------------------
+|              iterations |                   1 |                  0 |
+--------------------------+---------------------+---------------------
+|                requests |                 180 |                  0 |
+--------------------------+---------------------+---------------------
+|            test-scripts |                 180 |                  0 |
+--------------------------+---------------------+---------------------
+|      prerequest-scripts |                 180 |                  0 |
+--------------------------+---------------------+---------------------
+|              assertions |                 314 |                  0 |
+----------------------------------------------------------------------
+| total run duration: 5 s                                            |
+----------------------------------------------------------------------
+| total data received: 140.89 KB (approx)                            |
+----------------------------------------------------------------------
+| average response time: 14 ms [min: 2 ms, max: 239 ms, s.d.: 40 ms] |
+----------------------------------------------------------------------
+Postman credentials are required for publishing run details to Postman cloud.
+Please specify it by using the `postman login` command

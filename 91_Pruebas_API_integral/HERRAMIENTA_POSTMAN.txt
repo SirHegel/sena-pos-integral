@@ -1,0 +1,6 @@
+Postman CLI oficial 1.84.0, instalación portable local.
+Origen oficial: https://dl-cli.pstmn.io/download/latest/linux64
+SHA256 del ejecutable utilizado: d5fcce0e6b828e815f53b2322d18ad2e0937e4f3743ec23e4f162c2db09fbe85
+Comando: postman collection run 91_API_integral_POS.postman_collection.json --environment ENTORNO_PRIVADO --no-report-events --working-dir DIRECTORIO_LOCAL
+El entorno privado contiene sólo la clave de datos sintéticos y queda fuera del expediente.
+180 solicitudes/314 aserciones aprobadas; retorno 0. No se inició sesión ni se publicaron resultados en Postman cloud.

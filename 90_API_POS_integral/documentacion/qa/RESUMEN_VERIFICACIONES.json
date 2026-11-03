@@ -1,0 +1,75 @@
+{
+  "metodologia": "Ejecuciones independientes por bloques y una colección integral final; datos exclusivamente sintéticos. No se suman como una sola corrida de peticiones.",
+  "bloques": {
+    "A": {
+      "comprobaciones_aprobadas": 42,
+      "registro": "A_resultados_http.json",
+      "fuentes_sha256": {
+        "src/main/java/co/edu/sena/pos/integral/nucleo/Actor.java": "14036fd5b2b0e3a991f8b40da5850213f7328aef7e679ee0413f95809d3e1bc6",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/Errores.java": "018b67fb2d189079839383629be7010b256f7dd24305a7bda1dcd84b74d90ee2",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/ApiError.java": "a6430670d6aa9076637cdda1ae216df11e1f3476a56dfab871f4d3c21a8f3cd5",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/WebConfig.java": "0548a1df6aa4b4c29259ef8c58e595ea531f485d7392ba48ae60fce0efa94524",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/V.java": "142fe34412860300e687c74471550cbea5a5eaf699d36406019b4f57bf2256a1",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/Db.java": "bb448568cdfdf6d1820080c1be5d0819441399b98ad427f152211a33e012a338",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/Sesiones.java": "2e1857d7637aec855b081172a8b3a1b4de7745024813e44afc8560c5785aae8f",
+        "src/main/java/co/edu/sena/pos/integral/nucleo/Permitidos.java": "01ba05bb56d58664e837a5f941560e0b45d78c606f9884e872609f8fc56cf33c",
+        "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java": "351bfc912503b5fc953d334e4bd891c5e75251bdd261c1b2e6635f59a66f507d",
+        "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadService.java": "a65c6bdc767964b1ee133e087bb3c6544d1abbcd5b29ff64956d8db05f08a9a8",
+        "src/main/java/co/edu/sena/pos/integral/identidad/DatosDemostracion.java": "90909002f186bebf98d4091f623075b861e54af3b828fcc6473f62be6b0e192b",
+        "src/main/java/co/edu/sena/pos/integral/catalogo/CatalogoService.java": "be95d9b2db59c030d600cece14f93912a7e49082a1081a14cba510e7ee89e0c3",
+        "src/main/java/co/edu/sena/pos/integral/catalogo/CatalogoController.java": "b4489b0094432ef94015ce384c87512058ba2e3fe5418b4b66a6617fe70d938c"
+      }
+    },
+    "B": {
+      "comprobaciones_aprobadas": 125,
+      "registro": "B_resultados_http.json",
+      "fuentes_java_sha256": {
+        "src/main/java/co/edu/sena/pos/integral/operacion/OperacionService.java": "f65a8acb4419af8576da853e4671c56ebaea20f0adc54604f4e0abce86a40b24",
+        "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java": "fdf90067a7690464bdc0756bcfafe4bfeb70dae49a1019087889b3117057ba66"
+      }
+    },
+    "C": {
+      "comprobaciones_aprobadas": 222,
+      "registro": "C_resultados_http.json",
+      "fuentes_java_sha256": {
+        "src/main/java/co/edu/sena/pos/integral/administracion/CReglas.java": "a4922470eccf21643039f9c01b05b2b579fbdf3e1c87075f19a9012c50e1001b",
+        "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java": "ad4607cb5eb6476cff0b6b6278ca5c90da1edd219cff6793748d75e9832c6f25",
+        "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadService.java": "28f9a78cc1932dd01c5ebcfdccfecc303aa2e1b245a0791431227b2046f96e50",
+        "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java": "b45e5e2af865f0af65e88b35a7b9783489c3a6f4177dac75f90cb72c1c51dd54",
+        "src/main/java/co/edu/sena/pos/integral/administracion/NominaService.java": "5758b84b6d0b33c8a9c65e957f8be50fd99f7e006238ca23d54af5e6fb18d33b",
+        "src/main/java/co/edu/sena/pos/integral/administracion/ReportesController.java": "897ccfcf75c84aa650e38973d64994f842cde1279ff526c453c21e60dafbf1a8",
+        "src/main/java/co/edu/sena/pos/integral/administracion/ReportesService.java": "5e6dde5f5b3a14631342f68320c3a1634103de11cabc0008b4303798084ff7d1"
+      }
+    }
+  },
+  "postman_integral": {
+    "instrumento": "Postman CLI oficial1.84.0",
+    "solicitudes": 180,
+    "aserciones_aprobadas": 314,
+    "fallos": 0,
+    "retorno": 0,
+    "duracion_motor_segundos": 5,
+    "jar_sha256": "8d406676b5c743c289a6286fc2684f0e63a14d6912d39e0bf1ab35843682eddd",
+    "coleccion_sha256": "e2c7cac2b7629270559cbb437bdd3c8a78791288149eacad824a69867976f783",
+    "salida_sha256": "257f35e6a05163f5d6a4b09f1354fb6e6c174789e60087f03b511bff68fdea97"
+  },
+  "baseline61": {
+    "tablas": 26,
+    "FK": 42,
+    "CHECK": 146,
+    "originales_byte_identicos": true
+  },
+  "evolucion_aplicacion": {
+    "archivo": "sql/03_Aplicacion_operativa.sql",
+    "cambio": "pago.medio EFECTIVO/EXTERNO",
+    "tablas": 26,
+    "FK": 42,
+    "CHECK": 147
+  },
+  "interfaz": "React87 separado; no está conectado a esta API en el expediente",
+  "registros_sha256": {
+    "A_resultados_http.json": "bd7f56cbd34c8acfb6edf3ead5346909186a0f5fb2018ddbb513e229408c2ca1",
+    "B_resultados_http.json": "3bf9370dd94207915a3d776703811bb633289f79833649172985aaf22bd948f2",
+    "C_resultados_http.json": "ede39d26f364a6b09a2bd740fce52ea792c9f494ebd5be4d9d06d38d86b0aac3"
+  }
+}

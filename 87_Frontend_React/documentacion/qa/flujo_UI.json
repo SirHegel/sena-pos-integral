@@ -1,0 +1,34 @@
+{
+  "fecha_UTC": "2026-11-03T16:21:45.240Z",
+  "venta": {
+    "factura": "DEMO-0001",
+    "total_COP": 17000,
+    "lineas": [
+      "CAF001 x2",
+      "REC001 x1"
+    ],
+    "comprobante_texto": "Inicio / Ventas / Comprobante\nComprobante\n\nResultado de la confirmación y trazabilidad del inventario.\n\nPago de demostración confirmado una sola vez.\nVenta de demostración confirmada\nPAGADA\nDEMO-0001\n\nFecha y hora Bogotá: 3/11/2026, 11:17:41 a. m.\nMesa: Sin mesa\nMedio: Efectivo\n\nProducto\tCantidad\tPrecio histórico\tSubtotal\nCafé filtrado\t2\t$ 5.000,00\t$ 10.000,00\nBebida especial\t1\t$ 7.000,00\t$ 7.000,00\nTotal $ 17.000,00\n\nEl inventario de esta factura se descontó una sola vez en esta sesión.\n\nVer kardex\nNueva venta\nEstado sintético en memoria · No se realizan cobros, pagos laborales ni registros contables reales."
+  },
+  "stock_observado_AX": {
+    "CAF001": 10,
+    "REC001_preparaciones": 4,
+    "INS001_g": 990,
+    "INS002_ml": 400
+  },
+  "producto_agregado": {
+    "codigo": "REACT-87",
+    "nombre_literal": "Café <demo> & pruebas",
+    "precio_COP": 1250.5,
+    "nodos_demo_en_DOM": 0
+  },
+  "rango_invalido": {
+    "exportacionDeshabilitada": true,
+    "texto": "Inicio / Reportes / Reportes\nReportes\n\nConsulta las áreas con filtros y exporta las ventas del mismo resultado.\n\nFiltros de consulta\n\nOrigen: Café Demo A · Administrador de demostración. Todos los datos son sintéticos y locales.\n\nÁrea\nTodas\nIdentidad\nVentas\nInventario\nGastronomía\nNómina\nContabilidad\nDesde para ventas\nHasta para ventas\nEstado de empleados y cuentas\nTodos\nActivos\nInactivos\n\nLa fecha inicial debe ser igual o anterior a la final.\n\nVentas\nFactura\tFecha y hora Bogotá\tTotal COP\nNo hay registros para esta consulta.\nTotal filtrado $ 0,00\nExportar ventas filtradas en CSV\nEstado sintético en memoria · No se realizan cobros, pagos laborales ni registros contables reales."
+  },
+  "rango_valido": {
+    "exportacionDeshabilitada": false,
+    "texto": "Inicio / Reportes / Reportes\nReportes\n\nConsulta las áreas con filtros y exporta las ventas del mismo resultado.\n\nFiltros de consulta\n\nOrigen: Café Demo A · Administrador de demostración. Todos los datos son sintéticos y locales.\n\nÁrea\nTodas\nIdentidad\nVentas\nInventario\nGastronomía\nNómina\nContabilidad\nDesde para ventas\nHasta para ventas\nEstado de empleados y cuentas\nTodos\nActivos\nInactivos\nVentas\nFactura\tFecha y hora Bogotá\tTotal COP\nDEMO-0001\t3/11/2026, 11:17:41 a. m.\t$ 17.000,00\nTotal filtrado $ 17.000,00\nExportar ventas filtradas en CSV\nEstado sintético en memoria · No se realizan cobros, pagos laborales ni registros contables reales."
+  },
+  "exportacion_csv_navegador_ejecutada": false,
+  "errores_consola": []
+}

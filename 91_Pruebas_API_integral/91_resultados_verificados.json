@@ -1,0 +1,1283 @@
+{
+  "instrumento": "Postman CLI oficial1.84.0",
+  "solicitudes": 180,
+  "aserciones_aprobadas": 314,
+  "fallos": 0,
+  "retorno": 0,
+  "duracion_motor_segundos": 5,
+  "duracion_orquestacion_segundos": 8.225,
+  "jar_sha256": "8d406676b5c743c289a6286fc2684f0e63a14d6912d39e0bf1ab35843682eddd",
+  "coleccion_sha256": "e2c7cac2b7629270559cbb437bdd3c8a78791288149eacad824a69867976f783",
+  "salida_sha256": "257f35e6a05163f5d6a4b09f1354fb6e6c174789e60087f03b511bff68fdea97",
+  "conteo_http_observado": {
+    "401": 2,
+    "200": 99,
+    "403": 4,
+    "201": 33,
+    "400": 15,
+    "404": 2,
+    "409": 25
+  },
+  "solicitudes_observadas": [
+    {
+      "nombre": "A01 · Lectura sin sesión denegada",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/usuarios",
+      "http_observado": 401,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A02 · Token CSRF y cookie de sesión",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/csrf",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A03 · Ingreso sin CSRF denegado",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/ingreso",
+      "http_observado": 403,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A04 · Ingreso del administrador DEMO1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/ingreso",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A05 · Sesión autenticada",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/sesion",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A06 · Roles del negocio",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/roles",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A07 · Usuarios sin hashes ni contraseñas",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/usuarios",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A08 · Crear usuario de inventario",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/usuarios",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A09 · Cambiar estado y rol autorizado",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/usuarios/62be85be-ac4a-44f9-b2f9-a391e4e473e5",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A10 · Escritura sin CSRF denegada",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 403,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A11 · Crear producto con IVA",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A12 · Leer producto propio",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A13 · Buscar por código literal",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/productos?q=A-aa518e45e1fd4cebb755a277a57c631d",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "A14 · Precio cero denegado",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A15 · Tenant cliente no autoriza escritura",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A16 · Actualizar producto propio",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A17 · Cambiar a DEMO2 con credenciales",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/ingreso",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A18 · Producto ajeno oculto",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b",
+      "http_observado": 404,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A19 · Producto ajeno inmodificable",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b",
+      "http_observado": 404,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A20 · Regresar a DEMO1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/ingreso",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A21 · Cajero se autentica",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/ingreso",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A22 · Cajero no administra usuarios",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/usuarios",
+      "http_observado": 403,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A23 · Cajero no edita catálogo",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/productos/75fb8859-9056-40f8-8bf8-e05c76ea295b",
+      "http_observado": 403,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "A24 · Sesión administrador para operación",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/ingreso",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B01 Sesión inicial del administradorT1",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/sesion",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B02 Crear bodega propia",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/bodegas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B03 Listar bodegas del tenant",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/bodegas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B04 Rechazar tenant en cuerpo",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/bodegas",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B05 Crear mesa",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/mesas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B06 Consultar mesas",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/mesas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B07 Inactivar mesa libre",
+      "metodo": "PATCH",
+      "url": "http://127.0.0.1:8090/api/v1/mesas/199c0d37-4c55-409b-8c76-c8f793e64a73/estado",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B08 Habilitar mesa",
+      "metodo": "PATCH",
+      "url": "http://127.0.0.1:8090/api/v1/mesas/199c0d37-4c55-409b-8c76-c8f793e64a73/estado",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B09 Crear caja",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/cajas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B10 Consultar cajas",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/cajas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B11 Abrir sesión de caja",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B12 No abrir dos sesiones en la misma caja",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B13 Consultar sesiones",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B14 Resumen de caja inicial",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B15 Crear Vendible B",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B16 Movimiento ENTRADA directo 10.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B17 Entrada deja diez unidades",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B18 Movimiento ENTRADA directo 10.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B19 Repetir entrada no duplica saldo",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B20 Movimiento ENTRADA directo 11.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B21 Movimiento AJUSTE ajuste-negativo -20.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B22 Ajuste rechazado conserva saldo",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B23 Rechazar cantidad fraccionaria",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B24 Rechazar adición superior a stock",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B25 Borrador rechazado no descuenta",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B26 Crear venta en mesa",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B27 No duplicar borrador en mesa ocupada",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B28 No inactivar mesa ocupada",
+      "metodo": "PATCH",
+      "url": "http://127.0.0.1:8090/api/v1/mesas/199c0d37-4c55-409b-8c76-c8f793e64a73/estado",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B29 Editar detalle a dos unidades",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/detalle",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B30 Editar borrador no reserva ni descuenta",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B31 Comprobante previo al pago",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/comprobante",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B32 Confirmar venta efectiva",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "B33 Confirmar descuenta dos unidades",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B34 Repetir solicitud idempotente",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B35 Repetición no descuenta otra vez",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B36 Misma clave y contenido diferente",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B37 Otra clave no repaga una venta",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B38 No editar venta pagada",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/detalle",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B39 No anular venta pagada",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/anular",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B40 Mesa liberada por pago",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/mesas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B41 Crear segunda venta para referencia duplicada",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B42 Referencia duplicada revierte transacción",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/beda2ff0-c6a7-4bea-b41a-85bb61b2a7ef/confirmar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B43 Rollback tardío conserva stock",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B44 Rollback no deja pago ni estado parcial",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/beda2ff0-c6a7-4bea-b41a-85bb61b2a7ef/comprobante",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B45 Nueva referencia reutiliza clave revertida",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/beda2ff0-c6a7-4bea-b41a-85bb61b2a7ef/confirmar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B46 Pago externo descuenta una unidad",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B47 Separar efectivo y externo",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B48 Actualizar precio vigente posterior al pago",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/productos/28b363ae-8389-4b8e-beeb-3463dc4a4de1",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B49 Conservar precio pagado histórico",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/comprobante",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B50 Crear borrador con precio11000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B51 Cambiar precio de catálogo a12000",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/productos/28b363ae-8389-4b8e-beeb-3463dc4a4de1",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B52 Rechazar precio cambiado entre detalle y cobro",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/320d55cd-055b-49b9-8000-376a59e28a38/confirmar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B53 Rechazo por precio conserva existencias",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B54 Anular borrador pendiente",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/320d55cd-055b-49b9-8000-376a59e28a38/anular",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B55 Crear Insumo compartido B",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B56 Movimiento ENTRADA entrada-insumo 12.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B57 Crear Plato B1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B58 Crear receta de plato1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/recetas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B59 Activar receta de plato1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/recetas/d0fc8000-a30d-43d5-9b27-d53e1715c489/activar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B60 Crear Plato B2",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/productos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B61 Crear receta de plato2",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/recetas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B62 Activar receta de plato2",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/recetas/ebdffa12-8bb4-4abb-904e-9c779b93528d/activar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B63 Listar recetas",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/recetas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B64 Consultar receta y unidad",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/recetas/d0fc8000-a30d-43d5-9b27-d53e1715c489",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B65 Crear venta de dos platos con demanda12",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B66 Movimiento AJUSTE ajuste-consumo -2.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B67 Insumo queda en diez",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B68 Rechazar nueva adición por demanda conjunta12",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B69 Revalidar stock del borrador anterior",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/dee6a861-3a72-4979-a03e-fdc56fc3f9c8/confirmar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B70 Fallo agregado no deja consumo parcial",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B71 Venta de receta sigue sin pagos",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/dee6a861-3a72-4979-a03e-fdc56fc3f9c8/comprobante",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B72 Movimiento ENTRADA reposicion-insumo 2.000",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B73 Confirmar receta con insumos suficientes",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/dee6a861-3a72-4979-a03e-fdc56fc3f9c8/confirmar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B74 Demanda conjunta consumió doce",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/existencias?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B75 Kardex conserva origen por receta y saldo firmado",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/movimientos?bodegaId=77e4acfb-1068-4630-b075-c7b43f4bcc8a",
+      "http_observado": 200,
+      "aserciones_aprobadas": 5
+    },
+    {
+      "nombre": "B76 Listar ventas del negocio",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B77 Cerrar caja con efectivo separado",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f/cerrar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B78 No volver a cerrar sesión",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f/cerrar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B79 No crear venta con caja cerrada",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "B80 Repetición legítima después del cierre",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/ventas/2cc69649-f3d7-46a5-9858-8f324066d0e2/confirmar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B81 Consultar cierre conservado",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/sesiones-caja/efc57bdb-2ade-426e-918d-fbf67b8b9d5f",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "B82 Sesión administrativa queda disponible para C",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/sesion",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C01 Sesión de administrador recibida de B",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/sesion",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C02 Crear empleado sintético",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/empleados",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C03 Listar empleados",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/empleados",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C04 Consultar empleado",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C05 No aceptar tenant en el cuerpo",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/empleados",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C06 Inactivar antes de historial",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C07 No crear novedad de empleado inactivo",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C08 Activar empleado",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C09 Rechazar importe 0.00",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C10 Rechazar importe -1.00",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C11 Rechazar importe 1.001",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C12 Rechazar importe 1000000000000.00",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C13 Crear novedad 1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C14 Crear novedad 2",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C15 Crear novedad 3",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C16 Crear novedad 4",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C17 Consultar novedades del período",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/novedades?periodo=4118-12",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C18 Consultar novedad individual",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C19 Editar borrador sin consumir",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C20 Crear liquidación",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C21 No aprobar selección sin autorización",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C22 Rechazo conserva borrador vacío",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C23 Autorizar novedad 1",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f/autorizar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C24 Autorizar novedad 2",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/6f3e5c15-d987-4d0e-a400-66abfb96e8be/autorizar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C25 Autorizar novedad 3",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/f58fa869-62e4-4782-b59a-561cce81153b/autorizar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C26 Rechazar cuarta novedad",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/980fff4f-093d-4f79-bd0c-b157450c6857/rechazar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C27 No editar autorización",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C28 Simulación sin escritura",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/simulacion",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C29 No repetir un ID en la selección",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C30 Aprobar selección explícita completa",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C31 Aprobación repetida idempotente",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C32 No cambiar selección aprobada",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf/aprobar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C33 No rechazar novedad consumida",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/novedades/ac5a044c-8d08-429c-91fb-3819d21b359f/rechazar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C34 Conservar identidad histórica",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/empleados/f0745e97-8c9f-4c2e-ad0e-c65e0ecda0bb",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C35 Listar liquidaciones del período",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones?periodo=4118-12",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C36 Nueva versión vacía",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones",
+      "http_observado": 201,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C37 No consumir nuevamente en otra versión",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/716d710e-73ed-4aee-8b47-473fd5e12f7d/aprobar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C38 Nueva versión sigue vacía",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/716d710e-73ed-4aee-8b47-473fd5e12f7d",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C39 Crear cuenta Debito",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/cuentas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C40 Crear cuenta Credito",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/cuentas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C41 Crear cuenta Auxiliar",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/cuentas",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C42 Listar cuentas del negocio",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/cuentas",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C43 Editar cuenta antes de usar",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/cuentas/7c4158e2-26fb-473a-bfd2-4d582487c77f",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C44 Encontrar eventos propios pendientes",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/eventos?estado=PENDIENTE",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C45 Consultar evento de nómina",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C46 No admitir importes contables del cliente",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/asientos",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C47 No repetir cuenta en débito y crédito",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C48 Exigir auxiliar para deducciones positivas",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C49 Rechazos no procesan el evento",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C50 Registrar nómina con tres líneas",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/asientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C51 Consultar asiento íntegro",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/asientos/adb353e7-b8d3-48c5-b6fc-bf1f1c524372",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C52 Ruta de eventos repite mismo asiento",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C53 No cambiar cuentas del asiento registrado",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459/procesar",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C54 No redefinir cuenta con historial",
+      "metodo": "PUT",
+      "url": "http://127.0.0.1:8090/api/v1/cuentas/7c4158e2-26fb-473a-bfd2-4d582487c77f",
+      "http_observado": 409,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C55 Evento procesado con fecha real",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/8a2930f7-12c0-4e84-811b-2ba290d45459",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C56 Nómina contabilizada conserva neto",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/liquidaciones/e9a15849-1c92-40e2-9ea2-6eb62639eedf",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C57 Contabilizar venta histórica de B",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/eventos/0246529e-ed47-49a0-b716-6ee490d1e8bf/procesar",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C58 Repetir venta sin otro asiento",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/asientos",
+      "http_observado": 201,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C59 Listado con un solo asiento por origen",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/asientos",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "C60 Reporte JSON ventas",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/ventas?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C61 CSV idéntico al conjunto JSON ventas",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/ventas/csv?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 5
+    },
+    {
+      "nombre": "C62 Reporte JSON nomina",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/nomina?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C63 CSV idéntico al conjunto JSON nomina",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/nomina/csv?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 5
+    },
+    {
+      "nombre": "C64 Reporte JSON contabilidad",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/contabilidad?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C65 CSV idéntico al conjunto JSON contabilidad",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/contabilidad/csv?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 5
+    },
+    {
+      "nombre": "C66 Reporte JSON inventario",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/inventario?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C67 CSV idéntico al conjunto JSON inventario",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/inventario/csv?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 5
+    },
+    {
+      "nombre": "C68 Reporte JSON caja",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/caja?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 3
+    },
+    {
+      "nombre": "C69 CSV idéntico al conjunto JSON caja",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/caja/csv?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 200,
+      "aserciones_aprobadas": 5
+    },
+    {
+      "nombre": "C70 Rango invertido no admitido",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/nomina?desde=2026-12-01&hasta=2026-11-01",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C71 Área fuera del contrato no admitida",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/reportes/desconocida?desde=2026-11-03&hasta=2026-11-03",
+      "http_observado": 400,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "C72 Sesión queda activa sin cambiar negocio",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/sesion",
+      "http_observado": 200,
+      "aserciones_aprobadas": 2
+    },
+    {
+      "nombre": "Z01 · Cerrar sesión real",
+      "metodo": "POST",
+      "url": "http://127.0.0.1:8090/api/v1/auth/salir",
+      "http_observado": 200,
+      "aserciones_aprobadas": 1
+    },
+    {
+      "nombre": "Z02 · Sesión invalidada",
+      "metodo": "GET",
+      "url": "http://127.0.0.1:8090/api/v1/auth/sesion",
+      "http_observado": 401,
+      "aserciones_aprobadas": 1
+    }
+  ]
+}

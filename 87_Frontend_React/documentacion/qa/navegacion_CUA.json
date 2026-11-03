@@ -1,0 +1,114 @@
+{
+  "acceso_verificado": true,
+  "vistas": 19,
+  "recorridos": [
+    {
+      "ruta": "usuarios",
+      "titulo": "Usuarios",
+      "fecha_UTC": "2026-11-03T16:16:13.057Z",
+      "correcto": true
+    },
+    {
+      "ruta": "roles",
+      "titulo": "Roles y permisos",
+      "fecha_UTC": "2026-11-03T16:16:14.062Z",
+      "correcto": true
+    },
+    {
+      "ruta": "nueva-venta",
+      "titulo": "Nueva venta",
+      "fecha_UTC": "2026-11-03T16:16:15.098Z",
+      "correcto": true
+    },
+    {
+      "ruta": "pago",
+      "titulo": "Revisar pago",
+      "fecha_UTC": "2026-11-03T16:16:16.189Z",
+      "correcto": true
+    },
+    {
+      "ruta": "comprobante",
+      "titulo": "Comprobante",
+      "fecha_UTC": "2026-11-03T16:16:17.283Z",
+      "correcto": true
+    },
+    {
+      "ruta": "productos",
+      "titulo": "Productos",
+      "fecha_UTC": "2026-11-03T16:16:18.376Z",
+      "correcto": true
+    },
+    {
+      "ruta": "existencias",
+      "titulo": "Existencias",
+      "fecha_UTC": "2026-11-03T16:16:19.474Z",
+      "correcto": true
+    },
+    {
+      "ruta": "movimientos",
+      "titulo": "Kardex",
+      "fecha_UTC": "2026-11-03T16:16:20.602Z",
+      "correcto": true
+    },
+    {
+      "ruta": "mesas",
+      "titulo": "Mesas",
+      "fecha_UTC": "2026-11-03T16:16:21.694Z",
+      "correcto": true
+    },
+    {
+      "ruta": "caja",
+      "titulo": "Sesión de caja",
+      "fecha_UTC": "2026-11-03T16:16:22.765Z",
+      "correcto": true
+    },
+    {
+      "ruta": "recetas",
+      "titulo": "Recetas",
+      "fecha_UTC": "2026-11-03T16:16:23.835Z",
+      "correcto": true
+    },
+    {
+      "ruta": "empleados",
+      "titulo": "Empleados",
+      "fecha_UTC": "2026-11-03T16:16:24.933Z",
+      "correcto": true
+    },
+    {
+      "ruta": "novedades",
+      "titulo": "Novedades",
+      "fecha_UTC": "2026-11-03T16:16:26.046Z",
+      "correcto": true
+    },
+    {
+      "ruta": "liquidacion",
+      "titulo": "Liquidación",
+      "fecha_UTC": "2026-11-03T16:16:27.113Z",
+      "correcto": true
+    },
+    {
+      "ruta": "cuentas",
+      "titulo": "Cuentas",
+      "fecha_UTC": "2026-11-03T16:16:28.245Z",
+      "correcto": true
+    },
+    {
+      "ruta": "asientos",
+      "titulo": "Asientos",
+      "fecha_UTC": "2026-11-03T16:16:29.320Z",
+      "correcto": true
+    },
+    {
+      "ruta": "reportes",
+      "titulo": "Reportes",
+      "fecha_UTC": "2026-11-03T16:16:30.441Z",
+      "correcto": true
+    },
+    {
+      "ruta": "inicio",
+      "titulo": "Inicio",
+      "fecha_UTC": "2026-11-03T16:16:31.531Z",
+      "correcto": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+POS Integral - API del proyecto
+GA7-220501096-AA5-EV03
+Repositorio público:
+https://github.com/SirHegel/sena-pos-integral/tree/main/90_API_POS_integral
+Expediente de pruebas:
+https://github.com/SirHegel/sena-pos-integral/tree/main/91_Pruebas_API_integral

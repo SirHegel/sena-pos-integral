@@ -1,0 +1,13 @@
+API DEL PROYECTO — GA7-220501096-AA5-EV04
+Jhon Steven Alvarez Ruiz · ficha 3388966
+
+1. Leer 91_Documentacion_pruebas_API_integral.pdf.
+2. El video presenta una secuencia explicativa de capturas auténticas del registro ejecutado.
+3. La colección, log, resultados y capturas corresponden a la ejecución final 180/314.
+4. ENDPOINT.txt/JSON documenta 62 operaciones. El proyecto completo está en la carpeta Proyecto_API del ZIP.
+5. Importar SQL 01/02/03 en laboratorio,configurar datasource privado y datos sintéticos,reconstruir con Maven. La clave no se entrega.
+6. Los resultados A42/B125/C222 son ejecuciones de bloques independientes; la colección Postman final prueba integración.
+7. React87 es una entrega separada; el expediente es de servicios REST.
+
+Repositorio público de la API: https://github.com/SirHegel/sena-pos-integral/tree/main/90_API_POS_integral
+Repositorio público de este expediente: https://github.com/SirHegel/sena-pos-integral/tree/main/91_Pruebas_API_integral
