@@ -25,9 +25,3 @@ UUID canónico; correo ASCII normalizado y hasta 254 caracteres; contraseña de 
 Límites
 Este caso local comprueba registro y autenticación. No incorpora autorización de roles, emisión de tokens, recuperación de contraseña, verificación por correo ni las operaciones de los otros seis dominios. Esas funciones no se declaran realizadas por este módulo. La prueba audiovisual de la API corresponde a la evidencia AA5-EV02.
 
-Referencias
-SENA, Guía de aprendizaje 7, AA5-EV01 y componente Construcción API.
-https://docs.spring.io/spring-boot/system-requirements.html
-https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html
-https://docs.spring.io/spring-framework/reference/data-access/jdbc.html
-https://dev.mysql.com/doc/connector-j/en/

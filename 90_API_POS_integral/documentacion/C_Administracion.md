@@ -81,4 +81,3 @@ Suite `pruebas/C_pruebas_http.py`: 222 de 222 comprobaciones aprobadas mediante 
 
 La ejecución corresponde al JAR SHA-256 `8d406676b5c743c289a6286fc2684f0e63a14d6912d39e0bf1ab35843682eddd`. El registro conserva cada respuesta y resultado; no contiene las credenciales de laboratorio. Las carreras concurrentes pertenecen a esta suite HTTP. Una colección Postman secuencial no sustituye esas pruebas de concurrencia.
 
-Fuentes técnicas: [MySQL8.4, locking reads](https://dev.mysql.com/doc/refman/8.4/en/innodb-locking-reads.html); [Spring, transacciones declarativas](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html); [Java21, BigDecimal](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html); [OWASP, CSV Injection](https://owasp.org/www-community/attacks/CSV_Injection).

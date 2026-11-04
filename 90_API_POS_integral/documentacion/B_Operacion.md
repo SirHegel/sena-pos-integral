@@ -55,12 +55,9 @@ El cierre conserva `fondo_inicial + pagos CONFIRMADO/EFECTIVO` como esperado. Lo
 
 El DDL y los146CHECK del modelo61 se conservan byte a byte. Una migración posterior03 añade `pago.medio VARCHAR(16) NOT NULL` y `CHECK(medio IN ('EFECTIVO','EXTERNO'))`. Se ejecuta con la tabla pago vacía antes de la semilla de esta aplicación; no se asigna un medio supuesto a pagos históricos. Permanecen26tablas. El recuento final de restricciones debe incluir el CHECK nuevo y distinguirse del resultado de la versión61.
 
-## Errores y fuentes técnicas
+## Errores
 
 400: formato, escala, campo inesperado, cantidad o UUID inválido.401: sesión requerida.403: rol o propiedad no autorizados.404: recurso no encontrado en negocio actual.409: caja/mesa/venta/receta no disponible, existencias, precio o importe no coincidente, clave/referencia duplicada u otra restricción operativa. Los mensajes no devuelven SQL ni datos de otros negocios.
 
-MySQL8.4, locking reads: https://dev.mysql.com/doc/refman/8.4/en/innodb-locking-reads.html
 
-Spring Framework, transacciones declarativas: https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html
 
-Guía7 y rúbricas GA7-220501096-AA5-EV03/EV04: servicios según requerimientos, validaciones, versionamiento y pruebas posteriores con Postman. La implementación local se somete a pruebas antes de componer la evidencia91.

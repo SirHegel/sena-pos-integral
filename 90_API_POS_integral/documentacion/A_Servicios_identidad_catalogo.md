@@ -42,6 +42,6 @@ Java 21, Maven, MySQL 8.4. Importar los SQL originales01/02 y la migración oper
 
 El inicializador de demostración está desactivado por defecto. Sólo en una base de laboratorio vacía se habilita POS_DEMO_ENABLED=true y se proporciona POS_DEMO_PASSWORD (clave sintética válida). Crea DEMO1 y DEMO2 con UUID 90000000-0000-4000-8000-000000000001/2, cinco roles y cinco cuentas por negocio: administrador,cajero,inventario,nomina,contabilidad en el dominio reservado demo.example. Sus contraseñas se almacenan como hashes BCrypt con sales diferentes. No hay información personal o laboral real en esas semillas. Volver a arrancar no sustituye contraseñas existentes.
 
-## Alcance pendiente de validación integrada
+## Verificaciones registradas
 
-Las pruebas registradas se referenciarán por archivo y hash de fuente. Una compilación exitosa por sí sola no comprueba reglas de negocio. La cobertura integral y el expediente Postman91 se cierran después de integrar B y C; no se atribuyen aquí resultados todavía no ejecutados.
+Las comprobaciones del módulo A se conservan en A_resultados_http.json: 42 de 42 aprobadas. El expediente integral 91 registra 180 solicitudes y 314 aserciones como un instrumento separado.

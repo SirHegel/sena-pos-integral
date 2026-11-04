@@ -9,4 +9,3 @@ Capas: CatalogoController recibe GET/POST, valida CSRF y prepara las JSP; Catalo
 
 Reglas: precio comercial mayor que cero, conforme al prototipo GA5; el CHECK físico>=0 continúa más amplio. Todo acceso usa tenant_id y producto_id; los errores no exponen SQL. La edición conserva activo. La demostración permite sólo dos negocios sintéticos y no representa autorización de roles. Se mantiene alcance de catálogo: otros dominios y la API integral no se dan por implementados. No hay campos de fecha en este módulo; no se inventa un campo para documentar una validación ajena al contrato.
 
-Fuentes: SENA Guía 7 AA3-EV01, instrumento correspondiente y CF20 secciones 4/5; arquitectura GA4, prototipo GA5 y modelo GA6. https://docs.spring.io/spring-boot/reference/web/servlet.html ; https://docs.spring.io/spring-data/jpa/reference/ ; https://docs.jboss.org/hibernate/orm/ ; https://dev.mysql.com/doc/refman/8.4/en/

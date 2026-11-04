@@ -21,10 +21,4 @@ Nombre, código y unidad obligatorios con límites del modelo; precio estrictame
 Demostración
 --demo crea sólo productos sintéticos con identificadores aleatorios en dos negocios de prueba ya existentes, comprueba CRUD/duplicados/decimales/validaciones/aislamiento de claves y retira esos productos al finalizar. El predicado tenant_id evita cruces por clave, pero no representa un sistema de autorización de usuarios: el programa local no expide sesiones ni roles.
 
-Referencias
-SENA, Guía7, GA7-220501096-AA2-EV01, instrumento correspondiente y CF20 Desarrollo de aplicaciones web con Java.
-https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html
-https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/PreparedStatement.html
-https://dev.mysql.com/doc/connector-j/en/
-
 Regla comercial de catálogo: precio mayor que cero; el CHECK físico GA6 conserva precio mayor o igual a cero. La aplicación impone la condición comercial más estricta y usa la misma regla en las versiones JDBC, Servlet/JSP y Spring.

@@ -51,11 +51,3 @@ TRAZABILIDAD.json: correspondencia de vistas y requisitos.
 Validación realizada
 Compilación real con Vite. Once casos funcionales aprobados con node:test: cantidades, atomicidad local del cobro, demanda compartida de insumos, precisión, precio histórico, caja, fecha Bogotá/CSV, nómina, asientos e identidad. Navegación de las 19 vistas verificada en navegador. Flujo de interfaz real: CAF001x2 y REC001x1, venta DEMO-0001 por 17000 COP, saldos CAF001=10, INS001=990 g e INS002=400 ml. Se verificaron texto literal con caracteres especiales, rechazo de rango invertido y limpieza de contraseña. La descarga CSV del navegador no se ejecutó; la función de serialización y su correspondencia con el filtro se comprobaron en las pruebas de estado.
 
-Fuentes
-SENA, guía 7 AA4 EV03 e instrumento IE-GA7-220501096-AA4-EV03.
-SENA, CF20 Desarrollo de aplicaciones web con Java, sección 3 React.
-Antecedentes del proyecto: arquitectura GA4, prototipo GA5 de 19 vistas, modelo físico GA6 de 26 tablas, interfaz 68 corregida, plan 76, estándar 77 y definición de componentes 86.
-React: https://react.dev/learn/creating-a-react-app
-React: https://react.dev/learn/your-first-component
-React: https://react.dev/learn/managing-state
-Vite: https://vite.dev/guide/

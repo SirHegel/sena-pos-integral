@@ -11,6 +11,5 @@ Validaciones: límites de Producto, decimales exactos, UUID, códigos duplicados
 
 Diseño: interfaz de catálogo relacionada con el prototipoGA5; capas Servlet→DAO→JDBC→MySQL; vistas JSP separadas del acceso a datos; estándar77 y versionamiento local. Preserva esquemaGA6 de26tablas. El módulo no altera la arquitectura Java del proyecto.
 
-Fuentes: SENA Guía7 AA2-EV02 y CF20; https://docs.spring.io/spring-boot/reference/web/servlet.html ; https://tomcat.apache.org/tomcat-11.0-doc/jasper-howto.html ; https://jakarta.ee/specifications/servlet/6.1/ ; https://jakarta.ee/specifications/pages/4.0/
 
 Regla comercial de catálogo: precio mayor que cero; el CHECK físico GA6 conserva precio mayor o igual a cero. La aplicación impone la condición comercial más estricta y usa la misma regla en las versiones JDBC, Servlet/JSP y Spring.
