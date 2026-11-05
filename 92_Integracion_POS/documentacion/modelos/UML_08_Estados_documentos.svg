@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="408" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 408" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="408"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-408)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="4" y="392" style="font-family: DVS-B; font-size: 12px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,784) scale(1,-1)">Venta</text>
+			<rect x="8" y="325" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="8" y="347" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="15" y="356" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,712) scale(1,-1)">BORRADOR</text>
+			<rect x="177" y="325" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="177" y="347" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="184" y="356" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,712) scale(1,-1)">PAGADA</text>
+			<rect x="346" y="325" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="346" y="347" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="353" y="356" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,712) scale(1,-1)">ANULADA</text>
+			<path d="M 163,350 L 177,350 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="177 350, 171.5973 347.3902, 171.5973 352.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="154.7763671875" y="379" width="30.447265625" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="158.7763671875" y="383" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,766) scale(1,-1)">pago</text>
+			<path d="M 85,325 L 85,304 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 85,304 L 423,304 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 423,304 L 423,325 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="423 325, 425.6098 319.5973, 420.3902 319.5973" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="224.1552734375" y="287" width="91.689453125" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="228.1552734375" y="291" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,582) scale(1,-1)">anular BORRADOR</text>
+			<text x="4" y="260" style="font-family: DVS-B; font-size: 12px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,520) scale(1,-1)">Nómina</text>
+			<rect x="8" y="193" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="8" y="215" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="15" y="224" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,448) scale(1,-1)">BORRADOR</text>
+			<rect x="177" y="193" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="177" y="215" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="184" y="224" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,448) scale(1,-1)">APROBADA</text>
+			<rect x="346" y="193" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="346" y="215" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="353" y="224" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,448) scale(1,-1)">CONTABILIZADA</text>
+			<path d="M 163,218 L 177,218 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="177 218, 171.5973 215.3902, 171.5973 220.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<path d="M 332,218 L 346,218 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="346 218, 340.5973 215.3902, 340.5973 220.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="9" y="171" style="font-family: DVS; font-size: 9.5px;fill: rgb(32%,40%,44%); stroke:none;" transform="translate(0,342) scale(1,-1)">Aprobar / procesar evento</text>
+			<text x="4" y="128" style="font-family: DVS-B; font-size: 12px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,256) scale(1,-1)">Evento</text>
+			<rect x="8" y="61" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="8" y="83" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="15" y="92" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,184) scale(1,-1)">PENDIENTE</text>
+			<rect x="177" y="61" width="155" height="49" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="177" y="83" width="155" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="184" y="92" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,184) scale(1,-1)">PROCESADO</text>
+			<path d="M 163,86 L 177,86 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="177 86, 171.5973 83.39021, 171.5973 88.60979" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="9" y="39" style="font-family: DVS; font-size: 9.5px;fill: rgb(32%,40%,44%); stroke:none;" transform="translate(0,78) scale(1,-1)">Procesar origen de forma equivalente</text>
+		</g>
+	</g>
+</svg>

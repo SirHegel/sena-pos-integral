@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="430" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 430" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="430"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-430)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="318" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="403" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="412" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,824) scale(1,-1)">Empleado</text>
+			<text x="7" y="388" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,776) scale(1,-1)">- empleadoId, documento</text>
+			<text x="7" y="375.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,751) scale(1,-1)">- nombre, estado</text>
+			<text x="7" y="363.2" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,726) scale(1,-1)">+ estaActivo()</text>
+			<rect x="285" y="318" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="285" y="403" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="292" y="412" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,824) scale(1,-1)">NovedadNomina</text>
+			<text x="292" y="388" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,776) scale(1,-1)">- empleadoId, periodo, tipo</text>
+			<text x="292" y="375.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,751) scale(1,-1)">- concepto, importe, estado</text>
+			<text x="292" y="363.2" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,726) scale(1,-1)">+ autorizar()</text>
+			<rect x="0" y="164" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="249" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="258" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,516) scale(1,-1)">LiquidacionNomina</text>
+			<text x="7" y="234" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,468) scale(1,-1)">- periodo, version, estado</text>
+			<text x="7" y="221.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,443) scale(1,-1)">+ simular()</text>
+			<text x="7" y="209.2" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,418) scale(1,-1)">+ aprobar(seleccion)</text>
+			<rect x="285" y="164" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="285" y="249" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="292" y="258" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,516) scale(1,-1)">DetalleNomina</text>
+			<text x="292" y="234" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,468) scale(1,-1)">- liquidacionId, empleadoId</text>
+			<text x="292" y="221.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,443) scale(1,-1)">- devengos, deducciones</text>
+			<text x="292" y="209.2" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,418) scale(1,-1)">/ neto</text>
+			<text x="292" y="196.79999999999998" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,393) scale(1,-1)">+ calcularNeto()</text>
+			<rect x="285" y="10" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="285" y="95" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="292" y="104" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,208) scale(1,-1)">DetalleNominaNovedad</text>
+			<text x="292" y="80" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,160) scale(1,-1)">- tenantId, novedadId</text>
+			<text x="292" y="67.60000000000002" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,135) scale(1,-1)">- liquidacionId, empleadoId</text>
+			<text x="292" y="55.200000000000045" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,110) scale(1,-1)">+ identificarAplicacion()</text>
+			<path d="M 224,374 L 285,374 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="229.2005859375" y="375.0" width="13.598828125000011" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="233.2005859375" y="379.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,758) scale(1,-1)">1</text>
+			<rect x="257.2033203125" y="375.0" width="23.593359374999977" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="261.2033203125" y="379.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,758) scale(1,-1)">0..*</text>
+			<path d="M 224,220 L 285,220 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="224 220, 229 217, 234 220, 229 223" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="229.2005859375" y="221.0" width="13.598828125000011" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="233.2005859375" y="225.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,450) scale(1,-1)">1</text>
+			<rect x="257.2033203125" y="221.0" width="23.593359374999977" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="261.2033203125" y="225.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,450) scale(1,-1)">0..*</text>
+			<path d="M 397,164 L 397,122 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="402.2005859375" y="165" width="13.598828125000011" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="406.2005859375" y="169" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,338) scale(1,-1)">1</text>
+			<rect x="369.2033203125" y="123" width="23.593359374999977" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="373.2033203125" y="127" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,254) scale(1,-1)">0..*</text>
+			<path d="M 112,318 L 112,297 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 112,297 L 397,297 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 397,297 L 397,276 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="117.2005859375" y="319" width="13.598828125000011" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="121.2005859375" y="323" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,646) scale(1,-1)">1</text>
+			<rect x="369.2033203125" y="277" width="23.593359374999977" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="373.2033203125" y="281" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,562) scale(1,-1)">0..*</text>
+			<path d="M 285,374 L 270,374 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 270,374 L 270,66 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 270,66 L 285,66 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="290.2005859375" y="375" width="13.598828125000011" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="294.2005859375" y="379" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,758) scale(1,-1)">1</text>
+			<rect x="256.60390625" y="67" width="24.79218750000001" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="260.60390625" y="71" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,142) scale(1,-1)">0..1</text>
+		</g>
+	</g>
+</svg>

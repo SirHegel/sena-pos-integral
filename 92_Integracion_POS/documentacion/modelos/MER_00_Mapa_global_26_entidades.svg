@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="414" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 414" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="414"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-414)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="289" width="245" height="125" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="387" width="245" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="396" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,792) scale(1,-1)">Identidad</text>
+			<text x="7" y="372" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,744) scale(1,-1)">tenant / usuario</text>
+			<text x="7" y="359.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,719) scale(1,-1)">rol / usuario_rol</text>
+			<rect x="264" y="289" width="245" height="125" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="264" y="387" width="245" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="271" y="396" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,792) scale(1,-1)">Catálogo e inventario</text>
+			<text x="271" y="372" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,744) scale(1,-1)">producto / bodega</text>
+			<text x="271" y="359.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,719) scale(1,-1)">existencia / movimiento_inventario</text>
+			<rect x="0" y="151" width="245" height="125" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="249" width="245" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="258" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,516) scale(1,-1)">Ventas y pago</text>
+			<text x="7" y="234" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,468) scale(1,-1)">venta / detalle_venta</text>
+			<text x="7" y="221.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,443) scale(1,-1)">pago / operacion_confirmacion</text>
+			<rect x="264" y="151" width="245" height="125" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="264" y="249" width="245" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="271" y="258" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,516) scale(1,-1)">Gastronomía y caja</text>
+			<text x="271" y="234" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,468) scale(1,-1)">mesa / caja</text>
+			<text x="271" y="221.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,443) scale(1,-1)">sesion_caja / receta / detalle_receta</text>
+			<rect x="0" y="13" width="245" height="125" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="111" width="245" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="120" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,240) scale(1,-1)">Nómina</text>
+			<text x="7" y="96" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,192) scale(1,-1)">empleado / novedad_nomina</text>
+			<text x="7" y="83.60000000000002" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,167) scale(1,-1)">liquidacion_nomina / detalle_nomina /</text>
+			<text x="7" y="71.20000000000005" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,142) scale(1,-1)">detalle_nomina_novedad</text>
+			<rect x="264" y="13" width="245" height="125" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="264" y="111" width="245" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="271" y="120" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,240) scale(1,-1)">Contabilidad e integración</text>
+			<text x="271" y="96" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,192) scale(1,-1)">cuenta / asiento_contable</text>
+			<text x="271" y="83.60000000000002" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,167) scale(1,-1)">linea_asiento / evento_integracion</text>
+		</g>
+	</g>
+</svg>

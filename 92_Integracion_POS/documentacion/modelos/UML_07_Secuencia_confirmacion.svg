@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="470" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 470" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="470"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-470)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="8" y="438" width="104" height="32" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="21.460351562499994" y="449" style="font-family: DVS-B; font-size: 9.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,898) scale(1,-1)">Cajero / React</text>
+			<path d="M 60,436 L 60,12 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<rect x="136" y="438" width="104" height="32" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="155.147509765625" y="449" style="font-family: DVS-B; font-size: 9.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,898) scale(1,-1)">Controlador</text>
+			<path d="M 188,436 L 188,12 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<rect x="273" y="438" width="104" height="32" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="276.471337890625" y="449" style="font-family: DVS-B; font-size: 9.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,898) scale(1,-1)">OperacionService</text>
+			<path d="M 325,436 L 325,12 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<rect x="403" y="438" width="104" height="32" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="436.11298828125" y="449" style="font-family: DVS-B; font-size: 9.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,898) scale(1,-1)">MySQL</text>
+			<path d="M 455,436 L 455,12 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 60,415 L 188,415 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="188 415, 182.5973 412.3902, 182.5973 417.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="40.57851562500001" y="416" width="166.84296874999995" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="44.57851562500001" y="420" style="font-family: DVS; font-size: 8.2px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,840) scale(1,-1)">Confirmar importe / medio / referencia</text>
+			<path d="M 188,386 L 325,386 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="325 386, 319.5973 383.3902, 319.5973 388.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="166.430908203125" y="387" width="180.13818359375" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="170.430908203125" y="391" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,782) scale(1,-1)">Actor autorizado + clave idempotente</text>
+			<path d="M 325,357 L 455,357 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="455 357, 449.5973 354.3902, 449.5973 359.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="305.61962890625" y="358" width="168.7607421875" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="309.61962890625" y="362" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,724) scale(1,-1)">Buscar resultado de la misma clave</text>
+			<path d="M 455,328 L 325,328 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="325 328, 330.4027 330.6098, 330.4027 325.3902" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="322.28369140625" y="329" width="135.4326171875" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="326.28369140625" y="333" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,666) scale(1,-1)">Resultado previo o ausencia</text>
+			<path d="M 325,299 L 455,299 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="455 299, 449.5973 296.3902, 449.5973 301.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="310.231689453125" y="300" width="159.53662109375" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="314.231689453125" y="304" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,608) scale(1,-1)">Bloquear venta/sesión y revalidar</text>
+			<path d="M 325,270 L 455,270 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="455 270, 449.5973 267.3902, 449.5973 272.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="302.470947265625" y="271" width="175.05810546875" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="306.470947265625" y="275" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,550) scale(1,-1)">Bloquear productos, recetas y saldos</text>
+			<path d="M 325,241 L 355,241 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 355,241 L 355,229 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 355,229 L 325,229 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="325 229, 330.4027 231.6098, 330.4027 226.3902" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="245.372314453125" y="242" width="159.25537109375" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="249.372314453125" y="246" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,492) scale(1,-1)">Total exacto y demanda conjunta</text>
+			<path d="M 325,212 L 455,212 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="455 212, 449.5973 209.3902, 449.5973 214.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="298.48291015625" y="213" width="183.0341796875" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="302.48291015625" y="217" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,434) scale(1,-1)">Guardar pago, PAGADA y movimientos</text>
+			<path d="M 325,183 L 455,183 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="455 183, 449.5973 180.3902, 449.5973 185.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="294.004248046875" y="184" width="191.99150390625" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="298.004248046875" y="188" style="font-family: DVS; font-size: 8.2px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,376) scale(1,-1)">Guardar evento y operación de confirmación</text>
+			<path d="M 325,154 L 455,154 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<polygon points="455 154, 449.5973 151.3902, 449.5973 156.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="315.131591796875" y="155" width="149.73681640625" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="319.131591796875" y="159" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,318) scale(1,-1)">COMMIT al finalizar transacción</text>
+			<path d="M 455,125 L 325,125 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="325 125, 330.4027 127.6098, 330.4027 122.3902" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="342.311767578125" y="126" width="95.37646484375" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="346.311767578125" y="130" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,260) scale(1,-1)">Conjunto persistido</text>
+			<path d="M 325,96 L 188,96 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="188 96, 193.4027 98.60979, 193.4027 93.39021" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="195.856689453125" y="97" width="121.28662109375" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="199.856689453125" y="101" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,202) scale(1,-1)">Comprobante académico</text>
+			<path d="M 188,67 L 60,67 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="60 67, 65.40268 69.60979, 65.40268 64.39021" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="69.46728515625" y="68" width="109.0654296875" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="73.46728515625" y="72" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,144) scale(1,-1)">Respuesta confirmada</text>
+		</g>
+	</g>
+</svg>

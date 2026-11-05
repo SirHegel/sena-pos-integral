@@ -1,0 +1,767 @@
+{
+  "base_local": "http://127.0.0.1:8093",
+  "operaciones": 63,
+  "endpoints": [
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/cuentas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/cuentas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/cuentas/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/asientos",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/asientos/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/asientos",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/eventos",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/eventos/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/eventos/{id}/procesar",
+      "roles": [
+        "ADMINISTRADOR",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ContabilidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/empleados",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/empleados/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/empleados",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/empleados/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/novedades",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/novedades/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/novedades",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/novedades/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/novedades/{id}/autorizar",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/novedades/{id}/rechazar",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/liquidaciones",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/liquidaciones/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/liquidaciones/{id}/simulacion",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/liquidaciones",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/liquidaciones/{id}/aprobar",
+      "roles": [
+        "ADMINISTRADOR",
+        "NOMINA"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/NominaController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/reportes/{area}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO",
+        "NOMINA",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ReportesController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/reportes/{area}/csv",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO",
+        "NOMINA",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/administracion/ReportesController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/productos",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/catalogo/CatalogoController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/productos/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/catalogo/CatalogoController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/productos",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/catalogo/CatalogoController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/productos/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/catalogo/CatalogoController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/auth/csrf",
+      "roles": [],
+      "publico": true,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/auth/ingreso",
+      "roles": [],
+      "publico": true,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/auth/sesion",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO",
+        "NOMINA",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/auth/salir",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO",
+        "NOMINA",
+        "CONTABILIDAD"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/usuarios",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/usuarios",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/usuarios/{id}",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/roles",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/identidad/IdentidadController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/bodegas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/bodegas",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/existencias",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/movimientos",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/movimientos",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/mesas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/mesas",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "PATCH",
+      "ruta": "/api/v1/mesas/{id}/estado",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/cajas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/cajas",
+      "roles": [
+        "ADMINISTRADOR"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/sesiones-caja",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/sesiones-caja",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/sesiones-caja/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/sesiones-caja/{id}/cerrar",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/recetas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/recetas/{id}",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/recetas",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/recetas/{id}/activar",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/ventas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/ventas",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 201,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/ventas/{id}/detalle",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "GET",
+      "ruta": "/api/v1/ventas/{id}/comprobante",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": false,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/ventas/{id}/anular",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "POST",
+      "ruta": "/api/v1/ventas/{id}/confirmar",
+      "roles": [
+        "ADMINISTRADOR",
+        "CAJERO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/OperacionController.java"
+    },
+    {
+      "metodo": "PUT",
+      "ruta": "/api/v1/existencias/minimo",
+      "roles": [
+        "ADMINISTRADOR",
+        "INVENTARIO"
+      ],
+      "publico": false,
+      "csrf": true,
+      "exito": 200,
+      "fuente": "src/main/java/co/edu/sena/pos/integral/operacion/MinimosController.java"
+    }
+  ]
+}

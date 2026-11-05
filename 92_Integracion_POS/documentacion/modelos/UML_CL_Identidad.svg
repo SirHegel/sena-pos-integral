@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="300" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 300" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="300"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-300)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="188" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="273" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="282" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,564) scale(1,-1)">Tenant</text>
+			<text x="7" y="258" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,516) scale(1,-1)">- tenantId: UUID</text>
+			<text x="7" y="245.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,491) scale(1,-1)">- codigo, nombre</text>
+			<text x="7" y="233.2" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,466) scale(1,-1)">- zonaHoraria, moneda</text>
+			<text x="7" y="220.8" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,441) scale(1,-1)">+ delimitarNegocio()</text>
+			<rect x="285" y="188" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="285" y="273" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="292" y="282" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,564) scale(1,-1)">Usuario</text>
+			<text x="292" y="258" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,516) scale(1,-1)">- tenantId, usuarioId</text>
+			<text x="292" y="245.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,491) scale(1,-1)">- correo, activo</text>
+			<text x="292" y="233.2" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,466) scale(1,-1)">- fallos, bloqueadoHasta</text>
+			<text x="292" y="220.8" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,441) scale(1,-1)">+ puedeIngresar()</text>
+			<rect x="0" y="24" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="109" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="118" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,236) scale(1,-1)">Rol</text>
+			<text x="7" y="94" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,188) scale(1,-1)">- tenantId, rolId</text>
+			<text x="7" y="81.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,163) scale(1,-1)">- nombre</text>
+			<text x="7" y="69.19999999999999" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,138) scale(1,-1)">+ autoriza(accion)</text>
+			<rect x="285" y="24" width="224" height="112" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="285" y="109" width="224" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="292" y="118" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,236) scale(1,-1)">UsuarioRol</text>
+			<text x="292" y="94" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,188) scale(1,-1)">- tenantId, usuarioId, rolId</text>
+			<text x="292" y="81.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,163) scale(1,-1)">+ identificarAsignacion()</text>
+			<path d="M 224,244 L 285,244 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="229.2005859375" y="245.0" width="13.598828125000011" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="233.2005859375" y="249.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,498) scale(1,-1)">1</text>
+			<rect x="257.2033203125" y="245.0" width="23.593359374999977" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="261.2033203125" y="249.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,498) scale(1,-1)">0..*</text>
+			<path d="M 112,188 L 112,136 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="117.2005859375" y="189" width="13.598828125000011" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="121.2005859375" y="193" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,386) scale(1,-1)">1</text>
+			<rect x="84.2033203125" y="137" width="23.59335937499999" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="88.2033203125" y="141" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,282) scale(1,-1)">0..*</text>
+			<path d="M 397,188 L 397,136 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="402.2005859375" y="189" width="13.598828125000011" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="406.2005859375" y="193" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,386) scale(1,-1)">1</text>
+			<rect x="369.2033203125" y="137" width="23.593359374999977" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="373.2033203125" y="141" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,282) scale(1,-1)">0..*</text>
+			<path d="M 224,80 L 285,80 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<rect x="229.2005859375" y="81.0" width="13.598828125000011" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="233.2005859375" y="85.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,170) scale(1,-1)">1</text>
+			<rect x="257.2033203125" y="81.0" width="23.593359374999977" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="261.2033203125" y="85.0" style="font-family: DVS; font-size: 8.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,170) scale(1,-1)">0..*</text>
+		</g>
+	</g>
+</svg>

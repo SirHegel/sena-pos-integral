@@ -1,0 +1,12 @@
+node_modules
+target/
+dist/
+.env
+.env.*
+*.log
+*.pid
+__pycache__/
+*.pyc
+*.jar
+*.bundle
+*.zip

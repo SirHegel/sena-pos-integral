@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="420" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 420" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="420"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-420)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="155" y="5" width="354.27559055118115" height="410" style="stroke: rgb(87%,90%,92%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="170" y="396" style="font-family: DVS-B; font-size: 11px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,792) scale(1,-1)">Sistema POS Integral</text>
+			<circle cx="55" cy="352" r="7" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 55,345 L 55,320 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 39,336 L 71,336 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 55,320 L 42,303 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 55,320 L 68,303 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<text x="4" y="286" style="font-family: DVS; font-size: 10px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,572) scale(1,-1)">Cajero</text>
+			<path d="M 74,334 L 170,350 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 74,334 L 170,291 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 74,334 L 170,232 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 74,334 L 170,173 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<circle cx="55" cy="252" r="7" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 55,245 L 55,220 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 39,236 L 71,236 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 55,220 L 42,203 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 55,220 L 68,203 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<text x="4" y="186" style="font-family: DVS; font-size: 10px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,372) scale(1,-1)">Administrador</text>
+			<path d="M 74,234 L 170,350 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 74,234 L 170,291 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 74,234 L 170,232 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 74,234 L 170,173 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<circle cx="55" cy="152" r="7" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 55,145 L 55,120 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 39,136 L 71,136 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 55,120 L 42,103 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<path d="M 55,120 L 68,103 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<text x="4" y="86" style="font-family: DVS; font-size: 10px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,172) scale(1,-1)">Inventario</text>
+			<path d="M 74,134 L 170,173 Z" style="stroke: rgb(32%,40%,44%); stroke-linecap: butt; stroke-width: 0.85;"/>
+			<ellipse cx="332.0" cy="350.0" rx="153.0" ry="23.0" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.9; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="314.399169921875" y="354" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,708) scale(1,-1)">CU-01</text>
+			<text x="286.296875" y="340" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,680) scale(1,-1)">Acceder al negocio</text>
+			<ellipse cx="332.0" cy="291.0" rx="153.0" ry="23.0" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.9; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="314.399169921875" y="295" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,590) scale(1,-1)">CU-03</text>
+			<text x="296.1171875" y="281" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,562) scale(1,-1)">Preparar venta</text>
+			<ellipse cx="332.0" cy="232.0" rx="153.0" ry="23.0" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.9; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="314.399169921875" y="236" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,472) scale(1,-1)">CU-04</text>
+			<text x="275.0328125" y="222" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,444) scale(1,-1)">Confirmar pago y venta</text>
+			<ellipse cx="332.0" cy="173.0" rx="153.0" ry="23.0" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.9; fill: rgb(91%,96%,94%); fill-rule: evenodd;"/>
+			<text x="314.399169921875" y="177" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,354) scale(1,-1)">CU-06</text>
+			<text x="261.59375" y="163" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,326) scale(1,-1)">Operar mesas, caja y recetas</text>
+			<ellipse cx="330.0" cy="83.0" rx="150.0" ry="21.0" style="stroke: rgb(7%,43%,40%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="280.17578125" y="79" style="font-family: DVS; font-size: 10px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,158) scale(1,-1)">Emitir comprobante</text>
+			<path d="M 450,224 L 491,224 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 491,224 L 491,83 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 491,83 L 480,83 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="480 83, 485.4027 85.60979, 485.4027 80.39021" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="432.18994140625" y="111" width="51.6201171875" height="14" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="436.18994140625" y="115" style="font-family: DVS; font-size: 9px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,230) scale(1,-1)">«include»</text>
+			<text x="172" y="31" style="font-family: DVS; font-size: 9.8px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,62) scale(1,-1)">Asociar mesa «extend» Preparar venta</text>
+			<text x="172" y="14" style="font-family: DVS; font-size: 9.5px;fill: rgb(32%,40%,44%); stroke:none;" transform="translate(0,28) scale(1,-1)">Condición: atención en una mesa.</text>
+		</g>
+	</g>
+</svg>

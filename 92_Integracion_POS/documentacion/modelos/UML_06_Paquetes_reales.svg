@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="358" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 358" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="358"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-358)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="141" y="270" width="226" height="88" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="141" y="331" width="226" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="148" y="340" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,680) scale(1,-1)">nucleo</text>
+			<text x="148" y="316" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,632) scale(1,-1)">Actor / Sesiones / Db / V</text>
+			<text x="148" y="303.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,607) scale(1,-1)">WebConfig / errores / permisos</text>
+			<rect x="0" y="130" width="225" height="80" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="183" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="192" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,384) scale(1,-1)">identidad</text>
+			<text x="7" y="168" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,336) scale(1,-1)">Cuentas, ingreso y roles</text>
+			<rect x="284" y="130" width="225" height="80" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="284" y="183" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="291" y="192" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,384) scale(1,-1)">catalogo</text>
+			<text x="291" y="168" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,336) scale(1,-1)">Productos y definición de catálogo</text>
+			<rect x="0" y="10" width="225" height="80" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="63" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="72" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,144) scale(1,-1)">operacion</text>
+			<text x="7" y="48" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,96) scale(1,-1)">Ventas, inventario, mínimos,</text>
+			<text x="7" y="35.60000000000002" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,71) scale(1,-1)">mesas, recetas y caja</text>
+			<rect x="284" y="10" width="225" height="80" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="284" y="63" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="291" y="72" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,144) scale(1,-1)">administracion</text>
+			<text x="291" y="48" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,96) scale(1,-1)">Nómina, contabilidad y reportes</text>
+			<path d="M 112.5,210 L 112.5,243 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 112.5,243 L 254,243 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 254,243 L 254,270 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="254 270, 256.6098 264.5973, 251.3902 264.5973" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<path d="M 396.5,210 L 396.5,243 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 396.5,243 L 254,243 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 254,243 L 254,270 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="254 270, 256.6098 264.5973, 251.3902 264.5973" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<path d="M 112.5,90 L 112.5,112 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 112.5,112 L 254,112 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 254,112 L 254,270 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="254 270, 256.6098 264.5973, 251.3902 264.5973" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<path d="M 396.5,90 L 396.5,112 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 396.5,112 L 254,112 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 254,112 L 254,270 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="254 270, 256.6098 264.5973, 251.3902 264.5973" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

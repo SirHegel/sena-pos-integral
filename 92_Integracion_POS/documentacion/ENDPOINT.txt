@@ -1,0 +1,67 @@
+POS Integral - contratos HTTP de la integración 92
+Base local: http://127.0.0.1:8093
+Operaciones: 63
+
+GET /api/v1/cuentas | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: False | Éxito: 200
+POST /api/v1/cuentas | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: True | Éxito: 201
+PUT /api/v1/cuentas/{id} | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: True | Éxito: 200
+GET /api/v1/asientos | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: False | Éxito: 200
+GET /api/v1/asientos/{id} | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: False | Éxito: 200
+POST /api/v1/asientos | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: True | Éxito: 201
+GET /api/v1/eventos | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: False | Éxito: 200
+GET /api/v1/eventos/{id} | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: False | Éxito: 200
+POST /api/v1/eventos/{id}/procesar | Roles: ADMINISTRADOR, CONTABILIDAD | CSRF: True | Éxito: 200
+GET /api/v1/empleados | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+GET /api/v1/empleados/{id} | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+POST /api/v1/empleados | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 201
+PUT /api/v1/empleados/{id} | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 200
+GET /api/v1/novedades | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+GET /api/v1/novedades/{id} | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+POST /api/v1/novedades | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 201
+PUT /api/v1/novedades/{id} | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 200
+POST /api/v1/novedades/{id}/autorizar | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 200
+POST /api/v1/novedades/{id}/rechazar | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 200
+GET /api/v1/liquidaciones | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+GET /api/v1/liquidaciones/{id} | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+GET /api/v1/liquidaciones/{id}/simulacion | Roles: ADMINISTRADOR, NOMINA | CSRF: False | Éxito: 200
+POST /api/v1/liquidaciones | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 201
+POST /api/v1/liquidaciones/{id}/aprobar | Roles: ADMINISTRADOR, NOMINA | CSRF: True | Éxito: 200
+GET /api/v1/reportes/{area} | Roles: ADMINISTRADOR, CAJERO, INVENTARIO, NOMINA, CONTABILIDAD | CSRF: False | Éxito: 200
+GET /api/v1/reportes/{area}/csv | Roles: ADMINISTRADOR, CAJERO, INVENTARIO, NOMINA, CONTABILIDAD | CSRF: False | Éxito: 200
+GET /api/v1/productos | Roles: ADMINISTRADOR, CAJERO, INVENTARIO | CSRF: False | Éxito: 200
+GET /api/v1/productos/{id} | Roles: ADMINISTRADOR, CAJERO, INVENTARIO | CSRF: False | Éxito: 200
+POST /api/v1/productos | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 201
+PUT /api/v1/productos/{id} | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 200
+GET /api/v1/auth/csrf | Roles: público | CSRF: False | Éxito: 200
+POST /api/v1/auth/ingreso | Roles: público | CSRF: True | Éxito: 200
+GET /api/v1/auth/sesion | Roles: ADMINISTRADOR, CAJERO, INVENTARIO, NOMINA, CONTABILIDAD | CSRF: False | Éxito: 200
+POST /api/v1/auth/salir | Roles: ADMINISTRADOR, CAJERO, INVENTARIO, NOMINA, CONTABILIDAD | CSRF: True | Éxito: 200
+GET /api/v1/usuarios | Roles: ADMINISTRADOR | CSRF: False | Éxito: 200
+POST /api/v1/usuarios | Roles: ADMINISTRADOR | CSRF: True | Éxito: 201
+PUT /api/v1/usuarios/{id} | Roles: ADMINISTRADOR | CSRF: True | Éxito: 200
+GET /api/v1/roles | Roles: ADMINISTRADOR | CSRF: False | Éxito: 200
+GET /api/v1/bodegas | Roles: ADMINISTRADOR, CAJERO, INVENTARIO | CSRF: False | Éxito: 200
+POST /api/v1/bodegas | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 201
+GET /api/v1/existencias | Roles: ADMINISTRADOR, CAJERO, INVENTARIO | CSRF: False | Éxito: 200
+GET /api/v1/movimientos | Roles: ADMINISTRADOR, INVENTARIO | CSRF: False | Éxito: 200
+POST /api/v1/movimientos | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 201
+GET /api/v1/mesas | Roles: ADMINISTRADOR, CAJERO | CSRF: False | Éxito: 200
+POST /api/v1/mesas | Roles: ADMINISTRADOR | CSRF: True | Éxito: 201
+PATCH /api/v1/mesas/{id}/estado | Roles: ADMINISTRADOR | CSRF: True | Éxito: 200
+GET /api/v1/cajas | Roles: ADMINISTRADOR, CAJERO | CSRF: False | Éxito: 200
+POST /api/v1/cajas | Roles: ADMINISTRADOR | CSRF: True | Éxito: 201
+GET /api/v1/sesiones-caja | Roles: ADMINISTRADOR, CAJERO | CSRF: False | Éxito: 200
+POST /api/v1/sesiones-caja | Roles: ADMINISTRADOR, CAJERO | CSRF: True | Éxito: 201
+GET /api/v1/sesiones-caja/{id} | Roles: ADMINISTRADOR, CAJERO | CSRF: False | Éxito: 200
+POST /api/v1/sesiones-caja/{id}/cerrar | Roles: ADMINISTRADOR, CAJERO | CSRF: True | Éxito: 200
+GET /api/v1/recetas | Roles: ADMINISTRADOR, CAJERO, INVENTARIO | CSRF: False | Éxito: 200
+GET /api/v1/recetas/{id} | Roles: ADMINISTRADOR, CAJERO, INVENTARIO | CSRF: False | Éxito: 200
+POST /api/v1/recetas | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 201
+POST /api/v1/recetas/{id}/activar | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 200
+GET /api/v1/ventas | Roles: ADMINISTRADOR, CAJERO | CSRF: False | Éxito: 200
+POST /api/v1/ventas | Roles: ADMINISTRADOR, CAJERO | CSRF: True | Éxito: 201
+PUT /api/v1/ventas/{id}/detalle | Roles: ADMINISTRADOR, CAJERO | CSRF: True | Éxito: 200
+GET /api/v1/ventas/{id}/comprobante | Roles: ADMINISTRADOR, CAJERO | CSRF: False | Éxito: 200
+POST /api/v1/ventas/{id}/anular | Roles: ADMINISTRADOR, CAJERO | CSRF: True | Éxito: 200
+POST /api/v1/ventas/{id}/confirmar | Roles: ADMINISTRADOR, CAJERO | CSRF: True | Éxito: 200
+PUT /api/v1/existencias/minimo | Roles: ADMINISTRADOR, INVENTARIO | CSRF: True | Éxito: 200

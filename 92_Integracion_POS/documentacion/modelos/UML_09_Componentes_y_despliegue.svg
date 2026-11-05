@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="509.27559055118115" height="420" preserveAspectRatio="xMinYMin meet" viewBox="0 0 509 420" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="509.27559055118115" height="420"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-420)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="344" width="225" height="76" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="393" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="402" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,804) scale(1,-1)">«component» React</text>
+			<text x="7" y="378" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,756) scale(1,-1)">Vistas y servicios HTTP</text>
+			<text x="7" y="365.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,731) scale(1,-1)">Cookies de sesión / CSRF</text>
+			<rect x="284" y="344" width="225" height="76" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="284" y="393" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="291" y="402" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,804) scale(1,-1)">«component» API REST</text>
+			<text x="291" y="378" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,756) scale(1,-1)">Controladores Spring</text>
+			<text x="291" y="365.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,731) scale(1,-1)">Actor y validadores</text>
+			<rect x="284" y="212" width="225" height="86" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="284" y="271" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="291" y="280" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,560) scale(1,-1)">Servicios de negocio</text>
+			<text x="291" y="256" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,512) scale(1,-1)">Identidad / catálogo / operación</text>
+			<text x="291" y="243.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,487) scale(1,-1)">Nómina / contabilidad / reportes</text>
+			<rect x="0" y="212" width="225" height="86" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="271" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="280" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,560) scale(1,-1)">Db / JdbcTemplate</text>
+			<text x="7" y="256" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,512) scale(1,-1)">Consultas parametrizadas</text>
+			<text x="7" y="243.6" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,487) scale(1,-1)">Conexión transaccional</text>
+			<rect x="0" y="77" width="225" height="85" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="135" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="7" y="144" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,288) scale(1,-1)">«executionEnvironment» MySQL</text>
+			<text x="7" y="120" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,240) scale(1,-1)">pos_integral_ga6</text>
+			<text x="7" y="107.60000000000002" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,215) scale(1,-1)">26 tablas / 42 FK / 148 CHECK</text>
+			<rect x="284" y="77" width="225" height="85" rx="4" ry="4" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="284" y="135" width="225" height="27" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<text x="291" y="144" style="font-family: DVS-B; font-size: 10.5px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,288) scale(1,-1)">«executionEnvironment» JVM</text>
+			<text x="291" y="120" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,240) scale(1,-1)">pos-integral-api-1.1.0-</text>
+			<text x="291" y="107.60000000000002" style="font-family: DVS; font-size: 9.6px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,215) scale(1,-1)">integracion92.jar / API 8093</text>
+			<path d="M 225,382 L 284,382 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="284 382, 278.5973 379.3902, 278.5973 384.6098" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="224.3384033203125" y="382.0" width="60.32319335937498" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="228.3384033203125" y="386.0" style="font-family: DVS; font-size: 8.7px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,772) scale(1,-1)">HTTP / JSON</text>
+			<path d="M 396.5,344 L 396.5,298 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="396.5 298, 393.8902 303.4027, 399.1098 303.4027" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="377.75078125" y="321.0" width="37.498437499999966" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="381.75078125" y="325.0" style="font-family: DVS; font-size: 8.7px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,650) scale(1,-1)">delega</text>
+			<path d="M 284,255 L 225,255 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="225 255, 230.4027 257.6098, 230.4027 252.3902" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="242.81103515625" y="255.0" width="23.3779296875" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="246.81103515625" y="259.0" style="font-family: DVS; font-size: 8.7px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,518) scale(1,-1)">usa</text>
+			<path d="M 112.5,212 L 112.5,162 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="112.5 162, 109.8902 167.4027, 115.1098 167.4027" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="66.0896240234375" y="187.0" width="92.82075195312498" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="70.0896240234375" y="191.0" style="font-family: DVS; font-size: 8.7px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,382) scale(1,-1)">SQL / puerto 33192</text>
+			<path d="M 396.5,162 L 396.5,212 Z" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<polygon points="396.5 212, 399.1098 206.5973, 393.8902 206.5973" style="stroke: rgb(7%,21%,29%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,21%,29%); fill-rule: evenodd;"/>
+			<rect x="376.4190185546875" y="187.0" width="40.16196289062498" height="14.0" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="380.4190185546875" y="191.0" style="font-family: DVS; font-size: 8.7px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,382) scale(1,-1)">ejecuta</text>
+			<text x="0" y="34" style="font-family: DVS; font-size: 10.2px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,68) scale(1,-1)">El ambiente 92 documentado utiliza loopback. HTTPS y proxy son</text>
+			<text x="0" y="18" style="font-family: DVS; font-size: 10.2px;fill: rgb(7%,21%,29%); stroke:none;" transform="translate(0,36) scale(1,-1)">condiciones del despliegue público; Vercel GA5 conserva el prototipo local.</text>
+		</g>
+	</g>
+</svg>
