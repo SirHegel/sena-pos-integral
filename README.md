@@ -8,6 +8,11 @@ Este corte contiene 62 archivos fuente del contrato PS-API-V2-r3: esquema de 28 
 
 Se publican código y escenarios DEMO. El esquema carga únicamente cuatro unidades estándar; los escenarios crean personas y operaciones ficticias en una instalación de laboratorio separada. Las contraseñas se reciben de forma privada al ejecutar. Los resultados técnicos no acreditan aceptación del negocio, capacitación ni operación productiva.
 
+## Módulos y referencia de perfumería
+
+- [Catálogo JDBC y Servlet/JSP](Adaptadores_GA7_Perfumeria/): módulos de las evidencias 81 y 82 con identidad y catálogo V2.
+- [Referencia REST V2](Documentacion_API_Perfumeria/API_V2_Referencia.md): 48 combinaciones de método y ruta, permisos, entradas, respuestas, validaciones y reintentos de la aplicación de perfumería.
+
 ## Cortes académicos anteriores
 
 Las carpetas siguientes conservan íntegros los ejercicios y sus comprobaciones de cada etapa. El corte integrado anterior está en [92_Integracion_POS](92_Integracion_POS/), con 19 vistas y siete áreas. Su gastronomía, nómina y contabilidad didáctica corresponden a ese diseño histórico y no forman parte del alcance vigente de perfumería.
