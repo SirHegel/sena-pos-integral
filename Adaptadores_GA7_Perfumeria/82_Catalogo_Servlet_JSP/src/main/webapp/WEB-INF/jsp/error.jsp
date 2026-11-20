@@ -1,0 +1,3 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Catálogo · Esencias &amp; Estilo Solano</title><link rel="stylesheet" href="${pageContext.request.contextPath}/estilos.css"></head><body><main><header><p class="eyebrow">ESENCIAS &amp; ESTILO SOLANO</p><h1>Catálogo de artículos</h1><p>Módulo académico Servlet y JSP · Datos DEMO</p></header><section><h2>La solicitud requiere revisión</h2><p class="notice" role="alert"><c:out value="${error}"/></p><a href="${pageContext.request.contextPath}/catalogo">Volver al catálogo</a></section></main></body></html>
