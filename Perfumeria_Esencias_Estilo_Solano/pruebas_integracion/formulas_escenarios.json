@@ -1,0 +1,101 @@
+{
+  "naturaleza": "Entradas paramétricas de escenarios de prueba. Catálogos, personas, precios de decant y costos de ejecución son sintéticos.",
+  "reglas_liquidas_y_empaque": [
+    {
+      "id": "PS-RC-N30",
+      "tipo": "preparacion_normal",
+      "presentacion_ml": "30",
+      "liquidos_ml": {
+        "esencia": "10",
+        "fijador": "0.6",
+        "alcohol": "19.4"
+      }
+    },
+    {
+      "id": "PS-RC-N50",
+      "tipo": "preparacion_normal",
+      "presentacion_ml": "50",
+      "liquidos_ml": {
+        "esencia": "16.5",
+        "fijador": "1",
+        "alcohol": "32.5"
+      }
+    },
+    {
+      "id": "PS-RC-N100",
+      "tipo": "preparacion_normal",
+      "presentacion_ml": "100",
+      "liquidos_ml": {
+        "esencia": "33",
+        "fijador": "2",
+        "alcohol": "65"
+      }
+    },
+    {
+      "id": "PS-RC-E30-S",
+      "tipo": "preparacion_extra_sin_feromonas",
+      "presentacion_ml": "30",
+      "liquidos_ml": {
+        "esencia": "12",
+        "fijador": "1.2",
+        "feromonas": "0",
+        "alcohol": "16.8"
+      }
+    },
+    {
+      "id": "PS-RC-E30-F",
+      "tipo": "preparacion_extra_con_feromonas",
+      "presentacion_ml": "30",
+      "liquidos_ml": {
+        "esencia": "12",
+        "fijador": "0.6",
+        "feromonas": "0.6",
+        "alcohol": "16.8"
+      }
+    },
+    {
+      "id": "PS-RC-E50-S",
+      "tipo": "preparacion_extra_sin_feromonas",
+      "presentacion_ml": "50",
+      "liquidos_ml": {
+        "esencia": "20",
+        "fijador": "2",
+        "feromonas": "0",
+        "alcohol": "28"
+      }
+    },
+    {
+      "id": "PS-RC-E50-F",
+      "tipo": "preparacion_extra_con_feromonas",
+      "presentacion_ml": "50",
+      "liquidos_ml": {
+        "esencia": "20",
+        "fijador": "1",
+        "feromonas": "1",
+        "alcohol": "28"
+      }
+    },
+    {
+      "id": "PS-RC-E100-S",
+      "tipo": "preparacion_extra_sin_feromonas",
+      "presentacion_ml": "100",
+      "liquidos_ml": {
+        "esencia": "40",
+        "fijador": "4",
+        "feromonas": "0",
+        "alcohol": "56"
+      }
+    },
+    {
+      "id": "PS-RC-E100-F",
+      "tipo": "preparacion_extra_con_feromonas",
+      "presentacion_ml": "100",
+      "liquidos_ml": {
+        "esencia": "40",
+        "fijador": "2",
+        "feromonas": "2",
+        "alcohol": "56"
+      }
+    }
+  ]
+}

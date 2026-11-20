@@ -2,7 +2,15 @@
 
 Jhon Steven Alvarez Ruiz · ADSO · SENA · Ficha 3388966.
 
-Este repositorio reúne las evidencias académicas de programación del proyecto POS Integral. El corte integrado actual se encuentra en [92_Integracion_POS](92_Integracion_POS/): React conectado con API Java y MySQL, 19 vistas, siete áreas, 25 clases Java de producción y 63 operaciones REST. Cada carpeta anterior conserva el código y las comprobaciones de su etapa.
+La adaptación vigente del proyecto para perfumería se encuentra en [Perfumeria_Esencias_Estilo_Solano](Perfumeria_Esencias_Estilo_Solano/). Integra React, API Java 21 y MySQL para preparados, recargas, sellados y decants, con los perfiles Administrador y Vendedora. Incluye ventas de contado atómicas, crédito y abonos, insumos, caja, incidencias, gastos y reportes Excel.
+
+Este corte contiene 62 archivos fuente del contrato PS-API-V2-r3: esquema de 28 tablas y 46 claves foráneas, código y pruebas. Se verificaron 44 pruebas unitarias (21 del corte inicial y 23 adicionales); las 428 comprobaciones HTTP/MySQL corresponden a integración y se contabilizan por separado. Las instrucciones de instalación están en el README y en `documentacion/OPERACION_TECNICA.md` de esa carpeta. Los binarios se generan localmente y no se versionan aquí.
+
+Se publican código y escenarios DEMO. El esquema carga únicamente cuatro unidades estándar; los escenarios crean personas y operaciones ficticias en una instalación de laboratorio separada. Las contraseñas se reciben de forma privada al ejecutar. Los resultados técnicos no acreditan aceptación del negocio, capacitación ni operación productiva.
+
+## Cortes académicos anteriores
+
+Las carpetas siguientes conservan íntegros los ejercicios y sus comprobaciones de cada etapa. El corte integrado anterior está en [92_Integracion_POS](92_Integracion_POS/), con 19 vistas y siete áreas. Su gastronomía, nómina y contabilidad didáctica corresponden a ese diseño histórico y no forman parte del alcance vigente de perfumería.
 
 | Evidencia | Proyecto | Alcance |
 |---|---|---|

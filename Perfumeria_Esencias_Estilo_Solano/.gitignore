@@ -1,0 +1,14 @@
+backend/target/
+backend/target-unitarias-ampliadas/
+backend/pruebas/
+backend/preparar_base.py
+frontend/node_modules
+frontend/dist/
+__pycache__/
+*.pyc
+*.log
+resultados_pruebas/
+ejecutables/
+.env
+.env.*
+*.cnf

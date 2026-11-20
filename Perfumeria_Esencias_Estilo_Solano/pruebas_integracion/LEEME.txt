@@ -1,0 +1,11 @@
+Pruebas de integración HTTP/MySQL - versión2.0
+
+Use exclusivamente una instalación DEMO y un esquema separado. El ensayo crea usuarios, clientes ficticios, artículos, suministros, ventas, cobros, incidencias y turnos; no sirve para una base operativa. No borra bases ni limpia historias anteriores. Se recomienda instalar el DDL en una base nueva y arrancar otra API con el mismo JAR.
+
+Requisitos: Python3.10+, API iniciada y cliente mysql disponible. openpyxl es opcional para dos controles adicionales de lectura XLSX. La campaña técnica publicada distingue el grupo HTTP/MySQL de la lectura independiente del libro.
+
+Variables: PS_TEST_CONFIRM_DEMO=SI; PS_TEST_API=http://127.0.0.1:8095/api/v2; PS_TEST_ADMIN_USER=admin; PS_TEST_DB_NAME=<esquema_DEMO>; PS_TEST_DB_USER=<usuario>; PS_TEST_MYSQL_PORT=3306; PS_TEST_MYSQL_BIN=mysql. Las claves Admin/MySQL se solicitan de forma privada si no existen PS_TEST_ADMIN_PASSWORD y PS_TEST_DB_PASSWORD. No las incluya en comandos, repositorios ni capturas.
+
+Ejecutar desde software: python3 pruebas_integracion/probar_api_mysql.py
+
+PS_QA_DIR permite guardar resultados fuera de la carpeta de fuentes. Se conservan JSON de comprobaciones, fixtures de laboratorio y XLSX. La cuenta MySQL usada por el ensayo necesita INSERT/UPDATE para el caso controlado de importación sin costo. No se insertan costos desconocidos por la API pública. Los fallos iniciales se conservan antes de repetir. El script no realiza una aceptación de usuario ni un piloto del negocio.
